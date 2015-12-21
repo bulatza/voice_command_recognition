@@ -1,4 +1,4 @@
-Voice command recognition. 
+Voice command recognition for IR and HTTP devices control. 
 
 1. For voice activation used CMU Sphinx
 https://github.com/cmusphinx/pocketsphinx-python
