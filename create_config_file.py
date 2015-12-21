@@ -4,22 +4,82 @@ import json
 
 jsonFileName = "device_config.json"
 
-device = 'TV'
+device = 'TV-LG'
 
 name = [
+'KEY_POWER',
 'KEY_POWER', 
+'KEY_1',
+'KEY_2',
+'KEY_3',
+'KEY_4',
+'KEY_5',
+'KEY_6',
+'KEY_7',
+'KEY_8',
+'KEY_9',
+'KEY_0',
+'KEY_VOLUMEUP',
+'KEY_VOLUMEDOWN',
+'KEY_CHANNELUP',
+'KEY_CHANNELDOWN',
+'KEY_MENU',
 'KEY_UP',
-'KEY_DOWN']
+'KEY_DOWN',
+'KEY_RIGHT',
+'KEY_LEFT',
+'KEY_OK'
+]
 
 voice_command = [
 'включить',
-'синий',
-'зеленый']
+'выключить',
+'1',
+'2',
+'3',
+'4',
+'5',
+'6',
+'7',
+'8',
+'9',
+'0',
+'громкость прибавить',
+'громкость убавить',
+'канал следующий',
+'канал предыдущий',
+'меню',
+'вверх',
+'вниз',
+'вправо',
+'влево',
+'ок'
+]
 
 action = [
-'http://192.168.0.104/send/RGBW/KEY_POWER', 
-'http://192.168.0.104/send/RGBW/KEY_UP',
-'http://192.168.0.104/send/RGBW/KEY_DOWN']
+'http://192.168.0.104/send/LG/KEY_POWER',
+'http://192.168.0.104/send/LG/KEY_POWER',
+'http://192.168.0.104/send/LG/KEY_1', 
+'http://192.168.0.104/send/LG/KEY_2',
+'http://192.168.0.104/send/LG/KEY_3', 
+'http://192.168.0.104/send/LG/KEY_4',
+'http://192.168.0.104/send/LG/KEY_5', 
+'http://192.168.0.104/send/LG/KEY_6',
+'http://192.168.0.104/send/LG/KEY_7', 
+'http://192.168.0.104/send/LG/KEY_8',
+'http://192.168.0.104/send/LG/KEY_9', 
+'http://192.168.0.104/send/LG/KEY_0',
+'http://192.168.0.104/send/LG/KEY_VOLUMEUP', 
+'http://192.168.0.104/send/LG/KEY_VOLUMEDOWN',
+'http://192.168.0.104/send/LG/KEY_CHANNELUP', 
+'http://192.168.0.104/send/LG/KEY_CHANNELDOWN',
+'http://192.168.0.104/send/LG/KEY_MENU', 
+'http://192.168.0.104/send/LG/KEY_UP',
+'http://192.168.0.104/send/LG/KEY_DOWN', 
+'http://192.168.0.104/send/LG/KEY_RIGHT',
+'http://192.168.0.104/send/LG/KEY_LEFT', 
+'http://192.168.0.104/send/LG/KEY_OK'
+]
 
 
 def write2Json(file_name, device, names, voice_commands, actions):
@@ -37,7 +97,7 @@ def read4Json(file_name):
 	jdata = json.load(f)
 	f.close()
 	# parse jdata
-	device = jdata['TV']
+	device = jdata['TV-LG']
 	commands = []
 	actions = []
 	for button in device:

@@ -18,8 +18,8 @@ def readJsonFile(file_name):
 	f = open(file_name, "r")
 	jdata = json.load(f)
 	f.close()
-	# parse jdata for 'TV'
-	device = jdata['TV']
+	# parse jdata for 'TV-LG'
+	device = jdata['TV-LG']
 	commands = []
 	actions = []
 	for button in device:
