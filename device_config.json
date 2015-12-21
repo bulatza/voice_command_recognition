@@ -1,0 +1,19 @@
+{
+    "TV": [
+        {
+            "action": "http://192.168.0.104/send/RGBW/KEY_POWER",
+            "name": "KEY_POWER",
+            "voice_command": "включить"
+        },
+        {
+            "action": "http://192.168.0.104/send/RGBW/KEY_UP",
+            "name": "KEY_UP",
+            "voice_command": "синий"
+        },
+        {
+            "action": "http://192.168.0.104/send/RGBW/KEY_DOWN",
+            "name": "KEY_DOWN",
+            "voice_command": "зеленый"
+        }
+    ]
+}
