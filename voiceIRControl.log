@@ -700,3 +700,34 @@
 2016-01-07 14:15:43,185 - INFO - -----request url = http://192.168.0.106:3000/send/LG_AKB72915207/KEY_POWER
 2016-01-07 14:15:43,409 - INFO - -----success - 200
 2016-01-07 14:15:43,410 - INFO - ----stop listenCommand
+2016-01-07 14:21:01,508 - INFO - ----START voiceIRControl.py.
+2016-01-07 14:21:01,508 - INFO - ----finished to read device configuration json file device_config.json
+2016-01-07 14:21:01,509 - INFO - ----finished to set CMU SPHINX library settings
+2016-01-07 14:21:01,575 - INFO - ----finished to set alsaaudio parameters
+2016-01-07 14:21:31,701 - INFO - ----START voiceIRControl.py.
+2016-01-07 14:21:31,701 - INFO - ----finished to read device configuration json file device_config.json
+2016-01-07 14:21:31,702 - INFO - ----finished to set CMU SPHINX library settings
+2016-01-07 14:21:31,770 - INFO - ----finished to set alsaaudio parameters
+2016-01-07 14:22:23,849 - INFO - ----START voiceIRControl.py.
+2016-01-07 14:22:23,850 - INFO - ----finished to read device configuration json file device_config.json
+2016-01-07 14:22:23,850 - INFO - ----finished to set CMU SPHINX library settings
+2016-01-07 14:22:23,925 - INFO - ----finished to set alsaaudio parameters
+2016-01-07 14:23:40,342 - INFO - ----START voiceIRControl.py.
+2016-01-07 14:23:40,342 - INFO - ----finished to read device configuration json file device_config.json
+2016-01-07 14:23:40,343 - INFO - ----finished to set CMU SPHINX library settings
+2016-01-07 14:23:40,409 - INFO - ----finished to set alsaaudio parameters
+2016-01-07 14:23:42,659 - INFO - ----detected keyphrase raspberry
+2016-01-07 14:23:42,663 - INFO - ----start listenCommand
+2016-01-07 14:23:42,663 - INFO - -----start to record audio
+2016-01-07 14:23:45,599 - INFO - -----stop to record audio
+2016-01-07 14:23:48,990 - INFO - -----finished audio2Text
+2016-01-07 14:23:48,990 - INFO - -----not command matches
+2016-01-07 14:23:48,990 - INFO - ----stop listenCommand
+2016-01-07 14:23:50,948 - INFO - ----detected keyphrase raspberry
+2016-01-07 14:23:50,952 - INFO - ----start listenCommand
+2016-01-07 14:23:50,952 - INFO - -----start to record audio
+2016-01-07 14:23:53,946 - INFO - -----stop to record audio
+2016-01-07 14:23:57,159 - INFO - -----finished audio2Text
+2016-01-07 14:23:57,160 - INFO - -----request url = http://192.168.0.106:3000/send/LG_AKB72915207/KEY_POWER
+2016-01-07 14:23:57,343 - INFO - -----success - 200
+2016-01-07 14:23:57,344 - INFO - ----stop listenCommand

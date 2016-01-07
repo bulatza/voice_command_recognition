@@ -117,8 +117,8 @@ def main():
 	com_act_lib = readJsonFile(JSON_FILE_NAME)
 	app_log.info('----finished to read device configuration json file ' + JSON_FILE_NAME)
 
-	modeldir = "../../pocketsphinx-python/pocketsphinx/model"
-	datadir = "../../pocketsphinx-python/pocketsphinx/test/data"
+	modeldir = "../pocketsphinx-python/pocketsphinx/model"
+	datadir = "../pocketsphinx-python/pocketsphinx/test/data"
 	# Create a decoder with certain model
 	config = Decoder.default_config()
 	config.set_string('-hmm', os.path.join(modeldir, 'en-us/en-us'))
