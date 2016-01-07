@@ -1,3 +1,6 @@
+#!/usr/bin/python
+# -*- coding: utf-8 -*-
+
 import sys, os
 from pocketsphinx.pocketsphinx import *
 from sphinxbase.sphinxbase import *
