@@ -13,7 +13,7 @@ FORMAT_pyaudio = pyaudio.paInt16
 #OUTPUT_FILENAME = "output.wav"
 
 FORMAT_alsaaudio = alsaaudio.PCM_FORMAT_S16_LE
-FORMAT_alsaaudio_size  = 2
+FORMAT_PCM_FORMAT_S16_LE_size  = 2
 
 def recPyAudio(outFileName, recTime):
 
@@ -57,7 +57,7 @@ def recAlsaAudio(outFileName, recTime):
 
 	wf = wave.open(outFileName, 'wb')
 	wf.setnchannels(CHANNELS)
-	wf.setsampwidth(FORMAT_alsaaudio_size)
+	wf.setsampwidth(FORMAT_PCM_FORMAT_S16_LE_size)
 	wf.setframerate(RATE)
 	wf.writeframes(b''.join(frames))
 	wf.close()

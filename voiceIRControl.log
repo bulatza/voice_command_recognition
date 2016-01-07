@@ -582,3 +582,121 @@
 2016-01-07 13:08:29,308 - INFO - -----request url = http://192.168.0.106:3000/send/LG_AKB72915207/KEY_POWER
 2016-01-07 13:08:29,527 - INFO - -----success - 200
 2016-01-07 13:08:29,528 - INFO - ----stop listenCommand
+2016-01-07 13:37:04,768 - INFO - ----START voiceIRControl.py.
+2016-01-07 13:37:04,769 - INFO - ----finished to read device configuration json file device_config.json
+2016-01-07 13:37:04,769 - INFO - ----finished to set CMU SPHINX library settings
+2016-01-07 13:37:04,876 - INFO - ----finished to set alsaaudio parameters
+2016-01-07 13:37:14,560 - INFO - ----detected keyphrase raspberry
+2016-01-07 13:37:14,564 - INFO - ----start listenCommand
+2016-01-07 13:37:14,564 - INFO - -----start to record audio
+2016-01-07 13:37:14,564 - INFO - Unexpected error:<type 'exceptions.NameError'>
+2016-01-07 13:49:18,561 - INFO - ----START voiceIRControl.py.
+2016-01-07 13:49:18,576 - INFO - ----finished to read device configuration json file device_config.json
+2016-01-07 13:49:18,576 - INFO - ----finished to set CMU SPHINX library settings
+2016-01-07 13:49:19,015 - INFO - ----finished to set alsaaudio parameters
+2016-01-07 13:49:21,274 - INFO - ----detected keyphrase raspberry
+2016-01-07 13:49:21,278 - INFO - ----start listenCommand
+2016-01-07 13:49:21,278 - INFO - -----start to record audio
+2016-01-07 13:49:21,278 - INFO - Unexpected error:<type 'exceptions.NameError'>
+2016-01-07 13:58:11,097 - INFO - ----START voiceIRControl.py.
+2016-01-07 13:58:11,098 - INFO - ----finished to read device configuration json file device_config.json
+2016-01-07 13:58:11,098 - INFO - ----finished to set CMU SPHINX library settings
+2016-01-07 13:58:11,201 - INFO - ----finished to set alsaaudio parameters
+2016-01-07 13:58:13,319 - INFO - ----detected keyphrase raspberry
+2016-01-07 13:58:13,323 - INFO - ----start listenCommand
+2016-01-07 13:58:13,323 - INFO - -----start to record audio
+2016-01-07 13:58:13,323 - INFO - Unexpected error:<type 'exceptions.NameError'>
+2016-01-07 13:58:23,426 - INFO - ----detected keyphrase raspberry
+2016-01-07 13:58:23,427 - INFO - ----start listenCommand
+2016-01-07 13:58:23,427 - INFO - -----start to record audio
+2016-01-07 13:58:23,427 - INFO - Unexpected error:<type 'exceptions.NameError'>
+2016-01-07 13:58:30,343 - INFO - ----detected keyphrase raspberry
+2016-01-07 13:58:30,349 - INFO - ----start listenCommand
+2016-01-07 13:58:30,349 - INFO - -----start to record audio
+2016-01-07 13:58:30,349 - INFO - Unexpected error:<type 'exceptions.NameError'>
+2016-01-07 13:58:39,254 - INFO - ----detected keyphrase raspberry
+2016-01-07 13:58:39,261 - INFO - ----start listenCommand
+2016-01-07 13:58:39,262 - INFO - -----start to record audio
+2016-01-07 13:58:39,262 - INFO - Unexpected error:<type 'exceptions.NameError'>
+2016-01-07 13:59:43,559 - INFO - ----START voiceIRControl.py.
+2016-01-07 13:59:43,560 - INFO - ----finished to read device configuration json file device_config.json
+2016-01-07 13:59:43,560 - INFO - ----finished to set CMU SPHINX library settings
+2016-01-07 13:59:43,628 - INFO - ----finished to set alsaaudio parameters
+2016-01-07 13:59:45,794 - INFO - ----detected keyphrase raspberry
+2016-01-07 13:59:45,797 - INFO - ----start listenCommand
+2016-01-07 13:59:45,798 - INFO - -----start to record audio
+2016-01-07 14:09:54,610 - INFO - ----START voiceIRControl.py.
+2016-01-07 14:09:54,611 - INFO - ----finished to read device configuration json file device_config.json
+2016-01-07 14:09:54,611 - INFO - ----finished to set CMU SPHINX library settings
+2016-01-07 14:09:54,682 - INFO - ----finished to set alsaaudio parameters
+2016-01-07 14:09:57,660 - INFO - ----detected keyphrase raspberry
+2016-01-07 14:09:57,664 - INFO - ----start listenCommand
+2016-01-07 14:09:57,664 - INFO - -----start to record audio
+2016-01-07 14:10:00,602 - INFO - -----stop to record audio
+2016-01-07 14:10:03,571 - INFO - -----finished audio2Text
+2016-01-07 14:10:03,571 - INFO - -----not command matches
+2016-01-07 14:10:03,571 - INFO - ----stop listenCommand
+2016-01-07 14:10:07,287 - INFO - ----detected keyphrase raspberry
+2016-01-07 14:10:07,287 - INFO - ----start listenCommand
+2016-01-07 14:10:07,288 - INFO - -----start to record audio
+2016-01-07 14:10:10,204 - INFO - -----stop to record audio
+2016-01-07 14:10:13,127 - INFO - -----finished audio2Text
+2016-01-07 14:10:13,127 - INFO - -----not command matches
+2016-01-07 14:10:13,127 - INFO - ----stop listenCommand
+2016-01-07 14:10:13,188 - INFO - ----detected keyphrase raspberry
+2016-01-07 14:10:13,191 - INFO - ----start listenCommand
+2016-01-07 14:10:13,192 - INFO - -----start to record audio
+2016-01-07 14:10:16,159 - INFO - -----stop to record audio
+2016-01-07 14:10:18,682 - INFO - -----finished audio2Text
+2016-01-07 14:10:18,682 - INFO - -----request url = http://192.168.0.106:3000/send/LG_AKB72915207/KEY_POWER
+2016-01-07 14:10:19,564 - INFO - -----success - 200
+2016-01-07 14:10:19,565 - INFO - ----stop listenCommand
+2016-01-07 14:10:19,824 - INFO - ----detected keyphrase raspberry
+2016-01-07 14:10:19,827 - INFO - ----start listenCommand
+2016-01-07 14:10:19,827 - INFO - -----start to record audio
+2016-01-07 14:10:22,802 - INFO - -----stop to record audio
+2016-01-07 14:12:00,601 - INFO - ----START voiceIRControl.py.
+2016-01-07 14:12:00,602 - INFO - ----finished to read device configuration json file device_config.json
+2016-01-07 14:12:00,602 - INFO - ----finished to set CMU SPHINX library settings
+2016-01-07 14:12:00,667 - INFO - ----finished to set alsaaudio parameters
+2016-01-07 14:12:02,688 - INFO - ----detected keyphrase raspberry
+2016-01-07 14:12:02,692 - INFO - ----start listenCommand
+2016-01-07 14:12:02,692 - INFO - -----start to record audio
+2016-01-07 14:13:01,275 - INFO - ----START voiceIRControl.py.
+2016-01-07 14:13:01,276 - INFO - ----finished to read device configuration json file device_config.json
+2016-01-07 14:13:01,276 - INFO - ----finished to set CMU SPHINX library settings
+2016-01-07 14:13:01,338 - INFO - ----finished to set alsaaudio parameters
+2016-01-07 14:13:03,094 - INFO - ----detected keyphrase raspberry
+2016-01-07 14:13:03,098 - INFO - ----start listenCommand
+2016-01-07 14:13:03,098 - INFO - -----start to record audio
+2016-01-07 14:14:11,921 - INFO - ----START voiceIRControl.py.
+2016-01-07 14:14:11,921 - INFO - ----finished to read device configuration json file device_config.json
+2016-01-07 14:14:11,922 - INFO - ----finished to set CMU SPHINX library settings
+2016-01-07 14:14:11,994 - INFO - ----finished to set alsaaudio parameters
+2016-01-07 14:14:13,979 - INFO - ----detected keyphrase raspberry
+2016-01-07 14:14:13,983 - INFO - ----start listenCommand
+2016-01-07 14:14:13,983 - INFO - -----start to record audio
+2016-01-07 14:14:13,983 - INFO - Unexpected error:(<type 'exceptions.NameError'>, NameError("global name 'audioFileNam' is not defined",), <traceback object at 0xb6a0207c>)
+2016-01-07 14:14:22,625 - INFO - ----detected keyphrase raspberry
+2016-01-07 14:14:22,625 - INFO - ----start listenCommand
+2016-01-07 14:14:22,626 - INFO - -----start to record audio
+2016-01-07 14:14:22,626 - INFO - Unexpected error:(<type 'exceptions.NameError'>, NameError("global name 'audioFileNam' is not defined",), <traceback object at 0xb6a0211c>)
+2016-01-07 14:15:27,926 - INFO - ----START voiceIRControl.py.
+2016-01-07 14:15:27,927 - INFO - ----finished to read device configuration json file device_config.json
+2016-01-07 14:15:27,927 - INFO - ----finished to set CMU SPHINX library settings
+2016-01-07 14:15:27,994 - INFO - ----finished to set alsaaudio parameters
+2016-01-07 14:15:29,834 - INFO - ----detected keyphrase raspberry
+2016-01-07 14:15:29,837 - INFO - ----start listenCommand
+2016-01-07 14:15:29,838 - INFO - -----start to record audio
+2016-01-07 14:15:32,773 - INFO - -----stop to record audio
+2016-01-07 14:15:35,472 - INFO - -----finished audio2Text
+2016-01-07 14:15:35,472 - INFO - -----not command matches
+2016-01-07 14:15:35,472 - INFO - ----stop listenCommand
+2016-01-07 14:15:37,830 - INFO - ----detected keyphrase raspberry
+2016-01-07 14:15:37,833 - INFO - ----start listenCommand
+2016-01-07 14:15:37,834 - INFO - -----start to record audio
+2016-01-07 14:15:40,749 - INFO - -----stop to record audio
+2016-01-07 14:15:43,185 - INFO - -----finished audio2Text
+2016-01-07 14:15:43,185 - INFO - -----request url = http://192.168.0.106:3000/send/LG_AKB72915207/KEY_POWER
+2016-01-07 14:15:43,409 - INFO - -----success - 200
+2016-01-07 14:15:43,410 - INFO - ----stop listenCommand

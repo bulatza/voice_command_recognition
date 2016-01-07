@@ -101,14 +101,14 @@ def main():
 	log_file = 'voiceIRControl.log'
 
 	from logging.handlers import RotatingFileHandler
-	my_handler = RotatingFileHandler(log_file, mode='a', maxBytes=5*1024*1024, 
+	file_handler = RotatingFileHandler(log_file, mode='a', maxBytes=5*1024*1024, 
                                  backupCount=2, encoding=None, delay=0)
-	my_handler.setFormatter(log_formatter)
-	my_handler.setLevel(logging.INFO)
+	file_handler.setFormatter(log_formatter)
+	file_handler.setLevel(logging.INFO)
 
 
 	app_log.setLevel(logging.INFO)
-	app_log.addHandler(my_handler)
+	app_log.addHandler(file_handler)
 
 
 	app_log.info('----START voiceIRControl.py.')
@@ -155,12 +155,11 @@ def main():
 	        decoder.end_utt()
 	        
 	        try:
-	        	app_log.info('----start listenCommand')
-	        	listenCommand(com_act_lib, 3)
-	        	app_log.info('----stop listenCommand')
-	        except:
-	        	app_log.info("Unexpected error:" + str(sys.exc_info()[0]))
-	        	break
+	       		app_log.info('----start listenCommand')
+	       		listenCommand(com_act_lib, 3)
+	       		app_log.info('----stop listenCommand')
+	        except Exception, details:
+	       		app_log.info("Unexpected error:" + str(sys.exc_info()))
 	        
 	        decoder.start_utt()
 
