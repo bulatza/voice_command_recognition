@@ -5,26 +5,33 @@ import recordAudioToFile
 import time
 import json
 
+import logging
+
+
 # imports for CMU Sphinx voice activation
 import sys, os
 from pocketsphinx.pocketsphinx import *
 from sphinxbase.sphinxbase import *
-import pyaudio
+import alsaaudio
+
+sys.stdout.flush()
 
 JSON_FILE_NAME = 'device_config.json'
 AUDIO_FILE_NAME = 'output.wav'
+IP_adress = '192.168.0.106:3000'
+KEYPHRASE = 'raspberry'
 
 def readJsonFile(file_name):
 	f = open(file_name, "r")
 	jdata = json.load(f)
 	f.close()
-	# parse jdata for 'TV-LG'
-	device = jdata['TV-LG']
+	# parse jdata
 	commands = []
 	actions = []
-	for button in device:
+	for button in jdata:
 		commands.append(button['voice_command'])
 		actions.append(button['action'])
+	
 	return dict(zip(commands, actions)) 
 
 def audio2Text(audioFileName):
@@ -32,6 +39,7 @@ def audio2Text(audioFileName):
 	# convert to unicode
 	text = text.decode('utf-8')
 	text = text.lower()
+	text.encode('utf-8')
 	return text
 
 def speech2Text():
@@ -40,6 +48,7 @@ def speech2Text():
 	# convert to unicode
 	text = text.decode('utf-8')
 	text = text.lower()
+	text.encode('utf-8')
 	return text  
 
 def recordAudio(audioFileName, recTime):
@@ -54,65 +63,85 @@ def findMatch(text, commands):
 
 def commandToActionHttp(matchCommands, lib):
 	for command in matchCommands:
-		req_url = lib[command]
-		print "---- apply action: " + req_url + " for command: " + command 
+		req_url = 'http://' + IP_adress + '/'  + lib[command]
+		logging.info('-----request url = ' + req_url)
     	r = requests.get(req_url) # http request
-    	print "---- IR server returned: status_code = " + str(r.status_code) + ", content = " + r.content
+    	#print "---- IR server returned: status_code = " + str(r.status_code) + ", content = " + r.content
     	return r.status_code
 
-def listenCommand(com_act_lib):
+def listenCommand(com_act_lib, time):
 	#time.sleep(0.5)
 	#  record speech audio file
-	print "--- START to RECORD AUDIO"
-	recordAudio(AUDIO_FILE_NAME, 3)
-	print "--- STOP to RECORD AUDIO"
+	logging.info('-----start to record audio')
+	recordAudio(AUDIO_FILE_NAME, time)
+	logging.info('-----stop to record audio')
 
 	#  yandex speech recognition
 	text = audio2Text(AUDIO_FILE_NAME)
-	#text = unicode(text,'utf-8').lower();
-	print "--- audio2Text recognized text = " + text
-    
+	logging.info('-----finished audio2Text')
+	
 	# find commands in text
 	match = []
 	if(text):
 		match = findMatch(text, com_act_lib.keys())
 		
 	if (match):
-		commandToActionHttp(match, com_act_lib)
-		print "--- apply action"
+		status = commandToActionHttp(match, com_act_lib)
+		if status == 200:
+			logging.info('-----success - ' + str(status))
+		else:
+			logging.info('-----not success - ' + str(status))
 	else:
-		print "--- no matches"
+		logging.info('-----not command matches')
 
 def main():
+	# set logging info
+	logging.basicConfig(filename='voiceIRControl.log', level=logging.DEBUG, format='%(asctime)s - %(levelname)s - %(message)s')
+	
+	logging.info('----START voiceIRControl.py.')
+
 	# read commands from json file
 	com_act_lib = readJsonFile(JSON_FILE_NAME)
+	logging.info('----finished to read device configuration json file ' + JSON_FILE_NAME)
 
-	modeldir = "/home/bulat/pocketsphinx-python/pocketsphinx/model"
-	datadir = "/home/bulat/pocketsphinx-python/pocketsphinx/test/data"
+	modeldir = "../../pocketsphinx-python/pocketsphinx/model"
+	datadir = "../../pocketsphinx-python/pocketsphinx/test/data"
 	# Create a decoder with certain model
 	config = Decoder.default_config()
 	config.set_string('-hmm', os.path.join(modeldir, 'en-us/en-us'))
 	config.set_string('-dict', os.path.join(modeldir, 'en-us/cmudict-en-us.dict'))
-	config.set_string('-keyphrase', 'raspberry')
-	config.set_float('-kws_threshold', 1e-20)
+	config.set_string('-keyphrase', KEYPHRASE)
+	config.set_float('-kws_threshold', 1e-40)
+	logging.info('----finished to set CMU SPHINX library settings')
 
-	p = pyaudio.PyAudio()
-	stream = p.open(format=pyaudio.paInt16, channels=1, rate=16000, input=True, frames_per_buffer=1024)
-	stream.start_stream()
+
+	# alsaaudio settings
+	CHUNK = 1024
+	FORMAT = alsaaudio.PCM_FORMAT_S16_LE
+	CHANNELS = 1
+	RATE = 16000
+	stream = alsaaudio.PCM(alsaaudio.PCM_CAPTURE,alsaaudio.PCM_NORMAL)
+	stream.setchannels(CHANNELS)
+	stream.setrate(RATE)
+	stream.setformat(FORMAT)
+	stream.setperiodsize(CHUNK)
+	logging.info('----finished to set alsaaudio parameters')
+
 	# Process audio chunk by chunk. 
 	decoder = Decoder(config)
 	decoder.start_utt()
 	while True:
-	    buf = stream.read(1024)
+	    l, buf = stream.read()
 	    if buf:
 	         decoder.process_raw(buf, False, False)
 	    else:
 	         break
 	    if decoder.hyp() != None:
-	        #print ([(seg.word, seg.prob, seg.start_frame, seg.end_frame) for seg in decoder.seg()])
-	        print ("Detected keyword, restarting search")
+	    	logging.info('----detected keyphrase ' + KEYPHRASE)
 	        decoder.end_utt()
-	        listenCommand(com_act_lib)
+	        logging.info('----start listenCommand')
+	        listenCommand(com_act_lib, 3)
+	        logging.info('----stop listenCommand')
 	        decoder.start_utt()
 
 if __name__ == "__main__":

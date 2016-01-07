@@ -1,0 +1,221 @@
+2016-01-07 03:09:19,043 - INFO - ----START voiceIRControl.py.
+2016-01-07 03:09:19,043 - INFO - ----finished to read device configuration json file device_config.json
+2016-01-07 03:09:19,044 - INFO - ----finished to set CMU SPHINX library settings
+2016-01-07 03:09:19,106 - INFO - ----finished to set alsaaudio parameters
+2016-01-07 03:09:30,184 - INFO - ----detected keyphrase raspberry
+2016-01-07 03:09:30,188 - INFO - ----start listenCommand
+2016-01-07 03:09:30,188 - INFO - -----start to record audio
+2016-01-07 03:09:33,226 - INFO - -----stop to record audio
+2016-01-07 03:09:33,226 - INFO - uuid=9782b53d4d6c4a8e8c97e1787da232ea
+2016-01-07 03:09:33,283 - INFO - Connected to asr.yandex.net:80.
+2016-01-07 03:09:33,403 - INFO - session_id=ee711be8-b4d2-11e5-ab28-ca8678dee4ec
+2016-01-07 03:09:33,403 - INFO - Recognition was started.
+2016-01-07 03:09:33,403 - INFO - About to send chunk 0 (65536 bytes)
+2016-01-07 03:09:33,403 - INFO - entering send() :start index 0, pending answers 0, chunks answered 0
+2016-01-07 03:09:33,454 - INFO - leaving send()
+2016-01-07 03:09:33,454 - INFO - About to send chunk 1 (26668 bytes)
+2016-01-07 03:09:33,454 - INFO - entering send() :start index 0, pending answers 1, chunks answered 0
+2016-01-07 03:09:33,461 - INFO - leaving send()
+2016-01-07 03:09:33,461 - INFO - No more chunks. Finalizing recognition.
+2016-01-07 03:09:33,461 - INFO - entering send() :start index 0, pending answers 2, chunks answered 0
+2016-01-07 03:09:35,679 - INFO - got response: endOfUtt=True; len(recognition)=1
+2016-01-07 03:09:35,679 - INFO - partial result: Включить ; merged=2
+2016-01-07 03:09:35,679 - INFO - Utterance is not None
+2016-01-07 03:09:35,679 - INFO - Chunks from 0 to 2:
+2016-01-07 03:09:35,679 - INFO - got utterance: start index 2, pending answers 1, chunks answered 0
+2016-01-07 03:09:35,831 - INFO - got response: endOfUtt=True; len(recognition)=0
+2016-01-07 03:09:35,831 - INFO - Utterance is not None
+2016-01-07 03:09:35,831 - INFO - utterance incomplete, hiding partial result
+2016-01-07 03:09:35,832 - INFO - Recognition is done.
+2016-01-07 03:09:35,832 - INFO - Start at [07.01.2016 03:09:33], finish at [07.01.2016 03:09:35], took 2.60541605949 seconds
+2016-01-07 03:09:35,832 - INFO - Avg. 0.767631715753 chunks per second
+2016-01-07 03:09:35,832 - INFO - -----finished audio2Text
+2016-01-07 03:09:35,832 - INFO - -----request url = http://192.168.0.106:3000/send/LG_AKB72915207/KEY_POWER
+2016-01-07 03:09:35,842 - INFO - Starting new HTTP connection (1): 192.168.0.106
+2016-01-07 03:09:35,863 - DEBUG - Setting read timeout to None
+2016-01-07 03:09:35,968 - DEBUG - "GET /send/LG_AKB72915207/KEY_POWER HTTP/1.1" 302 23
+2016-01-07 03:09:35,970 - DEBUG - Setting read timeout to None
+2016-01-07 03:09:35,989 - DEBUG - "GET / HTTP/1.1" 200 9174
+2016-01-07 03:09:35,992 - INFO - -----success - 200
+2016-01-07 03:09:35,993 - INFO - ----stop listenCommand
+2016-01-07 03:09:53,552 - INFO - ----detected keyphrase raspberry
+2016-01-07 03:09:53,553 - INFO - ----start listenCommand
+2016-01-07 03:09:53,553 - INFO - -----start to record audio
+2016-01-07 03:09:56,552 - INFO - -----stop to record audio
+2016-01-07 03:09:56,552 - INFO - uuid=9782b53d4d6c4a8e8c97e1787da232ea
+2016-01-07 03:09:56,609 - INFO - Connected to asr.yandex.net:80.
+2016-01-07 03:09:56,732 - INFO - session_id=fc584b8c-b4d2-11e5-b15f-9277ca05b739
+2016-01-07 03:09:56,732 - INFO - Recognition was started.
+2016-01-07 03:09:56,732 - INFO - About to send chunk 0 (65536 bytes)
+2016-01-07 03:09:56,732 - INFO - entering send() :start index 0, pending answers 0, chunks answered 0
+2016-01-07 03:09:56,785 - INFO - leaving send()
+2016-01-07 03:09:56,785 - INFO - About to send chunk 1 (26668 bytes)
+2016-01-07 03:09:56,786 - INFO - entering send() :start index 0, pending answers 1, chunks answered 0
+2016-01-07 03:09:56,786 - INFO - leaving send()
+2016-01-07 03:09:56,786 - INFO - No more chunks. Finalizing recognition.
+2016-01-07 03:09:56,786 - INFO - entering send() :start index 0, pending answers 2, chunks answered 0
+2016-01-07 03:09:58,082 - INFO - got response: endOfUtt=False; len(recognition)=1
+2016-01-07 03:09:58,082 - INFO - partial result: Громкость ; merged=1
+2016-01-07 03:09:58,082 - INFO - Utterance is not None
+2016-01-07 03:09:58,082 - INFO - utterance incomplete, hiding partial result
+2016-01-07 03:09:59,181 - INFO - got response: endOfUtt=True; len(recognition)=1
+2016-01-07 03:09:59,181 - INFO - partial result: Громкость прибавить ; merged=2
+2016-01-07 03:09:59,182 - INFO - Utterance is not None
+2016-01-07 03:09:59,182 - INFO - Chunks from 0 to 3:
+2016-01-07 03:09:59,182 - INFO - got utterance: start index 3, pending answers 0, chunks answered 0
+2016-01-07 03:09:59,182 - INFO - Recognition is done.
+2016-01-07 03:09:59,182 - INFO - Start at [07.01.2016 03:09:56], finish at [07.01.2016 03:09:59], took 2.63007807732 seconds
+2016-01-07 03:09:59,182 - INFO - Avg. 0.760433698623 chunks per second
+2016-01-07 03:09:59,182 - INFO - -----finished audio2Text
+2016-01-07 03:09:59,182 - INFO - -----request url = http://192.168.0.106:3000/send/LG_AKB72915207/KEY_VOLUMEUP
+2016-01-07 03:09:59,184 - INFO - Starting new HTTP connection (1): 192.168.0.106
+2016-01-07 03:09:59,210 - DEBUG - Setting read timeout to None
+2016-01-07 03:09:59,316 - DEBUG - "GET /send/LG_AKB72915207/KEY_VOLUMEUP HTTP/1.1" 302 23
+2016-01-07 03:09:59,318 - DEBUG - Setting read timeout to None
+2016-01-07 03:09:59,335 - DEBUG - "GET / HTTP/1.1" 200 9174
+2016-01-07 03:09:59,338 - INFO - -----success - 200
+2016-01-07 03:09:59,338 - INFO - ----stop listenCommand
+2016-01-07 03:10:02,651 - INFO - ----detected keyphrase raspberry
+2016-01-07 03:10:02,655 - INFO - ----start listenCommand
+2016-01-07 03:10:02,655 - INFO - -----start to record audio
+2016-01-07 03:10:05,694 - INFO - -----stop to record audio
+2016-01-07 03:10:05,695 - INFO - uuid=9782b53d4d6c4a8e8c97e1787da232ea
+2016-01-07 03:10:05,752 - INFO - Connected to asr.yandex.net:80.
+2016-01-07 03:10:05,871 - INFO - session_id=01cb97ae-b4d3-11e5-aa5e-5ad957b9356d
+2016-01-07 03:10:05,871 - INFO - Recognition was started.
+2016-01-07 03:10:05,871 - INFO - About to send chunk 0 (65536 bytes)
+2016-01-07 03:10:05,871 - INFO - entering send() :start index 0, pending answers 0, chunks answered 0
+2016-01-07 03:10:05,923 - INFO - leaving send()
+2016-01-07 03:10:05,924 - INFO - About to send chunk 1 (26668 bytes)
+2016-01-07 03:10:05,924 - INFO - entering send() :start index 0, pending answers 1, chunks answered 0
+2016-01-07 03:10:05,924 - INFO - leaving send()
+2016-01-07 03:10:05,924 - INFO - No more chunks. Finalizing recognition.
+2016-01-07 03:10:05,924 - INFO - entering send() :start index 0, pending answers 2, chunks answered 0
+2016-01-07 03:10:07,296 - INFO - got response: endOfUtt=False; len(recognition)=1
+2016-01-07 03:10:07,297 - INFO - partial result: Громкость ; merged=1
+2016-01-07 03:10:07,297 - INFO - Utterance is not None
+2016-01-07 03:10:07,297 - INFO - utterance incomplete, hiding partial result
+2016-01-07 03:10:08,383 - INFO - got response: endOfUtt=True; len(recognition)=2
+2016-01-07 03:10:08,383 - INFO - partial result: Громкость убавить ; merged=2
+2016-01-07 03:10:08,383 - INFO - Utterance is not None
+2016-01-07 03:10:08,383 - INFO - Chunks from 0 to 3:
+2016-01-07 03:10:08,383 - INFO - got utterance: start index 3, pending answers 0, chunks answered 0
+2016-01-07 03:10:08,384 - INFO - Recognition is done.
+2016-01-07 03:10:08,384 - INFO - Start at [07.01.2016 03:10:05], finish at [07.01.2016 03:10:08], took 2.68902921677 seconds
+2016-01-07 03:10:08,384 - INFO - Avg. 0.743762837358 chunks per second
+2016-01-07 03:10:08,384 - INFO - -----finished audio2Text
+2016-01-07 03:10:08,384 - INFO - -----request url = http://192.168.0.106:3000/send/LG_AKB72915207/KEY_VOLUMEDOWN
+2016-01-07 03:10:08,385 - INFO - Starting new HTTP connection (1): 192.168.0.106
+2016-01-07 03:10:08,431 - DEBUG - Setting read timeout to None
+2016-01-07 03:10:08,537 - DEBUG - "GET /send/LG_AKB72915207/KEY_VOLUMEDOWN HTTP/1.1" 302 23
+2016-01-07 03:10:08,539 - DEBUG - Setting read timeout to None
+2016-01-07 03:10:08,559 - DEBUG - "GET / HTTP/1.1" 200 9174
+2016-01-07 03:10:08,561 - INFO - -----success - 200
+2016-01-07 03:10:08,561 - INFO - ----stop listenCommand
+2016-01-07 03:19:57,869 - INFO - ----START voiceIRControl.py.
+2016-01-07 03:19:57,870 - INFO - ----finished to read device configuration json file device_config.json
+2016-01-07 03:19:57,870 - INFO - ----finished to set CMU SPHINX library settings
+2016-01-07 03:19:57,940 - INFO - ----finished to set alsaaudio parameters
+2016-01-07 03:20:02,102 - INFO - ----detected keyphrase raspberry
+2016-01-07 03:20:02,105 - INFO - ----start listenCommand
+2016-01-07 03:20:02,106 - INFO - -----start to record audio
+2016-01-07 03:20:05,151 - INFO - -----stop to record audio
+2016-01-07 03:20:05,151 - INFO - uuid=9782b53d4d6c4a8e8c97e1787da232ea
+2016-01-07 03:20:05,231 - INFO - Connected to asr.yandex.net:80.
+2016-01-07 03:20:05,352 - INFO - session_id=671f2642-b4d4-11e5-b88b-ca3799e7ec61
+2016-01-07 03:20:05,353 - INFO - Recognition was started.
+2016-01-07 03:20:05,353 - INFO - About to send chunk 0 (65536 bytes)
+2016-01-07 03:20:05,353 - INFO - entering send() :start index 0, pending answers 0, chunks answered 0
+2016-01-07 03:20:05,407 - INFO - leaving send()
+2016-01-07 03:20:05,407 - INFO - About to send chunk 1 (26668 bytes)
+2016-01-07 03:20:05,408 - INFO - entering send() :start index 0, pending answers 1, chunks answered 0
+2016-01-07 03:20:05,414 - INFO - leaving send()
+2016-01-07 03:20:05,415 - INFO - No more chunks. Finalizing recognition.
+2016-01-07 03:20:05,415 - INFO - entering send() :start index 0, pending answers 2, chunks answered 0
+2016-01-07 03:20:07,447 - INFO - got response: endOfUtt=True; len(recognition)=1
+2016-01-07 03:20:07,447 - INFO - partial result: Проверка ; merged=2
+2016-01-07 03:20:07,447 - INFO - Utterance is not None
+2016-01-07 03:20:07,447 - INFO - Chunks from 0 to 2:
+2016-01-07 03:20:07,448 - INFO - got utterance: start index 2, pending answers 1, chunks answered 0
+2016-01-07 03:20:07,588 - INFO - got response: endOfUtt=True; len(recognition)=0
+2016-01-07 03:20:07,589 - INFO - Utterance is not None
+2016-01-07 03:20:07,589 - INFO - utterance incomplete, hiding partial result
+2016-01-07 03:20:07,589 - INFO - Recognition is done.
+2016-01-07 03:20:07,589 - INFO - Start at [07.01.2016 03:20:05], finish at [07.01.2016 03:20:07], took 2.43786406517 seconds
+2016-01-07 03:20:07,589 - INFO - Avg. 0.820390286962 chunks per second
+2016-01-07 03:20:07,589 - INFO - -----finished audio2Text
+2016-01-07 03:20:07,589 - INFO - -----not command matches
+2016-01-07 03:20:07,589 - INFO - ----stop listenCommand
+2016-01-07 03:20:26,500 - INFO - ----START voiceIRControl.py.
+2016-01-07 03:20:26,501 - INFO - ----finished to read device configuration json file device_config.json
+2016-01-07 03:20:26,501 - INFO - ----finished to set CMU SPHINX library settings
+2016-01-07 03:20:26,567 - INFO - ----finished to set alsaaudio parameters
+2016-01-07 03:20:38,506 - INFO - ----START voiceIRControl.py.
+2016-01-07 03:20:38,507 - INFO - ----finished to read device configuration json file device_config.json
+2016-01-07 03:20:38,507 - INFO - ----finished to set CMU SPHINX library settings
+2016-01-07 03:20:38,571 - INFO - ----finished to set alsaaudio parameters
+2016-01-07 03:20:41,734 - INFO - ----detected keyphrase raspberry
+2016-01-07 03:20:41,739 - INFO - ----start listenCommand
+2016-01-07 03:20:41,740 - INFO - -----start to record audio
+2016-01-07 03:20:44,732 - INFO - -----stop to record audio
+2016-01-07 03:20:44,732 - INFO - uuid=9782b53d4d6c4a8e8c97e1787da232ea
+2016-01-07 03:20:44,804 - INFO - Connected to asr.yandex.net:80.
+2016-01-07 03:20:44,936 - INFO - session_id=7eb5646a-b4d4-11e5-8306-9277ca05b739
+2016-01-07 03:20:44,936 - INFO - Recognition was started.
+2016-01-07 03:20:44,936 - INFO - About to send chunk 0 (65536 bytes)
+2016-01-07 03:20:44,936 - INFO - entering send() :start index 0, pending answers 0, chunks answered 0
+2016-01-07 03:20:45,007 - INFO - leaving send()
+2016-01-07 03:20:45,008 - INFO - About to send chunk 1 (26668 bytes)
+2016-01-07 03:20:45,008 - INFO - entering send() :start index 0, pending answers 1, chunks answered 0
+2016-01-07 03:20:45,013 - INFO - leaving send()
+2016-01-07 03:20:45,013 - INFO - No more chunks. Finalizing recognition.
+2016-01-07 03:20:45,013 - INFO - entering send() :start index 0, pending answers 2, chunks answered 0
+2016-01-07 03:20:46,236 - INFO - got response: endOfUtt=False; len(recognition)=0
+2016-01-07 03:20:46,237 - INFO - Utterance is not None
+2016-01-07 03:20:46,237 - INFO - utterance incomplete, hiding partial result
+2016-01-07 03:20:47,233 - INFO - got response: endOfUtt=True; len(recognition)=1
+2016-01-07 03:20:47,233 - INFO - partial result: Проверка звука ; merged=2
+2016-01-07 03:20:47,233 - INFO - Utterance is not None
+2016-01-07 03:20:47,233 - INFO - Chunks from 0 to 3:
+2016-01-07 03:20:47,234 - INFO - got utterance: start index 3, pending answers 0, chunks answered 0
+2016-01-07 03:20:47,234 - INFO - Recognition is done.
+2016-01-07 03:20:47,234 - INFO - Start at [07.01.2016 03:20:44], finish at [07.01.2016 03:20:47], took 2.50133395195 seconds
+2016-01-07 03:20:47,234 - INFO - Avg. 0.799573363021 chunks per second
+2016-01-07 03:20:47,234 - INFO - -----finished audio2Text
+2016-01-07 03:20:47,234 - INFO - -----not command matches
+2016-01-07 03:20:47,234 - INFO - ----stop listenCommand
+2016-01-07 03:26:07,708 - INFO - ----START voiceIRControl.py.
+2016-01-07 03:26:07,709 - INFO - ----finished to read device configuration json file device_config.json
+2016-01-07 03:26:07,709 - INFO - ----finished to set CMU SPHINX library settings
+2016-01-07 03:26:07,772 - INFO - ----finished to set alsaaudio parameters
+2016-01-07 03:26:10,488 - INFO - ----detected keyphrase raspberry
+2016-01-07 03:26:10,492 - INFO - ----start listenCommand
+2016-01-07 03:26:10,492 - INFO - -----start to record audio
+2016-01-07 03:26:13,534 - INFO - -----stop to record audio
+2016-01-07 03:26:13,535 - INFO - uuid=9782b53d4d6c4a8e8c97e1787da232ea
+2016-01-07 03:26:13,604 - INFO - Connected to asr.yandex.net:80.
+2016-01-07 03:26:13,730 - INFO - session_id=42b14488-b4d5-11e5-9d9f-0e34f62dcea3
+2016-01-07 03:26:13,730 - INFO - Recognition was started.
+2016-01-07 03:26:13,730 - INFO - About to send chunk 0 (65536 bytes)
+2016-01-07 03:26:13,731 - INFO - entering send() :start index 0, pending answers 0, chunks answered 0
+2016-01-07 03:26:13,792 - INFO - leaving send()
+2016-01-07 03:26:13,792 - INFO - About to send chunk 1 (26668 bytes)
+2016-01-07 03:26:13,793 - INFO - entering send() :start index 0, pending answers 1, chunks answered 0
+2016-01-07 03:26:13,795 - INFO - leaving send()
+2016-01-07 03:26:13,795 - INFO - No more chunks. Finalizing recognition.
+2016-01-07 03:26:13,795 - INFO - entering send() :start index 0, pending answers 2, chunks answered 0
+2016-01-07 03:26:15,616 - INFO - got response: endOfUtt=False; len(recognition)=1
+2016-01-07 03:26:15,616 - INFO - partial result: Ключи ; merged=2
+2016-01-07 03:26:15,616 - INFO - Utterance is not None
+2016-01-07 03:26:15,616 - INFO - utterance incomplete, hiding partial result
+2016-01-07 03:26:16,007 - INFO - got response: endOfUtt=True; len(recognition)=2
+2016-01-07 03:26:16,008 - INFO - partial result: Ключи ; merged=1
+2016-01-07 03:26:16,008 - INFO - Utterance is not None
+2016-01-07 03:26:16,008 - INFO - Chunks from 0 to 3:
+2016-01-07 03:26:16,008 - INFO - got utterance: start index 3, pending answers 0, chunks answered 0
+2016-01-07 03:26:16,008 - INFO - Recognition is done.
+2016-01-07 03:26:16,008 - INFO - Start at [07.01.2016 03:26:13], finish at [07.01.2016 03:26:16], took 2.47382903099 seconds
+2016-01-07 03:26:16,008 - INFO - Avg. 0.808463307264 chunks per second
+2016-01-07 03:26:16,009 - INFO - -----finished audio2Text
+2016-01-07 03:26:16,009 - INFO - -----not command matches
+2016-01-07 03:26:16,009 - INFO - ----stop listenCommand

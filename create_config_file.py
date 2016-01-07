@@ -4,9 +4,11 @@ import json
 
 jsonFileName = "device_config.json"
 
-device = 'TV-LG'
+device = "LG_AKB72915207"
 
-name = [
+IP_adress = "http://192.168.0.104/"
+
+button = [
 'KEY_POWER',
 'KEY_POWER', 
 'KEY_1',
@@ -56,62 +58,39 @@ voice_command = [
 'ок'
 ]
 
-action = [
-'http://192.168.0.104/send/LG/KEY_POWER',
-'http://192.168.0.104/send/LG/KEY_POWER',
-'http://192.168.0.104/send/LG/KEY_1', 
-'http://192.168.0.104/send/LG/KEY_2',
-'http://192.168.0.104/send/LG/KEY_3', 
-'http://192.168.0.104/send/LG/KEY_4',
-'http://192.168.0.104/send/LG/KEY_5', 
-'http://192.168.0.104/send/LG/KEY_6',
-'http://192.168.0.104/send/LG/KEY_7', 
-'http://192.168.0.104/send/LG/KEY_8',
-'http://192.168.0.104/send/LG/KEY_9', 
-'http://192.168.0.104/send/LG/KEY_0',
-'http://192.168.0.104/send/LG/KEY_VOLUMEUP', 
-'http://192.168.0.104/send/LG/KEY_VOLUMEDOWN',
-'http://192.168.0.104/send/LG/KEY_CHANNELUP', 
-'http://192.168.0.104/send/LG/KEY_CHANNELDOWN',
-'http://192.168.0.104/send/LG/KEY_MENU', 
-'http://192.168.0.104/send/LG/KEY_UP',
-'http://192.168.0.104/send/LG/KEY_DOWN', 
-'http://192.168.0.104/send/LG/KEY_RIGHT',
-'http://192.168.0.104/send/LG/KEY_LEFT', 
-'http://192.168.0.104/send/LG/KEY_OK'
-]
-
-
-def write2Json(file_name, device, names, voice_commands, actions):
+def write2Json(file_name, device, buttons, voice_commands):
 	f = open(file_name, "w")
 	dev_buttons = []
-	for i in range(0, len(names)):
-		dev_buttons.append({'name' :names[i], 'action': actions[i], 'voice_command': voice_commands[i]})
+	for i in range(0, len(buttons)):
+		action = 'send/' + device + '/' + buttons[i]
+		dev_buttons.append({'device_name': device, 
+							'button' :buttons[i], 
+							'action': action, 
+							'voice_command': voice_commands[i]})
 
-	dict_device = {device: dev_buttons} 
+	dict_device = dev_buttons 
 	json.dump(dict_device, f, ensure_ascii = False, sort_keys=True,  indent=4, separators=(',', ': '))
 	f.close()
 
-def read4Json(file_name):
+def readJsonFile(file_name):
 	f = open(file_name, "r")
 	jdata = json.load(f)
 	f.close()
 	# parse jdata
-	device = jdata['TV-LG']
 	commands = []
 	actions = []
-	for button in device:
+	for button in jdata:
 		commands.append(button['voice_command'])
 		actions.append(button['action'])
 	return dict(zip(commands, actions)) 
 
 def main():
 	# write data to json file
-	write2Json(jsonFileName, device, name, voice_command, action)
+	write2Json(jsonFileName, device, button, voice_command)
 	print "data was written"
 
 	# read data from json file
-	data = read4Json(jsonFileName)
+	data = readJsonFile(jsonFileName)
 	print 'data in file: '
 	print data
 
