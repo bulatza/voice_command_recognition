@@ -1,10 +1,12 @@
 # -*- coding: utf-8 -*-
-import requests
+
 import asr
-import recordAudioToFile
 import time
+
+import requests
 import json
 
+# logging libs
 import logging
 app_log = logging.getLogger('root')
 
@@ -13,7 +15,9 @@ app_log = logging.getLogger('root')
 import sys, os
 from pocketsphinx.pocketsphinx import *
 from sphinxbase.sphinxbase import *
+
 import alsaaudio
+import wave
 
 sys.stdout.flush()
 
@@ -52,8 +56,29 @@ def speech2Text():
 	text.encode('utf-8')
 	return text  
 
-def recordAudio(audioFileName, recTime):
-	recordAudioToFile.recAlsaAudio(audioFileName, recTime) 
+def recordAudio(audioFileName, recTime, stream):
+	#recordAudioToFile.recAlsaAudio(audioFileName, recTime)
+	#stream = alsaaudio.PCM(alsaaudio.PCM_CAPTURE,alsaaudio.PCM_NORMAL)
+	#stream.setchannels(CHANNELS)
+	#stream.setrate(RATE)
+	#stream.setformat(FORMAT_alsaaudio)
+	#stream.setperiodsize(CHUNK)
+	CHUNK = 1024
+	RATE  = 16000
+	FORMAT_PCM_FORMAT_S16_LE_size  = 2
+	CHANNELS = 1
+	frames = []
+
+	for i in range(0, int(RATE / CHUNK * recTime)):
+		l,data = stream.read()
+		frames.append(data)
+
+	wf = wave.open(audioFileName, 'wb')
+	wf.setnchannels(CHANNELS)
+	wf.setsampwidth(FORMAT_PCM_FORMAT_S16_LE_size)
+	wf.setframerate(RATE)
+	wf.writeframes(b''.join(frames))
+	wf.close() 
 
 def findMatch(text, commands):
 	match = []
@@ -70,11 +95,11 @@ def commandToActionHttp(matchCommands, lib):
     	#print "---- IR server returned: status_code = " + str(r.status_code) + ", content = " + r.content
     	return r.status_code
 
-def listenCommand(com_act_lib, time):
+def listenCommand(com_act_lib, time, stream):
 	#time.sleep(0.5)
 	#  record speech audio file
 	app_log.info('-----start to record audio')
-	recordAudio(AUDIO_FILE_NAME, time)
+	recordAudio(AUDIO_FILE_NAME, time, stream)
 	app_log.info('-----stop to record audio')
 
 	#  yandex speech recognition
@@ -153,10 +178,10 @@ def main():
 	    if decoder.hyp() != None:
 	    	app_log.info('----detected keyphrase ' + KEYPHRASE)
 	        decoder.end_utt()
-	        
+
 	        try:
 	       		app_log.info('----start listenCommand')
-	       		listenCommand(com_act_lib, 3)
+	       		listenCommand(com_act_lib, 3, stream)
 	       		app_log.info('----stop listenCommand')
 	        except Exception, details:
 	       		app_log.info("Unexpected error:" + str(sys.exc_info()))

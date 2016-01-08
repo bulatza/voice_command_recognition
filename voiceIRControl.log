@@ -731,3 +731,80 @@
 2016-01-07 14:23:57,160 - INFO - -----request url = http://192.168.0.106:3000/send/LG_AKB72915207/KEY_POWER
 2016-01-07 14:23:57,343 - INFO - -----success - 200
 2016-01-07 14:23:57,344 - INFO - ----stop listenCommand
+2016-01-07 21:20:24,677 - INFO - ----START voiceIRControl.py.
+2016-01-07 21:20:24,678 - INFO - ----finished to read device configuration json file device_config.json
+2016-01-07 21:20:24,678 - INFO - ----finished to set CMU SPHINX library settings
+2016-01-07 21:20:25,124 - INFO - ----finished to set alsaaudio parameters
+2016-01-07 21:20:27,882 - INFO - ----detected keyphrase raspberry
+2016-01-07 21:20:27,882 - INFO - ----start listenCommand
+2016-01-07 21:20:27,882 - INFO - -----start to record audio
+2016-01-07 21:20:30,819 - INFO - -----stop to record audio
+2016-01-07 21:20:33,955 - INFO - -----finished audio2Text
+2016-01-07 21:20:33,955 - INFO - -----not command matches
+2016-01-07 21:20:33,956 - INFO - ----stop listenCommand
+2016-01-07 21:20:34,053 - INFO - ----detected keyphrase raspberry
+2016-01-07 21:20:34,057 - INFO - ----start listenCommand
+2016-01-07 21:20:34,057 - INFO - -----start to record audio
+2016-01-07 21:20:37,051 - INFO - -----stop to record audio
+2016-01-07 21:20:39,995 - INFO - -----finished audio2Text
+2016-01-07 21:20:39,996 - INFO - -----not command matches
+2016-01-07 21:20:39,996 - INFO - ----stop listenCommand
+2016-01-08 02:47:14,495 - INFO - ----START voiceIRControl.py.
+2016-01-08 02:47:14,496 - INFO - ----finished to read device configuration json file device_config.json
+2016-01-08 02:47:14,499 - INFO - ----finished to set CMU SPHINX library settings
+2016-01-08 02:47:14,782 - INFO - ----finished to set alsaaudio parameters
+2016-01-08 02:47:16,971 - INFO - ----detected keyphrase raspberry
+2016-01-08 02:53:57,905 - INFO - ----START voiceIRControl.py.
+2016-01-08 02:53:57,905 - INFO - ----finished to read device configuration json file device_config.json
+2016-01-08 02:53:57,905 - INFO - ----finished to set CMU SPHINX library settings
+2016-01-08 02:53:57,973 - INFO - ----finished to set alsaaudio parameters
+2016-01-08 02:54:00,911 - INFO - ----detected keyphrase raspberry
+2016-01-08 02:54:00,915 - INFO - ----start listenCommand
+2016-01-08 02:54:00,915 - INFO - -----start to record audio
+2016-01-08 02:54:03,733 - INFO - Unexpected error:(<type 'exceptions.NameError'>, NameError("global name 'CHANNELS' is not defined",), <traceback object at 0xb69f002c>)
+2016-01-08 02:54:10,188 - INFO - ----detected keyphrase raspberry
+2016-01-08 02:54:10,189 - INFO - ----start listenCommand
+2016-01-08 02:54:10,189 - INFO - -----start to record audio
+2016-01-08 02:54:13,092 - INFO - Unexpected error:(<type 'exceptions.NameError'>, NameError("global name 'CHANNELS' is not defined",), <traceback object at 0xb69f00cc>)
+2016-01-08 02:56:26,685 - INFO - ----START voiceIRControl.py.
+2016-01-08 02:56:26,686 - INFO - ----finished to read device configuration json file device_config.json
+2016-01-08 02:56:26,686 - INFO - ----finished to set CMU SPHINX library settings
+2016-01-08 02:56:26,747 - INFO - ----finished to set alsaaudio parameters
+2016-01-08 02:56:31,114 - INFO - ----detected keyphrase raspberry
+2016-01-08 02:56:31,118 - INFO - ----start listenCommand
+2016-01-08 02:56:31,118 - INFO - -----start to record audio
+2016-01-08 02:56:33,926 - INFO - -----stop to record audio
+2016-01-08 02:56:36,624 - INFO - -----finished audio2Text
+2016-01-08 02:56:36,624 - INFO - -----request url = http://192.168.0.106:3000/send/LG_AKB72915207/KEY_POWER
+2016-01-08 02:56:37,196 - INFO - -----success - 200
+2016-01-08 02:56:37,196 - INFO - ----stop listenCommand
+2016-01-08 02:56:39,022 - INFO - ----detected keyphrase raspberry
+2016-01-08 02:56:39,026 - INFO - ----start listenCommand
+2016-01-08 02:56:39,026 - INFO - -----start to record audio
+2016-01-08 02:56:41,922 - INFO - -----stop to record audio
+2016-01-08 02:56:44,632 - INFO - -----finished audio2Text
+2016-01-08 02:56:44,632 - INFO - -----request url = http://192.168.0.106:3000/send/LG_AKB72915207/KEY_POWER
+2016-01-08 02:56:44,855 - INFO - -----success - 200
+2016-01-08 02:56:44,855 - INFO - ----stop listenCommand
+2016-01-08 02:56:46,752 - INFO - ----detected keyphrase raspberry
+2016-01-08 02:56:46,752 - INFO - ----start listenCommand
+2016-01-08 02:56:46,753 - INFO - -----start to record audio
+2016-01-08 02:56:49,654 - INFO - -----stop to record audio
+2016-01-08 02:56:52,251 - INFO - -----finished audio2Text
+2016-01-08 02:56:52,251 - INFO - -----not command matches
+2016-01-08 02:56:52,251 - INFO - ----stop listenCommand
+2016-01-08 02:56:52,303 - INFO - ----detected keyphrase raspberry
+2016-01-08 02:56:52,307 - INFO - ----start listenCommand
+2016-01-08 02:56:52,307 - INFO - -----start to record audio
+2016-01-08 02:56:53,204 - INFO - -----stop to record audio
+2016-01-08 02:56:55,750 - INFO - -----finished audio2Text
+2016-01-08 02:56:55,750 - INFO - -----request url = http://192.168.0.106:3000/send/LG_AKB72915207/KEY_VOLUMEUP
+2016-01-08 02:56:55,999 - INFO - -----success - 200
+2016-01-08 02:56:55,999 - INFO - ----stop listenCommand
+2016-01-08 02:56:56,058 - INFO - ----detected keyphrase raspberry
+2016-01-08 02:56:56,062 - INFO - ----start listenCommand
+2016-01-08 02:56:56,062 - INFO - -----start to record audio
+2016-01-08 02:56:58,477 - INFO - -----stop to record audio
+2016-01-08 02:57:00,855 - INFO - -----finished audio2Text
+2016-01-08 02:57:00,856 - INFO - -----not command matches
+2016-01-08 02:57:00,856 - INFO - ----stop listenCommand
