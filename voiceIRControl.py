@@ -124,7 +124,7 @@ def listenCommand(com_act_lib, time, stream):
 def main():
 	#change directory
 	homedir = os.getcwd() 
-	irdir = os.path.join(homedir, 'irControl')
+	irdir = os.path.join(homedir, 'voice_command_recognition')
 	os.chdir(irdir)
 
 	# set logging info
