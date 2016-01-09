@@ -1,3 +1,4 @@
+#! /usr/bin/env python
 # -*- coding: utf-8 -*-
 
 import asr
@@ -19,9 +20,9 @@ from sphinxbase.sphinxbase import *
 import alsaaudio
 import wave
 
-sys.stdout.flush()
+sys.path.append('~/irControl')
 
-JSON_FILE_NAME = 'device_config.json'
+JSON_FILE_NAME = "device_config.json"
 AUDIO_FILE_NAME = 'output.wav'
 IP_adress = '192.168.0.106:3000'
 KEYPHRASE = 'raspberry'
@@ -36,7 +37,7 @@ def readJsonFile(file_name):
 	for button in jdata:
 		commands.append(button['voice_command'])
 		actions.append(button['action'])
-	
+
 	return dict(zip(commands, actions)) 
 
 def audio2Text(audioFileName):
@@ -121,6 +122,11 @@ def listenCommand(com_act_lib, time, stream):
 		app_log.info('-----not command matches')
 
 def main():
+	#change directory
+	homedir = os.getcwd() 
+	irdir = os.path.join(homedir, 'irControl')
+	os.chdir(irdir)
+
 	# set logging info
 	log_formatter = logging.Formatter('%(asctime)s - %(levelname)s - %(message)s')
 	log_file = 'voiceIRControl.log'

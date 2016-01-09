@@ -808,3 +808,56 @@
 2016-01-08 02:57:00,855 - INFO - -----finished audio2Text
 2016-01-08 02:57:00,856 - INFO - -----not command matches
 2016-01-08 02:57:00,856 - INFO - ----stop listenCommand
+2016-01-09 21:23:54,723 - INFO - ----START voiceIRControl.py.
+2016-01-09 21:23:54,742 - INFO - ----finished to read device configuration json file device_config.json
+2016-01-09 21:23:54,743 - INFO - ----finished to set CMU SPHINX library settings
+2016-01-09 21:23:54,947 - INFO - ----finished to set alsaaudio parameters
+2016-01-09 21:24:33,489 - INFO - ----START voiceIRControl.py.
+2016-01-09 21:24:33,490 - INFO - ----finished to read device configuration json file device_config.json
+2016-01-09 21:24:33,490 - INFO - ----finished to set CMU SPHINX library settings
+2016-01-09 21:24:33,557 - INFO - ----finished to set alsaaudio parameters
+2016-01-09 21:24:40,226 - INFO - ----START voiceIRControl.py.
+2016-01-09 21:24:40,227 - INFO - ----finished to read device configuration json file device_config.json
+2016-01-09 21:24:40,227 - INFO - ----finished to set CMU SPHINX library settings
+2016-01-09 21:24:40,289 - INFO - ----finished to set alsaaudio parameters
+2016-01-09 22:04:26,305 - INFO - ----START voiceIRControl.py.
+2016-01-09 22:04:26,306 - INFO - ----finished to read device configuration json file device_config.json
+2016-01-09 22:04:26,306 - INFO - ----finished to set CMU SPHINX library settings
+2016-01-09 22:04:26,557 - INFO - ----finished to set alsaaudio parameters
+2016-01-10 01:52:56,584 - INFO - ----START voiceIRControl.py.
+2016-01-10 01:52:56,617 - INFO - ----finished to read device configuration json file device_config.json
+2016-01-10 01:52:56,638 - INFO - ----finished to set CMU SPHINX library settings
+2016-01-10 01:52:57,179 - INFO - ----finished to set alsaaudio parameters
+2016-01-10 01:53:07,561 - INFO - ----START voiceIRControl.py.
+2016-01-10 01:53:07,562 - INFO - ----finished to read device configuration json file device_config.json
+2016-01-10 01:53:07,562 - INFO - ----finished to set CMU SPHINX library settings
+2016-01-10 01:53:07,622 - INFO - ----finished to set alsaaudio parameters
+2016-01-10 02:16:09,082 - INFO - ----START voiceIRControl.py.
+2016-01-10 02:16:14,693 - INFO - ----START voiceIRControl.py.
+2016-01-10 02:16:25,621 - INFO - ----START voiceIRControl.py.
+2016-01-10 02:16:49,845 - INFO - ----START voiceIRControl.py.
+2016-01-10 02:16:55,389 - INFO - ----START voiceIRControl.py.
+2016-01-10 02:16:55,390 - INFO - ----finished to read device configuration json file device_config.json
+2016-01-10 02:16:55,391 - INFO - ----finished to set CMU SPHINX library settings
+2016-01-10 02:16:55,471 - INFO - ----finished to set alsaaudio parameters
+2016-01-10 02:18:07,676 - INFO - ----START voiceIRControl.py.
+2016-01-10 02:25:30,875 - INFO - ----START voiceIRControl.py.
+2016-01-10 02:25:30,875 - INFO - ----finished to read device configuration json file device_config.json
+2016-01-10 02:25:30,876 - INFO - ----finished to set CMU SPHINX library settings
+2016-01-10 02:25:30,932 - INFO - ----finished to set alsaaudio parameters
+2016-01-10 02:28:35,153 - INFO - ----START voiceIRControl.py.
+2016-01-10 02:28:35,153 - INFO - ----finished to read device configuration json file device_config.json
+2016-01-10 02:28:35,154 - INFO - ----finished to set CMU SPHINX library settings
+2016-01-10 02:28:35,215 - INFO - ----finished to set alsaaudio parameters
+2016-01-10 02:32:44,475 - INFO - ----START voiceIRControl.py.
+2016-01-10 02:32:44,476 - INFO - ----finished to read device configuration json file device_config.json
+2016-01-10 02:32:44,476 - INFO - ----finished to set CMU SPHINX library settings
+2016-01-10 02:32:44,538 - INFO - ----finished to set alsaaudio parameters
+2016-01-10 02:32:47,889 - INFO - ----detected keyphrase raspberry
+2016-01-10 02:32:47,892 - INFO - ----start listenCommand
+2016-01-10 02:32:47,892 - INFO - -----start to record audio
+2016-01-10 02:32:50,787 - INFO - -----stop to record audio
+2016-01-10 02:32:53,614 - INFO - -----finished audio2Text
+2016-01-10 02:32:53,614 - INFO - -----request url = http://192.168.0.106:3000/send/LG_AKB72915207/KEY_POWER
+2016-01-10 02:32:53,907 - INFO - -----success - 200
+2016-01-10 02:32:53,907 - INFO - ----stop listenCommand
