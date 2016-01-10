@@ -123,8 +123,9 @@ def listenCommand(com_act_lib, time, stream):
 
 def main():
 	#change directory
-	homedir = os.getcwd() 
-	irdir = os.path.join(homedir, 'voice_command_recognition')
+	homedir = os.environ['HOME']
+	currdir = os.getcwd()
+	irdir = os.path.join(homedir, 'irControl/voice_command_recognition')
 	os.chdir(irdir)
 
 	# set logging info
@@ -174,13 +175,14 @@ def main():
 	# Process audio chunk by chunk. 
 	decoder = Decoder(config)
 	decoder.start_utt()
+	
 	while True:
 	    l, buf = stream.read()
 	    if buf:
-	         decoder.process_raw(buf, False, False)
+	        decoder.process_raw(buf, False, False)
 	    else:
 	    	app_log.info('----no data from stream')
-	        break
+	        #break
 	    if decoder.hyp() != None:
 	    	app_log.info('----detected keyphrase ' + KEYPHRASE)
 	        decoder.end_utt()
@@ -189,7 +191,7 @@ def main():
 	       		app_log.info('----start listenCommand')
 	       		listenCommand(com_act_lib, 3, stream)
 	       		app_log.info('----stop listenCommand')
-	        except Exception, details:
+	        except Exception:
 	       		app_log.info("Unexpected error:" + str(sys.exc_info()))
 	        
 	        decoder.start_utt()
