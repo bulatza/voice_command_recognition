@@ -94,16 +94,21 @@ def commandToActionHttp(matchCommands, lib):
 	for command in matchCommands:
 		action = lib[command]
 		ip_adress = []
+		
 		if action[0] == 'Z':
 			ip_adress = ZWAY_IP_adress
+			req_url = 'http://' + ip_adress + '/'  + action
+			r = requests.get(req_url, auth=('admin', 'bzahome27')) # http request
+
 		else:
 			ip_adress = IR_IP_adress
+			req_url = 'http://' + ip_adress + '/'  + action
+			r = requests.get(req_url) # http request
 
-		req_url = 'http://' + ip_adress + '/'  + action
 		app_log.info('---- request url = ' + req_url)
-    	r = requests.get(req_url) # http request
+
     	#print "---- IR server returned: status_code = " + str(r.status_code) + ", content = " + r.content
-    	return r.status_code
+    	return r
 
 def listenCommand(com_act_lib, time, stream):
 	#time.sleep(0.5)
@@ -122,8 +127,8 @@ def listenCommand(com_act_lib, time, stream):
 		match = findMatch(text, com_act_lib.keys())
 		
 	if (match):
-		status = commandToActionHttp(match, com_act_lib)
-		app_log.info('---- device returned status = ' + str(status))
+		r = commandToActionHttp(match, com_act_lib)
+		app_log.info('---- device returned status = ' + str(r.status) + ' content ' + str(r.content))
 	else:
 		app_log.info('---- not command matches')
 
@@ -218,8 +223,6 @@ def main():
 				app_log.info("Unexpected error:" + str(sys.exc_info()))
 
 			decoder.start_utt()
-
-
 
 if __name__ == "__main__":
         main()
