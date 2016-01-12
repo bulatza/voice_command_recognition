@@ -20,11 +20,10 @@ from sphinxbase.sphinxbase import *
 import alsaaudio
 import wave
 
-sys.path.append('~/irControl')
-
 JSON_FILE_NAME = "device_config.json"
 AUDIO_FILE_NAME = 'output.wav'
-IP_adress = '192.168.0.106:3000'
+IR_IP_adress = '192.168.0.106:3000'
+ZWAY_IP_adress = '192.168.0.106:8083'
 KEYPHRASE = 'raspberry'
 
 def readJsonFile(file_name):
@@ -90,8 +89,15 @@ def findMatch(text, commands):
 
 def commandToActionHttp(matchCommands, lib):
 	for command in matchCommands:
-		req_url = 'http://' + IP_adress + '/'  + lib[command]
-		app_log.info('-----request url = ' + req_url)
+		action = lib[command]
+		ip_adress = []
+		if action[0] == 'Z':
+			ip_adress = ZWAY_IP_adress
+		else:
+			ip_adress = IR_IP_adress
+
+		req_url = 'http://' + ip_adress + '/'  + action
+		app_log.info('---- request url = ' + req_url)
     	r = requests.get(req_url) # http request
     	#print "---- IR server returned: status_code = " + str(r.status_code) + ", content = " + r.content
     	return r.status_code
@@ -99,13 +105,13 @@ def commandToActionHttp(matchCommands, lib):
 def listenCommand(com_act_lib, time, stream):
 	#time.sleep(0.5)
 	#  record speech audio file
-	app_log.info('-----start to record audio')
+	app_log.info('---- start to record audio')
 	recordAudio(AUDIO_FILE_NAME, time, stream)
-	app_log.info('-----stop to record audio')
+	app_log.info('---- stop to record audio')
 
 	#  yandex speech recognition
 	text = audio2Text(AUDIO_FILE_NAME)
-	app_log.info('-----finished audio2Text')
+	app_log.info('---- finished audio2Text')
 	
 	# find commands in text
 	match = []
@@ -114,19 +120,16 @@ def listenCommand(com_act_lib, time, stream):
 		
 	if (match):
 		status = commandToActionHttp(match, com_act_lib)
-		if status == 200:
-			app_log.info('-----success - ' + str(status))
-		else:
-			app_log.info('-----not success - ' + str(status))
+		app_log.info('---- device returned status = ' + str(status))
 	else:
-		app_log.info('-----not command matches')
+		app_log.info('---- not command matches')
 
 def main():
 	#change directory
 	homedir = os.environ['HOME']
 	currdir = os.getcwd()
 	irdir = os.path.join(homedir, 'irControl/voice_command_recognition')
-	os.chdir(irdir)
+	#os.chdir(irdir)
 
 	# set logging info
 	log_formatter = logging.Formatter('%(asctime)s - %(levelname)s - %(message)s')
@@ -143,11 +146,11 @@ def main():
 	app_log.addHandler(file_handler)
 
 
-	app_log.info('----START voiceIRControl.py.')
+	app_log.info('-- START voiceIRControl.py.')
 
 	# read commands from json file
 	com_act_lib = readJsonFile(JSON_FILE_NAME)
-	app_log.info('----finished to read device configuration json file ' + JSON_FILE_NAME)
+	app_log.info('-- finished to read device configuration json file ' + JSON_FILE_NAME)
 
 	modeldir = "../pocketsphinx-python/pocketsphinx/model"
 	datadir = "../pocketsphinx-python/pocketsphinx/test/data"
@@ -157,7 +160,7 @@ def main():
 	config.set_string('-dict', os.path.join(modeldir, 'en-us/cmudict-en-us.dict'))
 	config.set_string('-keyphrase', KEYPHRASE)
 	config.set_float('-kws_threshold', 1e-40)
-	app_log.info('----finished to set CMU SPHINX library settings')
+	app_log.info('-- finished to set CMU SPHINX library settings')
 
 
 	# alsaaudio settings
@@ -170,7 +173,7 @@ def main():
 	stream.setrate(RATE)
 	stream.setformat(FORMAT)
 	stream.setperiodsize(CHUNK)
-	app_log.info('----finished to set alsaaudio parameters')
+	app_log.info('-- finished to set alsaaudio parameters')
 
 	# Process audio chunk by chunk. 
 	decoder = Decoder(config)
@@ -181,16 +184,16 @@ def main():
 	    if buf:
 	        decoder.process_raw(buf, False, False)
 	    else:
-	    	app_log.info('----no data from stream')
+	    	app_log.info('-- no data from stream')
 	        #break
 	    if decoder.hyp() != None:
-	    	app_log.info('----detected keyphrase ' + KEYPHRASE)
+	    	app_log.info('-- detected keyphrase ' + KEYPHRASE)
 	        decoder.end_utt()
 
 	        try:
-	       		app_log.info('----start listenCommand')
+	       		app_log.info('-- start listenCommand')
 	       		listenCommand(com_act_lib, 3, stream)
-	       		app_log.info('----stop listenCommand')
+	       		app_log.info('-- stop listenCommand')
 	        except Exception:
 	       		app_log.info("Unexpected error:" + str(sys.exc_info()))
 	        

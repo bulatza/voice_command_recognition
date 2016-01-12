@@ -945,3 +945,51 @@
 2016-01-10 03:02:42,374 - INFO - -----request url = http://192.168.0.106:3000/send/LG_AKB72915207/KEY_POWER
 2016-01-10 03:02:42,540 - INFO - -----success - 200
 2016-01-10 03:02:42,540 - INFO - ----stop listenCommand
+2016-01-12 01:56:37,461 - INFO - -- START voiceIRControl.py.
+2016-01-12 01:56:58,957 - INFO - -- START voiceIRControl.py.
+2016-01-12 01:57:37,265 - INFO - -- START voiceIRControl.py.
+2016-01-12 01:57:37,265 - INFO - -- finished to read device configuration json file device_config.json
+2016-01-12 01:57:37,266 - INFO - -- finished to set CMU SPHINX library settings
+2016-01-12 01:57:37,807 - INFO - -- finished to set alsaaudio parameters
+2016-01-12 01:57:58,243 - INFO - -- detected keyphrase raspberry
+2016-01-12 01:57:58,247 - INFO - -- start listenCommand
+2016-01-12 01:57:58,247 - INFO - ---- start to record audio
+2016-01-12 01:58:01,145 - INFO - ---- stop to record audio
+2016-01-12 01:58:03,905 - INFO - ---- finished audio2Text
+2016-01-12 01:58:03,905 - INFO - ---- not command matches
+2016-01-12 01:58:03,906 - INFO - -- stop listenCommand
+2016-01-12 01:58:05,979 - INFO - -- detected keyphrase raspberry
+2016-01-12 01:58:05,984 - INFO - -- start listenCommand
+2016-01-12 01:58:05,984 - INFO - ---- start to record audio
+2016-01-12 01:58:08,875 - INFO - ---- stop to record audio
+2016-01-12 01:58:11,324 - INFO - ---- finished audio2Text
+2016-01-12 01:58:11,324 - INFO - ---- request url = http://192.168.0.106:8083/ZWaveAPI/Run/devices[13].instances[0].Basic.Set(0)
+2016-01-12 01:58:11,391 - INFO - ---- device returned status = 401
+2016-01-12 01:58:11,391 - INFO - -- stop listenCommand
+2016-01-12 02:02:09,925 - INFO - -- START voiceIRControl.py.
+2016-01-12 02:02:09,926 - INFO - -- finished to read device configuration json file device_config.json
+2016-01-12 02:02:09,927 - INFO - -- finished to set CMU SPHINX library settings
+2016-01-12 02:02:09,980 - INFO - -- finished to set alsaaudio parameters
+2016-01-12 02:02:14,055 - INFO - -- detected keyphrase raspberry
+2016-01-12 02:02:14,061 - INFO - -- start listenCommand
+2016-01-12 02:02:14,061 - INFO - ---- start to record audio
+2016-01-12 02:02:16,959 - INFO - ---- stop to record audio
+2016-01-12 02:02:20,146 - INFO - ---- finished audio2Text
+2016-01-12 02:02:20,146 - INFO - ---- not command matches
+2016-01-12 02:02:20,146 - INFO - -- stop listenCommand
+2016-01-12 02:02:21,881 - INFO - -- detected keyphrase raspberry
+2016-01-12 02:02:21,886 - INFO - -- start listenCommand
+2016-01-12 02:02:21,886 - INFO - ---- start to record audio
+2016-01-12 02:02:24,781 - INFO - ---- stop to record audio
+2016-01-12 02:02:27,167 - INFO - ---- finished audio2Text
+2016-01-12 02:02:27,167 - INFO - ---- request url = http://192.168.0.106:8083/ZWaveAPI/Run/devices[13].instances[0].Basic.Set(0)
+2016-01-12 02:02:27,206 - INFO - ---- device returned status = 401
+2016-01-12 02:02:27,207 - INFO - -- stop listenCommand
+2016-01-12 02:02:30,475 - INFO - -- detected keyphrase raspberry
+2016-01-12 02:02:30,475 - INFO - -- start listenCommand
+2016-01-12 02:02:30,476 - INFO - ---- start to record audio
+2016-01-12 02:02:33,282 - INFO - ---- stop to record audio
+2016-01-12 02:02:35,813 - INFO - ---- finished audio2Text
+2016-01-12 02:02:35,813 - INFO - ---- request url = http://192.168.0.106:8083/ZWaveAPI/Run/devices[13].instances[0].Basic.Set(255)
+2016-01-12 02:02:35,845 - INFO - ---- device returned status = 401
+2016-01-12 02:02:35,845 - INFO - -- stop listenCommand

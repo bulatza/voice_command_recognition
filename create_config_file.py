@@ -1,12 +1,12 @@
+#! /usr/bin/env python
 # -*- coding: utf-8 -*-
+
 # JSON device configuration file encoder and decoder.
 import json 
 
-jsonFileName = "device_config.json"
+jsonFileName = "deviceConfig.json"
 
 device = "LG_AKB72915207"
-
-IP_adress = "http://192.168.0.104/"
 
 button = [
 'KEY_POWER',
@@ -91,8 +91,8 @@ def main():
 
 	# read data from json file
 	data = readJsonFile(jsonFileName)
-	print 'data in file: '
-	print data
+	#print 'data in file: '
+	#print data
 
 
 if __name__ == '__main__':

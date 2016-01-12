@@ -130,5 +130,19 @@
         "button": "KEY_OK",
         "device_name": "LG_AKB72915207",
         "voice_command": "ок"
+    },
+
+    {
+        "action": "ZWaveAPI/Run/devices[13].instances[0].Basic.Set(255)",
+        "button": "LIGHT_ON",
+        "device_name": "ZWAY",
+        "voice_command": "светло"
+    },
+
+    {
+        "action": "ZWaveAPI/Run/devices[13].instances[0].Basic.Set(0)",
+        "button": "LIGHT_OFF",
+        "device_name": "ZWAY",
+        "voice_command": "темно"
     }
 ]
