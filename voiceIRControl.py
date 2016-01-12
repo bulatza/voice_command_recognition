@@ -7,6 +7,9 @@ import time
 import requests
 import json
 
+# GPIO settings
+import RPi.GPIO as GPIO
+
 # logging libs
 import logging
 app_log = logging.getLogger('root')
@@ -125,6 +128,15 @@ def listenCommand(com_act_lib, time, stream):
 		app_log.info('---- not command matches')
 
 def main():
+	# setup GPIO
+	GPIO.setmode(GPIO.BCM)
+	green = 12
+	GPIO.setup(green, GPIO.OUT) # green
+	red = 16
+	GPIO.setup(red, GPIO.OUT) # red
+	GPIO.output(green, GPIO.HIGH)
+	GPIO.output(red, GPIO.HIGH)
+
 	#change directory
 	homedir = os.environ['HOME']
 	currdir = os.getcwd()
@@ -179,25 +191,35 @@ def main():
 	decoder = Decoder(config)
 	decoder.start_utt()
 	
-	while True:
-	    l, buf = stream.read()
-	    if buf:
-	        decoder.process_raw(buf, False, False)
-	    else:
-	    	app_log.info('-- no data from stream')
-	        #break
-	    if decoder.hyp() != None:
-	    	app_log.info('-- detected keyphrase ' + KEYPHRASE)
-	        decoder.end_utt()
 
-	        try:
-	       		app_log.info('-- start listenCommand')
-	       		listenCommand(com_act_lib, 3, stream)
-	       		app_log.info('-- stop listenCommand')
-	        except Exception:
-	       		app_log.info("Unexpected error:" + str(sys.exc_info()))
-	        
-	        decoder.start_utt()
+	while True:
+		GPIO.output(green, GPIO.HIGH)
+		GPIO.output(red, GPIO.LOW)
+
+		l, buf = stream.read()
+		if buf:
+		    decoder.process_raw(buf, False, False)
+		else:
+			app_log.info('-- no data from stream')
+		    #break
+		if decoder.hyp() != None:
+			
+			GPIO.output(green, GPIO.LOW)
+			GPIO.output(red, GPIO.HIGH)
+
+			app_log.info('-- detected keyphrase ' + KEYPHRASE)
+			decoder.end_utt()
+
+			try:
+				app_log.info('-- start listenCommand')
+				listenCommand(com_act_lib, 3, stream)
+				app_log.info('-- stop listenCommand')
+			except Exception:
+				app_log.info("Unexpected error:" + str(sys.exc_info()))
+
+			decoder.start_utt()
+
+
 
 if __name__ == "__main__":
         main()
