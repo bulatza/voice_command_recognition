@@ -46,6 +46,12 @@ def read_chunks_from_pyaudio(chunk_size = DEFAULT_CHUNK_SIZE_VALUE):
     while True:
         yield stream.read(chunk_size)
 
+def read_chunks_from_alsaaudio(stream, rate, chunk_size, rec_sec):
+    for i in range(0, int(rate / chunk_size * rec_sec)):
+        l,data = stream.read()
+        yield stream.read(chunk_size)
+
+
 
 def read_chunks_from_files(files, chunksize, start_from = 0, max_count = None):
     count = 0

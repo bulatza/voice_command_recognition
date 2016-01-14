@@ -75,25 +75,25 @@
         "action": "send/LG_AKB72915207/KEY_VOLUMEUP",
         "button": "KEY_VOLUMEUP",
         "device_name": "LG_AKB72915207",
-        "voice_command": "громкость прибавить"
+        "voice_command": "громкость плюс"
     },
     {
         "action": "send/LG_AKB72915207/KEY_VOLUMEDOWN",
         "button": "KEY_VOLUMEDOWN",
         "device_name": "LG_AKB72915207",
-        "voice_command": "громкость убавить"
+        "voice_command": "громкость минус"
     },
     {
         "action": "send/LG_AKB72915207/KEY_CHANNELUP",
         "button": "KEY_CHANNELUP",
         "device_name": "LG_AKB72915207",
-        "voice_command": "канал следующий"
+        "voice_command": "канал плюс"
     },
     {
         "action": "send/LG_AKB72915207/KEY_CHANNELDOWN",
         "button": "KEY_CHANNELDOWN",
         "device_name": "LG_AKB72915207",
-        "voice_command": "канал предыдущий"
+        "voice_command": "канал минус"
     },
     {
         "action": "send/LG_AKB72915207/KEY_MENU",
@@ -136,13 +136,13 @@
         "action": "ZWaveAPI/Run/devices[13].instances[0].Basic.Set(255)",
         "button": "LIGHT_ON",
         "device_name": "ZWAY",
-        "voice_command": "светло"
+        "voice_command": "день"
     },
 
     {
         "action": "ZWaveAPI/Run/devices[13].instances[0].Basic.Set(0)",
         "button": "LIGHT_OFF",
         "device_name": "ZWAY",
-        "voice_command": "темно"
+        "voice_command": "ночь"
     }
 ]

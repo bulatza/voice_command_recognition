@@ -107,8 +107,8 @@ def commandToActionHttp(matchCommands, lib):
 
 		app_log.info('---- request url = ' + req_url)
 
-    	#print "---- IR server returned: status_code = " + str(r.status_code) + ", content = " + r.content
-    	return r
+    	return_mes = "returned: status_code = " + str(r.status_code) + ", content = " + r.content
+    	return return_mes
 
 def listenCommand(com_act_lib, time, stream):
 	#time.sleep(0.5)
@@ -127,13 +127,13 @@ def listenCommand(com_act_lib, time, stream):
 		match = findMatch(text, com_act_lib.keys())
 		
 	if (match):
-		r = commandToActionHttp(match, com_act_lib)
-		app_log.info('---- device returned status = ' + str(r.status) + ' content ' + str(r.content))
+		mes = commandToActionHttp(match, com_act_lib)
+		app_log.info('---- device' +  mes)
 	else:
-		app_log.info('---- not command matches')
+		app_log.info('---- no command matches')
 
 def main():
-	# setup GPIO
+	# setup GPIO. LED Indication
 	GPIO.setmode(GPIO.BCM)
 	green = 12
 	GPIO.setup(green, GPIO.OUT) # green

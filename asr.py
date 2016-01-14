@@ -1,7 +1,6 @@
 
 # -*- coding: utf-8 -*-
 
-
 import logging
 import click
 import exceptions
@@ -114,7 +113,7 @@ def  yandexAsrFile(audioFile):
     f.close()
     return results
 
-def  yandexAsrMic():
+def  yandexAsrMic_pyaudio():
     chunks = [] 
     if is_pyaudio:
         chunks = client.read_chunks_from_pyaudio(chunk_size)
@@ -139,3 +138,23 @@ def  yandexAsrMic():
                  ipv4=ipv4,
                  punctuation=not nopunctuation)
 
+def  yandexAsrMic_inputstream(stream, rate, chunk_size, rec_sec):
+    chunks = []
+    chunks = client.read_chunks_from_alsaaudio(stream, rate, chunk_size, rec_sec)
+
+    if not chunks:
+        click.echo('Please, specify one or more input filename.')
+    else:
+        client.recognize(chunks,
+                 callback= text_callback,
+                 host=server,
+                 port=port,
+                 key=key,
+                 format=format,
+                 topic=model,
+                 lang=lang,
+                 reconnect_delay=reconnect_delay,
+                 reconnect_retry_count=reconnect_retry_count,                         
+                 uuid=uuid,
+                 ipv4=ipv4,
+                 punctuation=not nopunctuation)
