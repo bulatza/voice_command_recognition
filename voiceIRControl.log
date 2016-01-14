@@ -2212,3 +2212,181 @@
 2016-01-15 01:41:35,819 - INFO - ---- recognized text = телевизор 
 2016-01-15 01:41:35,819 - INFO - ---- no command matches
 2016-01-15 01:41:35,820 - INFO - -- stop listenCommand
+2016-01-15 01:45:56,231 - INFO - -- START voiceIRControl.py.
+2016-01-15 01:45:56,231 - INFO - -- finished to read device configuration json file device_config.json
+2016-01-15 01:45:56,232 - INFO - -- finished to set CMU SPHINX library settings
+2016-01-15 01:45:56,296 - INFO - -- finished to set alsaaudio parameters
+2016-01-15 01:45:58,682 - INFO - -- detected keyphrase eva
+2016-01-15 01:45:58,686 - INFO - -- start listenCommand
+2016-01-15 01:45:58,686 - INFO - ---- start speech2Text
+2016-01-15 01:46:01,094 - INFO - ---- finished speech2Text
+2016-01-15 01:46:01,095 - INFO - ---- recognized text = 
+2016-01-15 01:46:01,095 - INFO - ---- no command matches
+2016-01-15 01:46:01,095 - INFO - -- stop listenCommand
+2016-01-15 01:46:07,661 - INFO - -- detected keyphrase eva
+2016-01-15 01:46:07,662 - INFO - -- start listenCommand
+2016-01-15 01:46:07,662 - INFO - ---- start speech2Text
+2016-01-15 01:46:10,014 - INFO - ---- finished speech2Text
+2016-01-15 01:46:10,014 - INFO - ---- recognized text = 
+2016-01-15 01:46:10,014 - INFO - ---- no command matches
+2016-01-15 01:46:10,014 - INFO - -- stop listenCommand
+2016-01-15 01:46:10,050 - INFO - -- detected keyphrase eva
+2016-01-15 01:46:10,054 - INFO - -- start listenCommand
+2016-01-15 01:46:10,054 - INFO - ---- start speech2Text
+2016-01-15 01:46:12,452 - INFO - ---- finished speech2Text
+2016-01-15 01:46:12,452 - INFO - ---- recognized text = ива 
+2016-01-15 01:46:12,453 - INFO - ---- no command matches
+2016-01-15 01:46:12,453 - INFO - -- stop listenCommand
+2016-01-15 01:46:17,607 - INFO - -- detected keyphrase eva
+2016-01-15 01:46:17,607 - INFO - -- start listenCommand
+2016-01-15 01:46:17,608 - INFO - ---- start speech2Text
+2016-01-15 01:46:20,084 - INFO - ---- finished speech2Text
+2016-01-15 01:46:20,084 - INFO - ---- recognized text = ива 
+2016-01-15 01:46:20,084 - INFO - ---- no command matches
+2016-01-15 01:46:20,085 - INFO - -- stop listenCommand
+2016-01-15 01:46:20,286 - INFO - -- detected keyphrase eva
+2016-01-15 01:46:20,287 - INFO - -- start listenCommand
+2016-01-15 01:46:20,287 - INFO - ---- start speech2Text
+2016-01-15 01:46:22,639 - INFO - ---- finished speech2Text
+2016-01-15 01:46:22,639 - INFO - ---- recognized text = ива 
+2016-01-15 01:46:22,640 - INFO - ---- no command matches
+2016-01-15 01:46:22,640 - INFO - -- stop listenCommand
+2016-01-15 01:46:27,534 - INFO - -- detected keyphrase eva
+2016-01-15 01:46:27,534 - INFO - -- start listenCommand
+2016-01-15 01:46:27,534 - INFO - ---- start speech2Text
+2016-01-15 01:46:29,971 - INFO - ---- finished speech2Text
+2016-01-15 01:46:29,971 - INFO - ---- recognized text = ива 
+2016-01-15 01:46:29,972 - INFO - ---- no command matches
+2016-01-15 01:46:29,972 - INFO - -- stop listenCommand
+2016-01-15 01:50:00,707 - INFO - -- START voiceIRControl.py.
+2016-01-15 01:50:00,707 - INFO - -- finished to read device configuration json file device_config.json
+2016-01-15 01:50:00,708 - INFO - -- finished to set CMU SPHINX library settings
+2016-01-15 01:50:00,775 - INFO - -- finished to set alsaaudio parameters
+2016-01-15 01:50:14,483 - INFO - -- detected keyphrase eva
+2016-01-15 01:50:14,487 - INFO - -- start listenCommand
+2016-01-15 01:50:14,488 - INFO - ---- start speech2Text
+2016-01-15 01:50:16,840 - INFO - ---- finished speech2Text
+2016-01-15 01:50:16,840 - INFO - ---- recognized text = 
+2016-01-15 01:50:16,840 - INFO - ---- no command matches
+2016-01-15 01:50:16,841 - INFO - -- stop listenCommand
+2016-01-15 01:50:19,351 - INFO - -- detected keyphrase eva
+2016-01-15 01:50:19,352 - INFO - -- start listenCommand
+2016-01-15 01:50:19,352 - INFO - ---- start speech2Text
+2016-01-15 01:50:21,632 - INFO - ---- finished speech2Text
+2016-01-15 01:50:21,632 - INFO - ---- recognized text = 
+2016-01-15 01:50:21,632 - INFO - ---- no command matches
+2016-01-15 01:50:21,632 - INFO - -- stop listenCommand
+2016-01-15 01:50:23,176 - INFO - -- detected keyphrase eva
+2016-01-15 01:50:23,180 - INFO - -- start listenCommand
+2016-01-15 01:50:23,180 - INFO - ---- start speech2Text
+2016-01-15 01:50:25,524 - INFO - ---- finished speech2Text
+2016-01-15 01:50:25,524 - INFO - ---- recognized text = 2 
+2016-01-15 01:50:25,695 - INFO - ---- request url = http://192.168.0.106:3000/send/LG_AKB72915207/KEY_2
+2016-01-15 01:50:25,696 - INFO - ---- device returned: status_code = 200
+2016-01-15 01:50:25,696 - INFO - -- stop listenCommand
+2016-01-15 01:50:31,679 - INFO - -- detected keyphrase eva
+2016-01-15 01:50:31,679 - INFO - -- start listenCommand
+2016-01-15 01:50:31,680 - INFO - ---- start speech2Text
+2016-01-15 01:50:34,022 - INFO - ---- finished speech2Text
+2016-01-15 01:50:34,022 - INFO - ---- recognized text = 2 
+2016-01-15 01:50:34,205 - INFO - ---- request url = http://192.168.0.106:3000/send/LG_AKB72915207/KEY_2
+2016-01-15 01:50:34,205 - INFO - ---- device returned: status_code = 200
+2016-01-15 01:50:34,206 - INFO - -- stop listenCommand
+2016-01-15 01:50:40,461 - INFO - -- detected keyphrase eva
+2016-01-15 01:50:40,465 - INFO - -- start listenCommand
+2016-01-15 01:50:40,465 - INFO - ---- start speech2Text
+2016-01-15 01:50:42,874 - INFO - ---- finished speech2Text
+2016-01-15 01:50:42,875 - INFO - ---- recognized text = 2 
+2016-01-15 01:50:43,205 - INFO - ---- request url = http://192.168.0.106:3000/send/LG_AKB72915207/KEY_2
+2016-01-15 01:50:43,207 - INFO - ---- device returned: status_code = 200
+2016-01-15 01:50:43,207 - INFO - -- stop listenCommand
+2016-01-15 01:50:58,551 - INFO - -- START voiceIRControl.py.
+2016-01-15 01:50:58,552 - INFO - -- finished to read device configuration json file device_config.json
+2016-01-15 01:50:58,553 - INFO - -- finished to set CMU SPHINX library settings
+2016-01-15 01:50:58,616 - INFO - -- finished to set alsaaudio parameters
+2016-01-15 01:51:30,299 - INFO - -- START voiceIRControl.py.
+2016-01-15 01:51:30,299 - INFO - -- finished to read device configuration json file device_config.json
+2016-01-15 01:51:30,300 - INFO - -- finished to set CMU SPHINX library settings
+2016-01-15 01:51:30,361 - INFO - -- finished to set alsaaudio parameters
+2016-01-15 01:51:44,980 - INFO - -- detected keyphrase eva
+2016-01-15 01:51:44,984 - INFO - -- start listenCommand
+2016-01-15 01:51:44,984 - INFO - ---- start speech2Text
+2016-01-15 01:51:47,304 - INFO - ---- finished speech2Text
+2016-01-15 01:51:47,305 - INFO - ---- recognized text = 
+2016-01-15 01:51:47,305 - INFO - ---- no command matches
+2016-01-15 01:51:47,305 - INFO - -- stop listenCommand
+2016-01-15 01:51:54,077 - INFO - -- detected keyphrase eva
+2016-01-15 01:51:54,081 - INFO - -- start listenCommand
+2016-01-15 01:51:54,081 - INFO - ---- start speech2Text
+2016-01-15 01:51:56,437 - INFO - ---- finished speech2Text
+2016-01-15 01:51:56,438 - INFO - ---- recognized text = 
+2016-01-15 01:51:56,438 - INFO - ---- no command matches
+2016-01-15 01:51:56,438 - INFO - -- stop listenCommand
+2016-01-15 01:52:44,117 - INFO - -- START voiceIRControl.py.
+2016-01-15 01:52:44,118 - INFO - -- finished to read device configuration json file device_config.json
+2016-01-15 01:52:44,119 - INFO - -- finished to set CMU SPHINX library settings
+2016-01-15 01:52:44,179 - INFO - -- finished to set alsaaudio parameters
+2016-01-15 01:53:27,042 - INFO - -- detected keyphrase walle
+2016-01-15 01:53:27,047 - INFO - -- start listenCommand
+2016-01-15 01:53:27,048 - INFO - ---- start speech2Text
+2016-01-15 01:53:29,540 - INFO - ---- finished speech2Text
+2016-01-15 01:53:29,541 - INFO - ---- recognized text = петр 
+2016-01-15 01:53:29,541 - INFO - ---- no command matches
+2016-01-15 01:53:29,541 - INFO - -- stop listenCommand
+2016-01-15 01:53:40,651 - INFO - -- detected keyphrase walle
+2016-01-15 01:53:40,655 - INFO - -- start listenCommand
+2016-01-15 01:53:40,655 - INFO - ---- start speech2Text
+2016-01-15 01:53:43,148 - INFO - ---- finished speech2Text
+2016-01-15 01:53:43,148 - INFO - ---- recognized text = петр 
+2016-01-15 01:53:43,148 - INFO - ---- no command matches
+2016-01-15 01:53:43,148 - INFO - -- stop listenCommand
+2016-01-15 01:54:17,446 - INFO - -- START voiceIRControl.py.
+2016-01-15 01:54:17,447 - INFO - -- finished to read device configuration json file device_config.json
+2016-01-15 01:54:17,447 - INFO - -- finished to set CMU SPHINX library settings
+2016-01-15 01:54:17,518 - INFO - -- finished to set alsaaudio parameters
+2016-01-15 01:54:23,864 - INFO - -- detected keyphrase computer
+2016-01-15 01:54:23,864 - INFO - -- start listenCommand
+2016-01-15 01:54:23,864 - INFO - ---- start speech2Text
+2016-01-15 01:54:26,158 - INFO - ---- finished speech2Text
+2016-01-15 01:54:26,158 - INFO - ---- recognized text = 
+2016-01-15 01:54:26,158 - INFO - ---- no command matches
+2016-01-15 01:54:26,158 - INFO - -- stop listenCommand
+2016-01-15 01:54:28,182 - INFO - -- detected keyphrase computer
+2016-01-15 01:54:28,183 - INFO - -- start listenCommand
+2016-01-15 01:54:28,183 - INFO - ---- start speech2Text
+2016-01-15 01:54:30,610 - INFO - ---- finished speech2Text
+2016-01-15 01:54:30,610 - INFO - ---- recognized text = громкость + 
+2016-01-15 01:54:30,843 - INFO - ---- request url = http://192.168.0.106:3000/send/LG_AKB72915207/KEY_VOLUMEUP
+2016-01-15 01:54:30,844 - INFO - ---- device returned: status_code = 200
+2016-01-15 01:54:30,844 - INFO - -- stop listenCommand
+2016-01-15 01:54:33,097 - INFO - -- detected keyphrase computer
+2016-01-15 01:54:33,098 - INFO - -- start listenCommand
+2016-01-15 01:54:33,098 - INFO - ---- start speech2Text
+2016-01-15 01:54:35,657 - INFO - ---- finished speech2Text
+2016-01-15 01:54:35,657 - INFO - ---- recognized text = - 
+2016-01-15 01:54:35,658 - INFO - ---- no command matches
+2016-01-15 01:54:35,658 - INFO - -- stop listenCommand
+2016-01-15 01:54:41,645 - INFO - -- detected keyphrase computer
+2016-01-15 01:54:41,649 - INFO - -- start listenCommand
+2016-01-15 01:54:41,649 - INFO - ---- start speech2Text
+2016-01-15 01:54:44,143 - INFO - ---- finished speech2Text
+2016-01-15 01:54:44,143 - INFO - ---- recognized text = громкость - 
+2016-01-15 01:54:44,350 - INFO - ---- request url = http://192.168.0.106:3000/send/LG_AKB72915207/KEY_VOLUMEDOWN
+2016-01-15 01:54:44,350 - INFO - ---- device returned: status_code = 200
+2016-01-15 01:54:44,351 - INFO - -- stop listenCommand
+2016-01-15 01:54:50,253 - INFO - -- detected keyphrase computer
+2016-01-15 01:54:50,254 - INFO - -- start listenCommand
+2016-01-15 01:54:50,254 - INFO - ---- start speech2Text
+2016-01-15 01:54:52,917 - INFO - ---- finished speech2Text
+2016-01-15 01:54:52,917 - INFO - ---- recognized text = день 
+2016-01-15 01:54:53,062 - INFO - ---- request url = http://192.168.0.106:8083/ZWaveAPI/Run/devices[13].instances[0].Basic.Set(255)
+2016-01-15 01:54:53,063 - INFO - ---- device returned: status_code = 200
+2016-01-15 01:54:53,063 - INFO - -- stop listenCommand
+2016-01-15 01:54:57,797 - INFO - -- detected keyphrase computer
+2016-01-15 01:54:57,801 - INFO - -- start listenCommand
+2016-01-15 01:54:57,801 - INFO - ---- start speech2Text
+2016-01-15 01:55:00,138 - INFO - ---- finished speech2Text
+2016-01-15 01:55:00,138 - INFO - ---- recognized text = ночь 
+2016-01-15 01:55:00,228 - INFO - ---- request url = http://192.168.0.106:8083/ZWaveAPI/Run/devices[13].instances[0].Basic.Set(0)
+2016-01-15 01:55:00,228 - INFO - ---- device returned: status_code = 200
+2016-01-15 01:55:00,229 - INFO - -- stop listenCommand

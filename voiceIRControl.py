@@ -28,7 +28,8 @@ AUDIO_FILE_NAME = 'output.wav'
 IR_IP_adress = '192.168.0.106:3000'
 ZWAY_IP_adress = '192.168.0.106:8083'
 
-KEYPHRASE = 'raspberry'
+KEYPHRASE = 'computer'
+KEYPHRASE_ERR = 1e-10
 REC_TIME = 2
 
 def readJsonFile(file_name):
@@ -201,8 +202,8 @@ def main():
 	config = Decoder.default_config()
 	config.set_string('-hmm', os.path.join(modeldir, 'en-us/en-us'))
 	config.set_string('-dict', os.path.join(modeldir, 'en-us/cmudict-en-us.dict'))
-	config.set_string('-keyphrase', KEYPHRASE)
-	config.set_float('-kws_threshold', 1e-40)
+	config.set_string('-keyphrase', KEYPHRASE) 
+	config.set_float('-kws_threshold', KEYPHRASE_ERR)
 	app_log.info('-- finished to set CMU SPHINX library settings')
 
 
