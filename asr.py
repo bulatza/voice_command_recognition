@@ -34,12 +34,11 @@ uuid = u'9782b53d4d6c4a8e8c97e1787da232ea'
 #files = 'out.wav'
 
 # callback variable
-textMic = ''
+recognized_text = ''
 
 def text_callback(yandex_text):
-    global textMic
-    textMic = yandex_text
-    print 'callback = ' + str(textMic)
+    global recognized_text
+    recognized_text = yandex_text
 
 def yandexASR(key, server, port, format, model, lang, chunk_size, start_with_chunk, max_chunks_count, silent, reconnect_delay, reconnect_retry_count, record, ipv4, nopunctuation, uuid, files):
     results = ""
@@ -113,7 +112,7 @@ def  yandexAsrFile(audioFile):
     f.close()
     return results
 
-def  yandexAsrMic_pyaudio():
+def  yandexAsrMicPyaudio():
     chunks = [] 
     if is_pyaudio:
         chunks = client.read_chunks_from_pyaudio(chunk_size)
@@ -138,7 +137,7 @@ def  yandexAsrMic_pyaudio():
                  ipv4=ipv4,
                  punctuation=not nopunctuation)
 
-def  yandexAsrMic_inputstream(stream, rate, chunk_size, rec_sec):
+def  yandexAsrMicStream(stream, rate, chunk_size, rec_sec):
     chunks = []
     chunks = client.read_chunks_from_alsaaudio(stream, rate, chunk_size, rec_sec)
 
@@ -158,3 +157,4 @@ def  yandexAsrMic_inputstream(stream, rate, chunk_size, rec_sec):
                  uuid=uuid,
                  ipv4=ipv4,
                  punctuation=not nopunctuation)
+    return recognized_text

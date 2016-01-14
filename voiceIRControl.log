@@ -993,3 +993,1222 @@
 2016-01-12 02:02:35,813 - INFO - ---- request url = http://192.168.0.106:8083/ZWaveAPI/Run/devices[13].instances[0].Basic.Set(255)
 2016-01-12 02:02:35,845 - INFO - ---- device returned status = 401
 2016-01-12 02:02:35,845 - INFO - -- stop listenCommand
+2016-01-14 23:12:47,399 - INFO - -- START voiceIRControl.py.
+2016-01-14 23:12:47,417 - INFO - -- finished to read device configuration json file device_config.json
+2016-01-14 23:12:47,417 - INFO - -- finished to set CMU SPHINX library settings
+2016-01-14 23:12:47,659 - INFO - -- finished to set alsaaudio parameters
+2016-01-14 23:12:51,434 - INFO - -- detected keyphrase raspberry
+2016-01-14 23:12:51,434 - INFO - -- start listenCommand
+2016-01-14 23:12:51,435 - INFO - ---- start to record audio
+2016-01-14 23:12:54,247 - INFO - ---- stop to record audio
+2016-01-14 23:12:57,309 - INFO - ---- finished audio2Text
+2016-01-14 23:12:57,309 - INFO - ---- no command matches
+2016-01-14 23:12:57,309 - INFO - -- stop listenCommand
+2016-01-14 23:12:57,445 - INFO - -- detected keyphrase raspberry
+2016-01-14 23:12:57,448 - INFO - -- start listenCommand
+2016-01-14 23:12:57,448 - INFO - ---- start to record audio
+2016-01-14 23:12:59,069 - INFO - ---- stop to record audio
+2016-01-14 23:13:02,343 - INFO - ---- finished audio2Text
+2016-01-14 23:13:02,343 - INFO - ---- no command matches
+2016-01-14 23:13:02,344 - INFO - -- stop listenCommand
+2016-01-14 23:48:39,030 - INFO - -- START voiceIRControl.py.
+2016-01-14 23:48:39,031 - INFO - -- finished to read device configuration json file device_config.json
+2016-01-14 23:48:39,031 - INFO - -- finished to set CMU SPHINX library settings
+2016-01-14 23:48:39,098 - INFO - -- finished to set alsaaudio parameters
+2016-01-14 23:48:45,776 - INFO - -- detected keyphrase raspberry
+2016-01-14 23:48:45,779 - INFO - -- start listenCommand
+2016-01-14 23:48:45,779 - INFO - ---- start speech2Text
+2016-01-14 23:48:45,953 - INFO - -- Unexpected error:(<type 'exceptions.TypeError'>, TypeError('read() takes exactly 0 arguments (1 given)',), <traceback object at 0xb69f0be4>)
+2016-01-14 23:49:34,974 - INFO - -- detected keyphrase raspberry
+2016-01-14 23:49:34,978 - INFO - -- start listenCommand
+2016-01-14 23:49:34,978 - INFO - ---- start speech2Text
+2016-01-14 23:49:35,139 - INFO - -- Unexpected error:(<type 'exceptions.TypeError'>, TypeError('read() takes exactly 0 arguments (1 given)',), <traceback object at 0xb69f0d74>)
+2016-01-14 23:49:44,207 - INFO - -- detected keyphrase raspberry
+2016-01-14 23:49:44,213 - INFO - -- start listenCommand
+2016-01-14 23:49:44,214 - INFO - ---- start speech2Text
+2016-01-14 23:49:44,404 - INFO - -- Unexpected error:(<type 'exceptions.TypeError'>, TypeError('read() takes exactly 0 arguments (1 given)',), <traceback object at 0xb69f0dc4>)
+2016-01-14 23:50:37,964 - INFO - -- detected keyphrase raspberry
+2016-01-14 23:50:37,968 - INFO - -- start listenCommand
+2016-01-14 23:50:37,968 - INFO - ---- start speech2Text
+2016-01-14 23:50:38,162 - INFO - -- Unexpected error:(<type 'exceptions.TypeError'>, TypeError('read() takes exactly 0 arguments (1 given)',), <traceback object at 0xb69f0e14>)
+2016-01-14 23:50:40,975 - INFO - -- START voiceIRControl.py.
+2016-01-14 23:50:40,976 - INFO - -- finished to read device configuration json file device_config.json
+2016-01-14 23:50:40,976 - INFO - -- finished to set CMU SPHINX library settings
+2016-01-14 23:50:41,039 - INFO - -- finished to set alsaaudio parameters
+2016-01-14 23:50:53,249 - INFO - -- detected keyphrase raspberry
+2016-01-14 23:50:53,250 - INFO - -- start listenCommand
+2016-01-14 23:50:53,250 - INFO - ---- start speech2Text
+2016-01-14 23:50:53,405 - INFO - -- Unexpected error:(<type 'exceptions.TypeError'>, TypeError("(1024, '\\xdf\\xff\\xe2\\xff\\xde\\xff\\xdb\\xff\\xde\\xff\\xdd\\xff\\xe0\\xff\\xdf\\xff\\xdd\\xff\\xda\\xff\\xd7\\xff\\xd7\\xff\\xd9\\xff\\xd9\\xff\\xda\\xff\\xdc\\xff\\xe3\\xff\\xe6\\xff\\xe5\\xff\\xe7\\xff\\xe8\\xff\\xe9\\xff\\xe7\\xff\\xe6\\xff\\xe2\\xff\\xdd\\xff\\xdd\\xff\\xde\\xff\\xdd\\xff\\xde\\xff\\xe1\\xff\\xdf\\xff\\xe0\\xff\\xdd\\xff\\xda\\xff\\xdb\\xff\\xdb\\xff\\xd9\\xff\\xd9\\xff\\xd9\\xff\\xdb\\xff\\xdc\\xff\\xdc\\xff\\xdb\\xff\\xdb\\xff\\xdb\\xff\\xdc\\xff\\xdf\\xff\\xde\\xff\\xdd\\xff\\xde\\xff\\xe0\\xff\\xe0\\xff\\xe1\\xff\\xe2\\xff\\xe2\\xff\\xe1\\xff\\xe2\\xff\\xe2\\xff\\xe2\\xff\\xe2\\xff\\xe1\\xff\\xde\\xff\\xdb\\xff\\xda\\xff\\xd8\\xff\\xd7\\xff\\xda\\xff\\xda\\xff\\xda\\xff\\xdc\\xff\\xe1\\xff\\xe2\\xff\\xe1\\xff\\xe3\\xff\\xe3\\xff\\xe3\\xff\\xe3\\xff\\xdf\\xff\\xdb\\xff\\xdc\\xff\\xdb\\xff\\xdc\\xff\\xdd\\xff\\xdc\\xff\\xdc\\xff\\xdc\\xff\\xdd\\xff\\xde\\xff\\xdc\\xff\\xdc\\xff\\xdd\\xff\\xdc\\xff\\xdc\\xff\\xdc\\xff\\xde\\xff\\xe1\\xff\\xe4\\xff\\xe8\\xff\\xe9\\xff\\xe5\\xff\\xe1\\xff\\xdf\\xff\\xde\\xff\\xdc\\xff\\xd9\\xff\\xd6\\xff\\xd8\\xff\\xd8\\xff\\xda\\xff\\xdd\\xff\\xde\\xff\\xde\\xff\\xde\\xff\\xe0\\xff\\xe0\\xff\\xe2\\xff\\xe2\\xff\\xde\\xff\\xdd\\xff\\xdd\\xff\\xdc\\xff\\xdd\\xff\\xde\\xff\\xdc\\xff\\xdf\\xff\\xe4\\xff has type <type 'tuple'>, but expected one of: (<type 'str'>,)",), <traceback object at 0xb6a4acac>)
+2016-01-14 23:50:55,853 - INFO - -- detected keyphrase raspberry
+2016-01-14 23:50:55,857 - INFO - -- start listenCommand
+2016-01-14 23:50:55,857 - INFO - ---- start speech2Text
+2016-01-14 23:50:56,046 - INFO - -- Unexpected error:(<type 'exceptions.TypeError'>, TypeError('(1024, "\\xd3\\xff\\xcc\\xff\\xcd\\xff\\xf6\\xff\\xcd\\xff\\xb0\\xff\\xb4\\xff\\xde\\xff\\xed\\xff\\xea\\xff\\x1a\\x00\\xf0\\xff\\xe2\\xffE\\x00\\xf1\\xff\\xde\\xff\\xda\\xff\\xbc\\xff\\xcb\\xff\\xb4\\xff\\xc7\\xff\\xdb\\xff\\xd4\\xff\\xe0\\xff\\xe6\\xff\\xcc\\xff\\xd3\\xff\\xc1\\xff\\xde\\xff\\xf4\\xff\\xcd\\xff\\xdd\\xff\\xef\\xff\\xcc\\xff\\xd2\\xff\\x18\\x00\\n\\x00\\xe2\\xff\\xe5\\xff\\xdc\\xff\\xdf\\xff\\xed\\xff\\xda\\xff\\xe6\\xff\\xdf\\xff\\xde\\xff\\xf3\\xff\\xaf\\xff\\xa5\\xff\\xbd\\xff\\xc4\\xff\\xe6\\xff\\xd9\\xff\\xde\\xff\\xc9\\xff\\x85\\xff\\xb7\\xff\\x95\\xff\\x82\\xff\\xc8\\xff\\xcc\\xff\\xf7\\xff\\xfb\\xff\\xd9\\xff\\x0b\\x00\\xfb\\xff\\xd3\\xff\\xe1\\xff\\xee\\xff\\xeb\\xff\\xe0\\xff\\xd3\\xff\\xe7\\xff\\xe6\\xff\\xf1\\xff\\xf8\\xff\\xee\\xff\\xc9\\xff\\xc0\\xff\\xdc\\xff\\xcf\\xff\\xe1\\xff\\x03\\x00\\xde\\xff\\xd4\\xff\\xdb\\xff\\xeb\\xff\\xe3\\xff\\xea\\xff\\xfd\\xff\\xe0\\xff\\x1c\\x00\\xff\\xff\\xf5\\xff\\x15\\x00\\xcb\\xff\\xd7\\xff\\xb8\\xff\\xbb\\xff\\xf5\\xff\\xe4\\xff\\xe0\\xff\\xe3\\xff\\xc7\\xff\\xed\\xff\\x0c\\x00\\xd6\\xff\\xdb\\xff\\xbc\\xff\\xae\\xff\\xf3\\xff\\t\\x00\\x08\\x00\\xef\\xff\\x0f\\x00\\xe0\\xff\\xaf\\xff\\xd6\\xff\\xdf\\xff\\xe4\\xff\\xdc\\xff\\xe8\\xff\\x01\\x00\\xfc\\xff\\xeb\\xff\\xdc\\xff\\xd9\\xff\\xe5\\xf has type <type \'tuple\'>, but expected one of: (<type \'str\'>,)',), <traceback object at 0xb6a4af04>)
+2016-01-14 23:51:43,964 - INFO - -- detected keyphrase raspberry
+2016-01-14 23:51:43,968 - INFO - -- start listenCommand
+2016-01-14 23:51:43,968 - INFO - ---- start speech2Text
+2016-01-14 23:51:44,157 - INFO - -- Unexpected error:(<type 'exceptions.TypeError'>, TypeError("(1024, '\\x11\\x00\\x10\\x00\\x0c\\x00\\x0c\\x00\\x17\\x00 \\x00%\\x00*\\x00*\\x00-\\x002\\x004\\x007\\x00;\\x00?\\x00A\\x00C\\x00J\\x00P\\x00X\\x00[\\x00U\\x00O\\x00J\\x00H\\x00J\\x00L\\x00P\\x00N\\x00G\\x00?\\x005\\x00/\\x00+\\x00)\\x00\\'\\x00&\\x00$\\x00\\x1d\\x00\\x19\\x00\\x0c\\x00\\n\\x00\\xf9\\xff\\xf4\\xff\\xf8\\xff\\xf5\\xff\\xf4\\xff\\xda\\xff\\xd6\\xff\\xce\\xff\\xc0\\xff\\xb4\\xff\\x9f\\xff\\x9f\\xff\\x97\\xff\\x8d\\xff\\x89\\xff\\x81\\xffx\\xffw\\xffj\\xffd\\xffg\\xffh\\xfft\\xff{\\xff\\x87\\xff\\x8c\\xff\\x92\\xff\\x92\\xff\\x8d\\xff\\x90\\xff\\x93\\xff\\x99\\xff\\xa0\\xff\\x9d\\xff\\x97\\xff\\x8f\\xff\\x8e\\xff\\x97\\xff\\x9b\\xff\\x97\\xff\\x8c\\xff\\x84\\xff|\\xff\\x83\\xff\\x90\\xff\\xa2\\xff\\xb0\\xff\\xb7\\xff\\xb6\\xff\\xae\\xff\\xae\\xff\\xb8\\xff\\xca\\xff\\xd6\\xff\\xde\\xff\\xe4\\xff\\xe5\\xff\\xe5\\xff\\xe5\\xff\\xe9\\xff\\xec\\xff\\xeb\\xff\\xe7\\xff\\xe2\\xff\\xe4\\xff\\xe7\\xff\\xeb\\xff\\xe9\\xff\\xe4\\xff\\xe1\\xff\\xdf\\xff\\xe1\\xff\\xe4\\xff\\xed\\xff\\xf2\\xff\\xf4\\xff\\xf3\\xff\\xec\\xff\\xe9\\xff\\xe3\\xff\\xe1\\xff\\xe1\\xff\\xe2\\xff\\xe9\\xff\\xea\\xff\\xe5\\xff\\xe4\\xff\\xe8\\xff\\xec\\xff\\xea\\xff\\xed\\xff\\xf8\\xff\\n\\x00\\x1a\\x00!\\x00(\\x001\\x00>\\x00H\\x00L\\x00M\\x00W\\x00d\\x00o\\x00x\\x00}\\ has type <type 'tuple'>, but expected one of: (<type 'str'>,)",), <traceback object at 0xb6a4af54>)
+2016-01-14 23:54:06,209 - INFO - -- detected keyphrase raspberry
+2016-01-14 23:54:06,213 - INFO - -- start listenCommand
+2016-01-14 23:54:06,213 - INFO - ---- start speech2Text
+2016-01-14 23:54:06,361 - INFO - -- Unexpected error:(<type 'exceptions.TypeError'>, TypeError("(1024, 'R\\x00M\\x00B\\x001\\x00\\x1a\\x00\\xfe\\xff\\xe4\\xff\\xc9\\xff\\xb0\\xff\\xa0\\xff\\x97\\xff\\x95\\xff\\x9b\\xff\\xa4\\xff\\xb2\\xff\\xbe\\xff\\xc9\\xff\\xd3\\xff\\xdb\\xff\\xe4\\xff\\xf0\\xff\\xfb\\xff\\x04\\x00\\n\\x00\\x08\\x00\\x03\\x00\\xfa\\xff\\xef\\xff\\xe1\\xff\\xd4\\xff\\xc6\\xff\\xb9\\xff\\xaf\\xff\\xa2\\xff\\x98\\xff\\x8e\\xff\\x83\\xff\\x83\\xff\\x8c\\xff\\x9c\\xff\\xb1\\xff\\xc9\\xff\\xe2\\xff\\xfc\\xff\\x10\\x00\\x1d\\x00)\\x001\\x00/\\x00(\\x00\\x1f\\x00\\x10\\x00\\xfe\\xff\\xea\\xff\\xd7\\xff\\xc5\\xff\\xb6\\xff\\xa4\\xff\\x95\\xff\\x8c\\xff\\x87\\xff\\x80\\xff\\x80\\xff\\x8b\\xff\\x9c\\xff\\xb9\\xff\\xda\\xff\\xf9\\xff\\x16\\x001\\x00F\\x00Q\\x00U\\x00S\\x00M\\x00?\\x00/\\x00\\x1b\\x00\\x00\\x00\\xe3\\xff\\xc9\\xff\\xb5\\xff\\xa8\\xff\\xa3\\xff\\xa5\\xff\\xae\\xff\\xba\\xff\\xc4\\xff\\xce\\xff\\xd7\\xff\\xdd\\xff\\xe6\\xff\\xf1\\xff\\xfe\\xff\\n\\x00\\x0f\\x00\\x0f\\x00\\x0c\\x00\\x05\\x00\\xfa\\xff\\xf4\\xff\\xeb\\xff\\xe0\\xff\\xd7\\xff\\xcf\\xff\\xc5\\xff\\xbb\\xff\\xab\\xff\\x9b\\xff\\x95\\xff\\x95\\xff\\x9e\\xff\\xb4\\xff\\xcf\\xff\\xe5\\xff\\xfa\\xff\\x0f\\x00\\x1f\\x00*\\x003\\x009\\x00:\\x007\\x00.\\x00 \\x00\\x0e\\x00\\xf9\\xff\\xe3\\xff\\xd1\\xff\\xc1\\xff\\xb3\\xff\\xaa\\xff\\xa1\\xff\\x9a\\xff\\x96\\xff\\x94\\xff\\ has type <type 'tuple'>, but expected one of: (<type 'str'>,)",), <traceback object at 0xb6a4afa4>)
+2016-01-14 23:54:54,459 - INFO - -- detected keyphrase raspberry
+2016-01-14 23:54:54,463 - INFO - -- start listenCommand
+2016-01-14 23:54:54,463 - INFO - ---- start speech2Text
+2016-01-14 23:54:54,629 - INFO - -- Unexpected error:(<type 'exceptions.TypeError'>, TypeError("(1024, '\\xed\\xff\\xe7\\xff\\xe8\\xff\\xe2\\xff\\xdd\\xff\\xe0\\xff\\xdd\\xff\\xdf\\xff\\xe2\\xff\\xe2\\xff\\xe3\\xff\\xe2\\xff\\xe5\\xff\\xe6\\xff\\xe4\\xff\\xe8\\xff\\xe9\\xff\\xe7\\xff\\xeb\\xff\\xe8\\xff\\xe6\\xff\\xe6\\xff\\xe3\\xff\\xe6\\xff\\xe4\\xff\\xe4\\xff\\xe2\\xff\\xe2\\xff\\xe4\\xff\\xe0\\xff\\xe0\\xff\\xe2\\xff\\xe3\\xff\\xe5\\xff\\xe4\\xff\\xe9\\xff\\xeb\\xff\\xe9\\xff\\xe9\\xff\\xe9\\xff\\xe6\\xff\\xe4\\xff\\xe4\\xff\\xdf\\xff\\xe2\\xff\\xe0\\xff\\xe1\\xff\\xdf\\xff\\xdc\\xff\\xe2\\xff\\xe2\\xff\\xe6\\xff\\xec\\xff\\xea\\xff\\xeb\\xff\\xec\\xff\\xe7\\xff\\xe9\\xff\\xe7\\xff\\xe3\\xff\\xe3\\xff\\xe1\\xff\\xe2\\xff\\xe2\\xff\\xdb\\xff\\xd9\\xff\\xdc\\xff\\xde\\xff\\xe0\\xff\\xe0\\xff\\xe2\\xff\\xe5\\xff\\xe9\\xff\\xeb\\xff\\xea\\xff\\xef\\xff\\xf0\\xff\\xf0\\xff\\xf0\\xff\\xf0\\xff\\xf0\\xff\\xee\\xff\\xee\\xff\\xec\\xff\\xeb\\xff\\xe7\\xff\\xe7\\xff\\xe5\\xff\\xe0\\xff\\xe2\\xff\\xe2\\xff\\xe3\\xff\\xe6\\xff\\xe6\\xff\\xe8\\xff\\xeb\\xff\\xed\\xff\\xee\\xff\\xeb\\xff\\xe8\\xff\\xe6\\xff\\xe6\\xff\\xe9\\xff\\xe7\\xff\\xe6\\xff\\xe9\\xff\\xe4\\xff\\xe2\\xff\\xe5\\xff\\xe4\\xff\\xe7\\xff\\xe8\\xff\\xe9\\xff\\xeb\\xff\\xe9\\xff\\xeb\\xff\\xea\\xff\\xe5\\xff\\xe6\\xff\\xe3\\xff\\xe5\\xff\\xe4\\xff\\xdf\\xff\\xe1\\xff\\xde\\xff\\xdc\\xff\\xdf\\xff has type <type 'tuple'>, but expected one of: (<type 'str'>,)",), <traceback object at 0xacea802c>)
+2016-01-14 23:54:57,462 - INFO - -- detected keyphrase raspberry
+2016-01-14 23:54:57,466 - INFO - -- start listenCommand
+2016-01-14 23:54:57,466 - INFO - ---- start speech2Text
+2016-01-14 23:54:57,652 - INFO - -- Unexpected error:(<type 'exceptions.TypeError'>, TypeError('(1024, \'2\\x000\\x00"\\x00\\x16\\x00\\x15\\x00\\x07\\x00\\xfd\\xff\\x05\\x00\\x07\\x00\\x0f\\x00\\n\\x00\\x00\\x00\\xf1\\xff\\xcb\\xff\\xb4\\xff\\x93\\xffy\\xfff\\xffK\\xff.\\xff\\x12\\xff\\xed\\xfe\\xef\\xfe(\\xffw\\xff\\xca\\xff\\xde\\xff\\x9a\\xff#\\xff\\xd6\\xfe\\xee\\xfef\\xff\\xec\\xff<\\x00d\\x00y\\x00N\\x00\\xe7\\xff\\x87\\xffe\\xff\\xc9\\xffS\\x00\\xaa\\x00\\xb9\\x00\\xa5\\x00\\x7f\\x00>\\x00\\xff\\xff\\xc5\\xff\\xbb\\xff\\xcf\\xff\\xd8\\xff\\xe6\\xff\\xee\\xff\\xda\\xff\\xa6\\xffF\\xff\\xe8\\xfe\\xb5\\xfe\\xb1\\xfe\\xcf\\xfe\\xf7\\xfe\\x15\\xff\\r\\xff\\xec\\xfe\\xb1\\xfe\\x82\\xfen\\xfe\\x98\\xfe\\xfc\\xfeG\\xff}\\xff\\x99\\xff\\x9a\\xff\\x99\\xff\\x94\\xff\\xa5\\xff\\xe3\\xff$\\x00V\\x00~\\x00\\xa3\\x00\\xb6\\x00\\xb8\\x00\\xa5\\x00\\x92\\x00\\x8e\\x00\\xaf\\x00\\xea\\x00\\x14\\x01\\x03\\x01\\xb8\\x00x\\x00\\\\\\x00Q\\x00@\\x00D\\x00X\\x00s\\x00n\\x00+\\x00\\xd8\\xff\\xa6\\xff\\xb7\\xff\\xe7\\xff\\x15\\x000\\x00H\\x00L\\x009\\x000\\x00\\x1b\\x00\\x01\\x00\\x06\\x00\\x1f\\x00C\\x00a\\x00w\\x00\\x85\\x00m\\x00J\\x00\\\'\\x00\\x19\\x001\\x00?\\x00K\\x00Z\\x00G\\x00,\\x00\\x0f\\x00\\xeb\\xff\\xc9\\xff\\xa2\\xff\\x83\\xffm\\xffY\\xff9\\xff\\x11\\xff\\xfd\\xfe\\x1b\\xffP\\xff\\x90\\xff\\xc1\\xff\\xb9\\xffy\\xff\\x1b\\xff\\xed\\xfe\\x1f\\xff\\x has type <type \'tuple\'>, but expected one of: (<type \'str\'>,)',), <traceback object at 0xacea807c>)
+2016-01-14 23:56:44,640 - INFO - -- START voiceIRControl.py.
+2016-01-14 23:56:44,640 - INFO - -- finished to read device configuration json file device_config.json
+2016-01-14 23:56:44,641 - INFO - -- finished to set CMU SPHINX library settings
+2016-01-14 23:56:44,707 - INFO - -- finished to set alsaaudio parameters
+2016-01-14 23:56:46,546 - INFO - -- detected keyphrase raspberry
+2016-01-14 23:56:46,552 - INFO - -- start listenCommand
+2016-01-14 23:56:46,552 - INFO - ---- start speech2Text
+2016-01-14 23:56:50,084 - INFO - -- Unexpected error:(<type 'exceptions.AttributeError'>, AttributeError("'NoneType' object has no attribute 'decode'",), <traceback object at 0xb69c8bbc>)
+2016-01-14 23:57:35,854 - INFO - -- detected keyphrase raspberry
+2016-01-14 23:57:35,858 - INFO - -- start listenCommand
+2016-01-14 23:57:35,858 - INFO - ---- start speech2Text
+2016-01-14 23:57:39,491 - INFO - -- Unexpected error:(<type 'exceptions.AttributeError'>, AttributeError("'NoneType' object has no attribute 'decode'",), <traceback object at 0xb69c8c34>)
+2016-01-14 23:57:41,807 - INFO - -- detected keyphrase raspberry
+2016-01-14 23:57:41,812 - INFO - -- start listenCommand
+2016-01-14 23:57:41,813 - INFO - ---- start speech2Text
+2016-01-14 23:57:45,314 - INFO - -- Unexpected error:(<type 'exceptions.AttributeError'>, AttributeError("'NoneType' object has no attribute 'decode'",), <traceback object at 0xb69c8d24>)
+2016-01-14 23:57:53,590 - INFO - -- detected keyphrase raspberry
+2016-01-14 23:57:53,591 - INFO - -- start listenCommand
+2016-01-14 23:57:53,591 - INFO - ---- start speech2Text
+2016-01-14 23:57:57,270 - INFO - -- Unexpected error:(<type 'exceptions.AttributeError'>, AttributeError("'NoneType' object has no attribute 'decode'",), <traceback object at 0xb69c8c5c>)
+2016-01-14 23:58:30,879 - INFO - -- detected keyphrase raspberry
+2016-01-14 23:58:30,884 - INFO - -- start listenCommand
+2016-01-14 23:58:30,884 - INFO - ---- start speech2Text
+2016-01-14 23:58:34,342 - INFO - -- Unexpected error:(<type 'exceptions.AttributeError'>, AttributeError("'NoneType' object has no attribute 'decode'",), <traceback object at 0xb69c8c0c>)
+2016-01-14 23:58:44,659 - INFO - -- detected keyphrase raspberry
+2016-01-14 23:58:44,663 - INFO - -- start listenCommand
+2016-01-14 23:58:44,663 - INFO - ---- start speech2Text
+2016-01-14 23:58:48,427 - INFO - -- Unexpected error:(<type 'exceptions.AttributeError'>, AttributeError("'NoneType' object has no attribute 'decode'",), <traceback object at 0xb69c8e14>)
+2016-01-14 23:59:47,952 - INFO - -- detected keyphrase raspberry
+2016-01-14 23:59:47,952 - INFO - -- start listenCommand
+2016-01-14 23:59:47,952 - INFO - ---- start speech2Text
+2016-01-14 23:59:51,372 - INFO - -- Unexpected error:(<type 'exceptions.AttributeError'>, AttributeError("'NoneType' object has no attribute 'decode'",), <traceback object at 0xb69c8dec>)
+2016-01-15 00:03:18,696 - INFO - -- detected keyphrase raspberry
+2016-01-15 00:03:18,699 - INFO - -- start listenCommand
+2016-01-15 00:03:18,699 - INFO - ---- start speech2Text
+2016-01-15 00:03:22,196 - INFO - -- Unexpected error:(<type 'exceptions.AttributeError'>, AttributeError("'NoneType' object has no attribute 'decode'",), <traceback object at 0xb69c8eb4>)
+2016-01-15 00:03:23,241 - INFO - -- detected keyphrase raspberry
+2016-01-15 00:03:23,245 - INFO - -- start listenCommand
+2016-01-15 00:03:23,246 - INFO - ---- start speech2Text
+2016-01-15 00:03:26,975 - INFO - -- Unexpected error:(<type 'exceptions.AttributeError'>, AttributeError("'NoneType' object has no attribute 'decode'",), <traceback object at 0xb69c8f04>)
+2016-01-15 00:03:37,025 - INFO - -- detected keyphrase raspberry
+2016-01-15 00:03:37,028 - INFO - -- start listenCommand
+2016-01-15 00:03:37,029 - INFO - ---- start speech2Text
+2016-01-15 00:03:41,021 - INFO - -- Unexpected error:(<type 'exceptions.AttributeError'>, AttributeError("'NoneType' object has no attribute 'decode'",), <traceback object at 0xb69c8f7c>)
+2016-01-15 00:05:06,041 - INFO - -- START voiceIRControl.py.
+2016-01-15 00:05:06,042 - INFO - -- finished to read device configuration json file device_config.json
+2016-01-15 00:05:06,042 - INFO - -- finished to set CMU SPHINX library settings
+2016-01-15 00:05:06,106 - INFO - -- finished to set alsaaudio parameters
+2016-01-15 00:05:08,816 - INFO - -- detected keyphrase raspberry
+2016-01-15 00:05:08,820 - INFO - -- start listenCommand
+2016-01-15 00:05:08,820 - INFO - ---- start speech2Text
+2016-01-15 00:05:12,254 - INFO - -- Unexpected error:(<type 'exceptions.AttributeError'>, AttributeError("'NoneType' object has no attribute 'decode'",), <traceback object at 0xb69e302c>)
+2016-01-15 00:05:22,589 - INFO - -- detected keyphrase raspberry
+2016-01-15 00:05:22,593 - INFO - -- start listenCommand
+2016-01-15 00:05:22,593 - INFO - ---- start speech2Text
+2016-01-15 00:05:26,349 - INFO - -- Unexpected error:(<type 'exceptions.AttributeError'>, AttributeError("'NoneType' object has no attribute 'decode'",), <traceback object at 0xb69e3c34>)
+2016-01-15 00:05:29,143 - INFO - -- detected keyphrase raspberry
+2016-01-15 00:05:29,147 - INFO - -- start listenCommand
+2016-01-15 00:05:29,147 - INFO - ---- start speech2Text
+2016-01-15 00:05:32,677 - INFO - -- Unexpected error:(<type 'exceptions.AttributeError'>, AttributeError("'NoneType' object has no attribute 'decode'",), <traceback object at 0xb69e3d4c>)
+2016-01-15 00:05:35,696 - INFO - -- detected keyphrase raspberry
+2016-01-15 00:05:35,700 - INFO - -- start listenCommand
+2016-01-15 00:05:35,701 - INFO - ---- start speech2Text
+2016-01-15 00:05:39,090 - INFO - -- Unexpected error:(<type 'exceptions.AttributeError'>, AttributeError("'NoneType' object has no attribute 'decode'",), <traceback object at 0xb69e3c0c>)
+2016-01-15 00:05:42,835 - INFO - -- detected keyphrase raspberry
+2016-01-15 00:05:42,839 - INFO - -- start listenCommand
+2016-01-15 00:05:42,839 - INFO - ---- start speech2Text
+2016-01-15 00:05:46,203 - INFO - -- Unexpected error:(<type 'exceptions.AttributeError'>, AttributeError("'NoneType' object has no attribute 'decode'",), <traceback object at 0xb69e3d9c>)
+2016-01-15 00:09:54,394 - INFO - -- START voiceIRControl.py.
+2016-01-15 00:09:54,395 - INFO - -- finished to read device configuration json file device_config.json
+2016-01-15 00:09:54,395 - INFO - -- finished to set CMU SPHINX library settings
+2016-01-15 00:09:54,457 - INFO - -- finished to set alsaaudio parameters
+2016-01-15 00:09:56,394 - INFO - -- detected keyphrase raspberry
+2016-01-15 00:09:56,398 - INFO - -- start listenCommand
+2016-01-15 00:09:56,398 - INFO - ---- start speech2Text
+2016-01-15 00:09:59,954 - INFO - -- Unexpected error:(<type 'exceptions.AttributeError'>, AttributeError("'NoneType' object has no attribute 'lower'",), <traceback object at 0xb69f7c34>)
+2016-01-15 00:11:19,560 - INFO - -- START voiceIRControl.py.
+2016-01-15 00:11:19,561 - INFO - -- finished to read device configuration json file device_config.json
+2016-01-15 00:11:19,561 - INFO - -- finished to set CMU SPHINX library settings
+2016-01-15 00:11:19,623 - INFO - -- finished to set alsaaudio parameters
+2016-01-15 00:11:21,554 - INFO - -- detected keyphrase raspberry
+2016-01-15 00:11:21,559 - INFO - -- start listenCommand
+2016-01-15 00:11:21,559 - INFO - ---- start speech2Text
+2016-01-15 00:11:25,004 - INFO - -- Unexpected error:(<type 'exceptions.AttributeError'>, AttributeError("'NoneType' object has no attribute 'lower'",), <traceback object at 0xb6982b94>)
+2016-01-15 00:11:50,759 - INFO - -- detected keyphrase raspberry
+2016-01-15 00:11:50,763 - INFO - -- start listenCommand
+2016-01-15 00:11:50,764 - INFO - ---- start speech2Text
+2016-01-15 00:11:54,746 - INFO - -- Unexpected error:(<type 'exceptions.AttributeError'>, AttributeError("'NoneType' object has no attribute 'lower'",), <traceback object at 0xb6982c84>)
+2016-01-15 00:11:54,806 - INFO - -- detected keyphrase raspberry
+2016-01-15 00:11:54,810 - INFO - -- start listenCommand
+2016-01-15 00:11:54,810 - INFO - ---- start speech2Text
+2016-01-15 00:11:58,239 - INFO - -- Unexpected error:(<type 'exceptions.AttributeError'>, AttributeError("'NoneType' object has no attribute 'lower'",), <traceback object at 0xb6982c0c>)
+2016-01-15 00:12:14,955 - INFO - -- detected keyphrase raspberry
+2016-01-15 00:12:14,955 - INFO - -- start listenCommand
+2016-01-15 00:12:14,955 - INFO - ---- start speech2Text
+2016-01-15 00:12:18,589 - INFO - -- Unexpected error:(<type 'exceptions.AttributeError'>, AttributeError("'NoneType' object has no attribute 'lower'",), <traceback object at 0xb6982cfc>)
+2016-01-15 00:12:26,507 - INFO - -- detected keyphrase raspberry
+2016-01-15 00:12:26,511 - INFO - -- start listenCommand
+2016-01-15 00:12:26,511 - INFO - ---- start speech2Text
+2016-01-15 00:12:30,340 - INFO - -- Unexpected error:(<type 'exceptions.AttributeError'>, AttributeError("'NoneType' object has no attribute 'lower'",), <traceback object at 0xb6982d4c>)
+2016-01-15 00:13:50,905 - INFO - -- detected keyphrase raspberry
+2016-01-15 00:13:50,910 - INFO - -- start listenCommand
+2016-01-15 00:13:50,910 - INFO - ---- start speech2Text
+2016-01-15 00:13:54,343 - INFO - -- Unexpected error:(<type 'exceptions.AttributeError'>, AttributeError("'NoneType' object has no attribute 'lower'",), <traceback object at 0xb6982bbc>)
+2016-01-15 00:15:02,391 - INFO - -- detected keyphrase raspberry
+2016-01-15 00:15:02,395 - INFO - -- start listenCommand
+2016-01-15 00:15:02,395 - INFO - ---- start speech2Text
+2016-01-15 00:15:06,505 - INFO - -- Unexpected error:(<type 'exceptions.AttributeError'>, AttributeError("'NoneType' object has no attribute 'lower'",), <traceback object at 0xb6982d74>)
+2016-01-15 00:16:23,254 - INFO - -- detected keyphrase raspberry
+2016-01-15 00:16:23,254 - INFO - -- start listenCommand
+2016-01-15 00:16:23,254 - INFO - ---- start speech2Text
+2016-01-15 00:16:26,845 - INFO - -- Unexpected error:(<type 'exceptions.AttributeError'>, AttributeError("'NoneType' object has no attribute 'lower'",), <traceback object at 0xb6982cfc>)
+2016-01-15 00:16:41,894 - INFO - -- detected keyphrase raspberry
+2016-01-15 00:16:41,895 - INFO - -- start listenCommand
+2016-01-15 00:16:41,895 - INFO - ---- start speech2Text
+2016-01-15 00:16:45,836 - INFO - -- Unexpected error:(<type 'exceptions.AttributeError'>, AttributeError("'NoneType' object has no attribute 'lower'",), <traceback object at 0xb6982b94>)
+2016-01-15 00:17:03,991 - INFO - -- START voiceIRControl.py.
+2016-01-15 00:17:03,992 - INFO - -- finished to read device configuration json file device_config.json
+2016-01-15 00:17:03,992 - INFO - -- finished to set CMU SPHINX library settings
+2016-01-15 00:17:04,055 - INFO - -- finished to set alsaaudio parameters
+2016-01-15 00:17:09,038 - INFO - -- detected keyphrase raspberry
+2016-01-15 00:17:09,043 - INFO - -- start listenCommand
+2016-01-15 00:17:09,043 - INFO - ---- start speech2Text
+2016-01-15 00:17:12,656 - INFO - ---- finished speech2Text
+2016-01-15 00:17:12,656 - INFO - -- Unexpected error:(<type 'exceptions.TypeError'>, TypeError("cannot concatenate 'str' and 'NoneType' objects",), <traceback object at 0xb6a22e64>)
+2016-01-15 00:17:48,966 - INFO - -- detected keyphrase raspberry
+2016-01-15 00:17:48,970 - INFO - -- start listenCommand
+2016-01-15 00:17:48,970 - INFO - ---- start speech2Text
+2016-01-15 00:17:52,514 - INFO - ---- finished speech2Text
+2016-01-15 00:17:52,514 - INFO - -- Unexpected error:(<type 'exceptions.TypeError'>, TypeError("cannot concatenate 'str' and 'NoneType' objects",), <traceback object at 0xb6a35c34>)
+2016-01-15 00:27:38,196 - INFO - -- detected keyphrase raspberry
+2016-01-15 00:27:38,202 - INFO - -- start listenCommand
+2016-01-15 00:27:38,202 - INFO - ---- start speech2Text
+2016-01-15 00:27:41,718 - INFO - ---- finished speech2Text
+2016-01-15 00:27:41,718 - INFO - -- Unexpected error:(<type 'exceptions.TypeError'>, TypeError("cannot concatenate 'str' and 'NoneType' objects",), <traceback object at 0xb6a35c5c>)
+2016-01-15 00:29:37,334 - INFO - -- detected keyphrase raspberry
+2016-01-15 00:29:37,339 - INFO - -- start listenCommand
+2016-01-15 00:29:37,339 - INFO - ---- start speech2Text
+2016-01-15 00:29:40,762 - INFO - ---- finished speech2Text
+2016-01-15 00:29:40,762 - INFO - -- Unexpected error:(<type 'exceptions.TypeError'>, TypeError("cannot concatenate 'str' and 'NoneType' objects",), <traceback object at 0xb6a35cfc>)
+2016-01-15 00:36:27,281 - INFO - -- START voiceIRControl.py.
+2016-01-15 00:36:27,282 - INFO - -- finished to read device configuration json file device_config.json
+2016-01-15 00:36:27,283 - INFO - -- finished to set CMU SPHINX library settings
+2016-01-15 00:36:27,346 - INFO - -- finished to set alsaaudio parameters
+2016-01-15 00:36:30,232 - INFO - -- detected keyphrase raspberry
+2016-01-15 00:36:30,236 - INFO - -- start listenCommand
+2016-01-15 00:36:30,236 - INFO - ---- start speech2Text
+2016-01-15 00:36:33,661 - INFO - -- Unexpected error:(<type 'exceptions.TypeError'>, TypeError("cannot concatenate 'str' and 'type' objects",), <traceback object at 0xb69c7e8c>)
+2016-01-15 00:45:52,327 - INFO - -- START voiceIRControl.py.
+2016-01-15 00:45:52,328 - INFO - -- finished to read device configuration json file device_config.json
+2016-01-15 00:45:52,329 - INFO - -- finished to set CMU SPHINX library settings
+2016-01-15 00:45:52,394 - INFO - -- finished to set alsaaudio parameters
+2016-01-15 00:45:54,971 - INFO - -- detected keyphrase raspberry
+2016-01-15 00:45:54,972 - INFO - -- start listenCommand
+2016-01-15 00:45:54,972 - INFO - ---- start speech2Text
+2016-01-15 00:45:58,474 - INFO - -- Unexpected error:(<type 'exceptions.TypeError'>, TypeError("'list' object is not callable",), <traceback object at 0xb6a65c5c>)
+2016-01-15 00:46:00,293 - INFO - -- detected keyphrase raspberry
+2016-01-15 00:46:00,297 - INFO - -- start listenCommand
+2016-01-15 00:46:00,297 - INFO - ---- start speech2Text
+2016-01-15 00:46:03,975 - INFO - -- Unexpected error:(<type 'exceptions.TypeError'>, TypeError("'list' object is not callable",), <traceback object at 0xb6a65e14>)
+2016-01-15 00:49:16,931 - INFO - -- START voiceIRControl.py.
+2016-01-15 00:49:16,932 - INFO - -- finished to read device configuration json file device_config.json
+2016-01-15 00:49:16,932 - INFO - -- finished to set CMU SPHINX library settings
+2016-01-15 00:49:16,995 - INFO - -- finished to set alsaaudio parameters
+2016-01-15 00:49:19,061 - INFO - -- detected keyphrase raspberry
+2016-01-15 00:49:19,065 - INFO - -- start listenCommand
+2016-01-15 00:49:19,065 - INFO - ---- start speech2Text
+2016-01-15 00:49:22,574 - INFO - -- Unexpected error:(<type 'exceptions.TypeError'>, TypeError("'list' object is not callable",), <traceback object at 0xb6a1fc5c>)
+2016-01-15 00:49:38,389 - INFO - -- detected keyphrase raspberry
+2016-01-15 00:49:38,390 - INFO - -- start listenCommand
+2016-01-15 00:49:38,390 - INFO - ---- start speech2Text
+2016-01-15 00:49:41,978 - INFO - -- Unexpected error:(<type 'exceptions.TypeError'>, TypeError("'list' object is not callable",), <traceback object at 0xb6a1fe3c>)
+2016-01-15 00:50:45,842 - INFO - -- START voiceIRControl.py.
+2016-01-15 00:50:45,843 - INFO - -- finished to read device configuration json file device_config.json
+2016-01-15 00:50:45,843 - INFO - -- finished to set CMU SPHINX library settings
+2016-01-15 00:50:45,904 - INFO - -- finished to set alsaaudio parameters
+2016-01-15 00:50:47,783 - INFO - -- detected keyphrase raspberry
+2016-01-15 00:50:47,788 - INFO - -- start listenCommand
+2016-01-15 00:50:47,789 - INFO - ---- start speech2Text
+2016-01-15 00:50:51,278 - INFO - -- Unexpected error:(<type 'exceptions.TypeError'>, TypeError("'list' object is not callable",), <traceback object at 0xb69d6c5c>)
+2016-01-15 00:51:00,887 - INFO - -- detected keyphrase raspberry
+2016-01-15 00:51:00,893 - INFO - -- start listenCommand
+2016-01-15 00:51:00,893 - INFO - ---- start speech2Text
+2016-01-15 00:51:04,237 - INFO - -- Unexpected error:(<type 'exceptions.TypeError'>, TypeError("'list' object is not callable",), <traceback object at 0xb69d6e3c>)
+2016-01-15 00:54:44,696 - INFO - -- START voiceIRControl.py.
+2016-01-15 00:54:44,696 - INFO - -- finished to read device configuration json file device_config.json
+2016-01-15 00:54:44,697 - INFO - -- finished to set CMU SPHINX library settings
+2016-01-15 00:54:44,758 - INFO - -- finished to set alsaaudio parameters
+2016-01-15 00:54:46,836 - INFO - -- detected keyphrase raspberry
+2016-01-15 00:54:46,839 - INFO - -- start listenCommand
+2016-01-15 00:54:46,840 - INFO - ---- start speech2Text
+2016-01-15 00:54:50,280 - INFO - -- Unexpected error:(<type 'exceptions.TypeError'>, TypeError("'str' object is not callable",), <traceback object at 0xb69ddcac>)
+2016-01-15 00:54:59,170 - INFO - -- detected keyphrase raspberry
+2016-01-15 00:54:59,171 - INFO - -- start listenCommand
+2016-01-15 00:54:59,171 - INFO - ---- start speech2Text
+2016-01-15 00:55:02,568 - INFO - -- Unexpected error:(<type 'exceptions.TypeError'>, TypeError("'str' object is not callable",), <traceback object at 0xb69dde64>)
+2016-01-15 01:11:12,037 - INFO - -- detected keyphrase raspberry
+2016-01-15 01:11:12,043 - INFO - -- start listenCommand
+2016-01-15 01:11:12,043 - INFO - ---- start speech2Text
+2016-01-15 01:11:15,497 - INFO - ---- finished speech2Text
+2016-01-15 01:11:15,497 - INFO - ---- recognized text = 
+2016-01-15 01:11:15,497 - INFO - ---- no command matches
+2016-01-15 01:11:15,497 - INFO - -- stop listenCommand
+2016-01-15 01:11:20,412 - INFO - -- detected keyphrase raspberry
+2016-01-15 01:11:20,412 - INFO - -- start listenCommand
+2016-01-15 01:11:20,412 - INFO - ---- start speech2Text
+2016-01-15 01:11:23,573 - INFO - -- Unexpected error:(<type 'exceptions.TypeError'>, TypeError("'str' object is not callable",), <traceback object at 0xb69ddf04>)
+2016-01-15 01:11:55,754 - INFO - -- START voiceIRControl.py.
+2016-01-15 01:11:55,755 - INFO - -- finished to read device configuration json file device_config.json
+2016-01-15 01:11:55,755 - INFO - -- finished to set CMU SPHINX library settings
+2016-01-15 01:11:55,803 - INFO - -- finished to set alsaaudio parameters
+2016-01-15 01:11:57,918 - INFO - -- detected keyphrase raspberry
+2016-01-15 01:11:57,922 - INFO - -- start listenCommand
+2016-01-15 01:11:57,922 - INFO - ---- start speech2Text
+2016-01-15 01:12:01,373 - INFO - -- Unexpected error:(<type 'exceptions.TypeError'>, TypeError("'str' object is not callable",), <traceback object at 0xb6a3fcd4>)
+2016-01-15 01:12:31,421 - INFO - -- START voiceIRControl.py.
+2016-01-15 01:12:31,422 - INFO - -- finished to read device configuration json file device_config.json
+2016-01-15 01:12:31,422 - INFO - -- finished to set CMU SPHINX library settings
+2016-01-15 01:12:31,488 - INFO - -- finished to set alsaaudio parameters
+2016-01-15 01:12:33,550 - INFO - -- detected keyphrase raspberry
+2016-01-15 01:12:33,551 - INFO - -- start listenCommand
+2016-01-15 01:12:33,552 - INFO - ---- start speech2Text
+2016-01-15 01:12:37,018 - INFO - -- Unexpected error:(<type 'exceptions.TypeError'>, TypeError("'str' object is not callable",), <traceback object at 0xb69d2c84>)
+2016-01-15 01:12:37,831 - INFO - -- detected keyphrase raspberry
+2016-01-15 01:12:37,831 - INFO - -- start listenCommand
+2016-01-15 01:12:37,831 - INFO - ---- start speech2Text
+2016-01-15 01:12:41,027 - INFO - -- Unexpected error:(<type 'exceptions.TypeError'>, TypeError("'str' object is not callable",), <traceback object at 0xb69d2e64>)
+2016-01-15 01:12:46,743 - INFO - -- detected keyphrase raspberry
+2016-01-15 01:12:46,743 - INFO - -- start listenCommand
+2016-01-15 01:12:46,744 - INFO - ---- start speech2Text
+2016-01-15 01:12:50,025 - INFO - -- Unexpected error:(<type 'exceptions.TypeError'>, TypeError("'str' object is not callable",), <traceback object at 0xb69d2e3c>)
+2016-01-15 01:16:45,539 - INFO - -- START voiceIRControl.py.
+2016-01-15 01:16:45,540 - INFO - -- finished to read device configuration json file device_config.json
+2016-01-15 01:16:45,541 - INFO - -- finished to set CMU SPHINX library settings
+2016-01-15 01:16:45,611 - INFO - -- finished to set alsaaudio parameters
+2016-01-15 01:16:47,733 - INFO - -- detected keyphrase raspberry
+2016-01-15 01:16:47,737 - INFO - -- start listenCommand
+2016-01-15 01:16:47,737 - INFO - ---- start speech2Text
+2016-01-15 01:16:51,515 - INFO - ---- finished speech2Text
+2016-01-15 01:16:51,515 - INFO - ---- recognized text = включить 
+2016-01-15 01:16:51,745 - INFO - ---- request url = http://192.168.0.106:3000/send/LG_AKB72915207/KEY_POWER
+2016-01-15 01:16:51,745 - INFO - ---- device returned: status_code = 200, content = <!DOCTYPE html>
+<html lang="en">
+  <head>
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, user-scalable=no" />
+<meta name="description" content="IR Remote Control Interface">
+
+<title>Remote - Television</title>
+
+<!-- Bootstrap core CSS -->
+<link href="/css/bootstrap.css" rel="stylesheet"/>
+<link href="/css/font-awesome.min.css" rel="stylesheet"/>
+<link href="/css/style.css" rel="stylesheet"/>
+
+
+<!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+<!--[if lt IE 9]>
+<script src="/js/html5shiv.min.js"></script>
+<script src="/js/respond.min.js"></script>
+<![endif]--> </head>
+  <body>
+
+  <ul>
+    <li>
+        <a href="devices/add">Add new device</a>
+    </li>
+    <li>
+      <a href="commands">Voice commands</a>
+    </li>
+  </ul>
+
+
+    <!-- BEGIN TELEVISION -->
+
+    <div class="remote-screen container" id="television">
+        <h1>Remote: LG_AKB72915207</h1>
+      <div class="buttongroup col-xs-12 col-md-4">
+        <div class="col-xs-12 control-button-container text-center">
+          <a class="btn col-xs-12 btn-lg btn-danger col-xs-12" href="/send/LG_AKB72915207/KEY_POWER">
+            <i class="fa fa-2x fa-power-off pull-left"></i> TV Power
+          </a>
+        </div>
+
+        <div class="col-xs-3 control-button-container text-center">
+          <a class="btn btn-lg btn-default col-xs-12" href="/send/LG_AKB72915207/KEY_REWIND">
+            <i class="fa fa-backward"></i>
+          </a>
+        </div>
+
+        <div class="col-xs-3 control-button-container text-center">
+          <a class="btn btn-lg btn-default col-xs-12" href="/send/LG_AKB72915207/KEY_PAUSE">
+            <i class="fa fa-pause"></i>
+          </a>
+        </div>
+        <div class="col-xs-3 control-button-container text-center">
+          <a class="btn btn-lg btn-default col-xs-12" href="/send/LG_AKB72915207/KEY_PLAY">
+            <i class="fa fa-play"></i>
+          </a>
+        </div>
+        <div class="col-xs-3 control-button-container text-center">
+          <a class="btn btn-lg btn-default col-xs-12" href="/send/LG_AKB72915207/KEY_FASTFORWARD">
+            <i class="fa fa-forward"></i>
+          </a>
+        </div>
+
+        <div class="col-xs-6 control-button-container text-center">
+          <a class="btn btn-lg btn-danger col-xs-12" href="/send/LG_AKB72915207/KEY_NETFLIX">
+            Guide
+          </a>
+        </div>
+        <div class="col-xs-6 control-button-container text-center">
+          <a class="btn btn-lg btn-success col-xs-12" href="/send/LG_AKB72915207/KEY_AMAZON">
+            Amazon
+          </a>
+        </div>
+
+      </div>
+
+      <div class="buttongroup col-xs-12 col-md-4">
+        <div class="col-xs-4 control-button-container text-center">
+          <a class="btn btn-lg btn-default col-xs-12" href="/send/LG_AKB72915207/KEY_BACK">
+            Back
+          </a>
+        </div>
+
+        <div class="col-xs-4 control-button-container text-center">
+          <a class="btn btn-lg btn-primary col-xs-12" href="/send/LG_AKB72915207/KEY_UP">
+            <i class="fa fa-arrow-up"></i>
+          </a>
+        </div>
+        <div class="col-xs-4 control-button-container text-center">
+          <a class="btn btn-lg btn-default col-xs-12" href="/send/LG_AKB72915207/KEY_INFO">
+            Info
+          </a>
+        </div>
+
+
+        <div class="col-xs-4 control-button-container text-center">
+          <a class="btn btn-lg btn-primary col-xs-12" href="/send/LG_AKB72915207/KEY_LEFT">
+            <i class="fa fa-arrow-left"></i>
+          </a>
+        </div>
+        <div class="col-xs-4 control-button-container text-center">
+          <a class="btn btn-lg btn-primary col-xs-12" href="/send/LG_AKB72915207/KEY_OK">
+            OK
+          </a>
+        </div>
+        <div class="col-xs-4 control-button-container text-center">
+          <a class="btn btn-lg btn-primary col-xs-12" href="/send/LG_AKB72915207/KEY_RIGHT">
+            <i class="fa fa-arrow-right"></i>
+          </a>
+        </div>
+        <div class="col-xs-4 control-button-container text-center">
+          <a class="btn btn-lg btn-default col-xs-12" href="/send/LG_AKB72915207/KEY_EXIT">
+            Exit
+          </a>
+        </div>
+
+        <div class="col-xs-4 control-button-container text-center">
+          <a class="btn btn-lg btn-primary col-xs-12" href="/send/LG_AKB72915207/KEY_DOWN">
+            <i class="fa fa-arrow-down"></i>
+          </a>
+        </div>
+        <div class="col-xs-4 control-button-container text-center">
+          <a class="btn btn-lg btn-default col-xs-12" href="/send/LG_AKB72915207/KEY_UP">
+            ?
+          </a>
+        </div>
+      </div>
+
+      <div class="buttongroup col-xs-12 col-md-4">
+
+        <div class="col-xs-4 control-button-container text-center">
+          <a class="btn btn-lg btn-default col-xs-12" href="/send/LG_AKB72915207/KEY_1">
+            1
+          </a>
+        </div>
+        <div class="col-xs-4 control-button-container text-center">
+          <a class="btn btn-lg btn-default col-xs-12" href="/send/LG_AKB72915207/KEY_2">
+            2
+          </a>
+        </div>
+        <div class="col-xs-4 control-button-container text-center">
+          <a class="btn btn-lg btn-default col-xs-12" href="/send/LG_AKB72915207/KEY_3">
+            3
+          </a>
+        </div>
+
+
+
+
+        <div class="col-xs-4 control-button-container text-center">
+          <a class="btn btn-lg btn-default col-xs-12" href="/send/LG_AKB72915207/KEY_4">
+            4
+          </a>
+        </div>
+        <div class="col-xs-4 control-button-container text-center">
+          <a class="btn btn-lg btn-default col-xs-12" href="/send/LG_AKB72915207/KEY_5">
+            5
+          </a>
+        </div>
+        <div class="col-xs-4 control-button-container text-center">
+          <a class="btn btn-lg btn-default col-xs-12" href="/send/LG_AKB72915207/KEY_6">
+            6
+          </a>
+        </div>
+
+
+
+        <div class="col-xs-4 control-button-container text-center">
+          <a class="btn btn-lg btn-default col-xs-12" href="/send/LG_AKB72915207/KEY_7">
+            7
+          </a>
+        </div>
+        <div class="col-xs-4 control-button-container text-center">
+          <a class="btn btn-lg btn-default col-xs-12" href="/send/LG_AKB72915207/KEY_8">
+            8
+          </a>
+        </div>
+        <div class="col-xs-4 control-button-container text-center">
+          <a class="btn btn-lg btn-default col-xs-12" href="/send/LG_AKB72915207/KEY_9">
+            9
+          </a>
+        </div>
+
+        <div class="col-xs-4 control-button-container text-center">
+          <a class="btn btn-lg btn-default col-xs-12" href="/send/LG_AKB72915207/KEY_mode">
+            Input
+          </a>
+        </div>
+        <div class="col-xs-4 control-button-container text-center">
+          <a class="btn btn-lg btn-default col-xs-12" href="/send/LG_AKB72915207/KEY_0">
+            0
+          </a>
+        </div>
+        <div class="col-xs-4 control-button-container text-center">
+          <a class="btn btn-lg btn-default col-xs-12" href="/send/LG_AKB72915207/KEY_enter">
+            Enter
+          </a>
+        </div>
+      </div>
+
+      <div class="buttongroup col-xs-12 col-md-4">
+
+
+        <div class="col-xs-4 control-button-container text-center">
+          <a class="btn btn-lg btn-primary col-xs-12" href="/send/LG_AKB72915207/KEY_VOLUMEUP">
+            <i class="fa fa-plus-circle"></i>
+          </a>
+        </div>
+        <div class="col-xs-4 control-button-container text-center">
+          <a class="btn btn-lg btn-warning col-xs-12" href="/send/LG_AKB72915207/KEY_MUTE">
+      <span style="display:inline-block;height:24px;overflow:hidden">
+        <i class="fa fa-stack-1x fa-volume-up"></i>
+        <i class="fa fa-stack-2x fa-ban"></i>
+      </span>
+          </a>
+        </div>
+        <div class="col-xs-4 control-button-container text-center">
+          <a class="btn btn-lg btn-primary col-xs-12" href="/send/LG_AKB72915207/KEY_CHANNELUP">
+            <i class="fa fa-arrow-circle-up"></i>
+          </a>
+        </div>
+
+
+        <div class="col-xs-4 control-button-container text-center">
+          <a class="btn btn-lg btn-primary col-xs-12" href="/send/LG_AKB72915207/KEY_VOLUMEDOWN">
+            <i class="fa fa-minus-circle"></i>
+          </a>
+        </div>
+        <div class="col-xs-4 control-button-container text-center">
+          <a class="btn btn-lg btn-success col-xs-12" href="/send/LG_AKB72915207/KEY_FAVORITE">
+            <i class="fa fa-star"></i>
+          </a>
+        </div>
+        <div class="col-xs-4 control-button-container text-center">
+          <a class="btn btn-lg btn-primary col-xs-12" href="/send/LG_AKB72915207/KEY_CHANNELDOWN">
+            <i class="fa fa-arrow-circle-down"></i>
+          </a>
+        </div>
+        <div class="col-xs-12 control-button-container text-center">
+
+
+        </div>
+
+
+      </div>
+    </div>
+      <!---- END TELEVISION ---->
+  </body>
+</html>
+
+
+2016-01-15 01:16:51,746 - INFO - -- stop listenCommand
+2016-01-15 01:17:08,931 - INFO - -- detected keyphrase raspberry
+2016-01-15 01:17:08,931 - INFO - -- start listenCommand
+2016-01-15 01:17:08,932 - INFO - ---- start speech2Text
+2016-01-15 01:17:12,509 - INFO - ---- finished speech2Text
+2016-01-15 01:17:12,509 - INFO - ---- recognized text = выключить 
+2016-01-15 01:17:12,722 - INFO - ---- request url = http://192.168.0.106:3000/send/LG_AKB72915207/KEY_POWER
+2016-01-15 01:17:12,723 - INFO - ---- device returned: status_code = 200, content = <!DOCTYPE html>
+<html lang="en">
+  <head>
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, user-scalable=no" />
+<meta name="description" content="IR Remote Control Interface">
+
+<title>Remote - Television</title>
+
+<!-- Bootstrap core CSS -->
+<link href="/css/bootstrap.css" rel="stylesheet"/>
+<link href="/css/font-awesome.min.css" rel="stylesheet"/>
+<link href="/css/style.css" rel="stylesheet"/>
+
+
+<!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+<!--[if lt IE 9]>
+<script src="/js/html5shiv.min.js"></script>
+<script src="/js/respond.min.js"></script>
+<![endif]--> </head>
+  <body>
+
+  <ul>
+    <li>
+        <a href="devices/add">Add new device</a>
+    </li>
+    <li>
+      <a href="commands">Voice commands</a>
+    </li>
+  </ul>
+
+
+    <!-- BEGIN TELEVISION -->
+
+    <div class="remote-screen container" id="television">
+        <h1>Remote: LG_AKB72915207</h1>
+      <div class="buttongroup col-xs-12 col-md-4">
+        <div class="col-xs-12 control-button-container text-center">
+          <a class="btn col-xs-12 btn-lg btn-danger col-xs-12" href="/send/LG_AKB72915207/KEY_POWER">
+            <i class="fa fa-2x fa-power-off pull-left"></i> TV Power
+          </a>
+        </div>
+
+        <div class="col-xs-3 control-button-container text-center">
+          <a class="btn btn-lg btn-default col-xs-12" href="/send/LG_AKB72915207/KEY_REWIND">
+            <i class="fa fa-backward"></i>
+          </a>
+        </div>
+
+        <div class="col-xs-3 control-button-container text-center">
+          <a class="btn btn-lg btn-default col-xs-12" href="/send/LG_AKB72915207/KEY_PAUSE">
+            <i class="fa fa-pause"></i>
+          </a>
+        </div>
+        <div class="col-xs-3 control-button-container text-center">
+          <a class="btn btn-lg btn-default col-xs-12" href="/send/LG_AKB72915207/KEY_PLAY">
+            <i class="fa fa-play"></i>
+          </a>
+        </div>
+        <div class="col-xs-3 control-button-container text-center">
+          <a class="btn btn-lg btn-default col-xs-12" href="/send/LG_AKB72915207/KEY_FASTFORWARD">
+            <i class="fa fa-forward"></i>
+          </a>
+        </div>
+
+        <div class="col-xs-6 control-button-container text-center">
+          <a class="btn btn-lg btn-danger col-xs-12" href="/send/LG_AKB72915207/KEY_NETFLIX">
+            Guide
+          </a>
+        </div>
+        <div class="col-xs-6 control-button-container text-center">
+          <a class="btn btn-lg btn-success col-xs-12" href="/send/LG_AKB72915207/KEY_AMAZON">
+            Amazon
+          </a>
+        </div>
+
+      </div>
+
+      <div class="buttongroup col-xs-12 col-md-4">
+        <div class="col-xs-4 control-button-container text-center">
+          <a class="btn btn-lg btn-default col-xs-12" href="/send/LG_AKB72915207/KEY_BACK">
+            Back
+          </a>
+        </div>
+
+        <div class="col-xs-4 control-button-container text-center">
+          <a class="btn btn-lg btn-primary col-xs-12" href="/send/LG_AKB72915207/KEY_UP">
+            <i class="fa fa-arrow-up"></i>
+          </a>
+        </div>
+        <div class="col-xs-4 control-button-container text-center">
+          <a class="btn btn-lg btn-default col-xs-12" href="/send/LG_AKB72915207/KEY_INFO">
+            Info
+          </a>
+        </div>
+
+
+        <div class="col-xs-4 control-button-container text-center">
+          <a class="btn btn-lg btn-primary col-xs-12" href="/send/LG_AKB72915207/KEY_LEFT">
+            <i class="fa fa-arrow-left"></i>
+          </a>
+        </div>
+        <div class="col-xs-4 control-button-container text-center">
+          <a class="btn btn-lg btn-primary col-xs-12" href="/send/LG_AKB72915207/KEY_OK">
+            OK
+          </a>
+        </div>
+        <div class="col-xs-4 control-button-container text-center">
+          <a class="btn btn-lg btn-primary col-xs-12" href="/send/LG_AKB72915207/KEY_RIGHT">
+            <i class="fa fa-arrow-right"></i>
+          </a>
+        </div>
+        <div class="col-xs-4 control-button-container text-center">
+          <a class="btn btn-lg btn-default col-xs-12" href="/send/LG_AKB72915207/KEY_EXIT">
+            Exit
+          </a>
+        </div>
+
+        <div class="col-xs-4 control-button-container text-center">
+          <a class="btn btn-lg btn-primary col-xs-12" href="/send/LG_AKB72915207/KEY_DOWN">
+            <i class="fa fa-arrow-down"></i>
+          </a>
+        </div>
+        <div class="col-xs-4 control-button-container text-center">
+          <a class="btn btn-lg btn-default col-xs-12" href="/send/LG_AKB72915207/KEY_UP">
+            ?
+          </a>
+        </div>
+      </div>
+
+      <div class="buttongroup col-xs-12 col-md-4">
+
+        <div class="col-xs-4 control-button-container text-center">
+          <a class="btn btn-lg btn-default col-xs-12" href="/send/LG_AKB72915207/KEY_1">
+            1
+          </a>
+        </div>
+        <div class="col-xs-4 control-button-container text-center">
+          <a class="btn btn-lg btn-default col-xs-12" href="/send/LG_AKB72915207/KEY_2">
+            2
+          </a>
+        </div>
+        <div class="col-xs-4 control-button-container text-center">
+          <a class="btn btn-lg btn-default col-xs-12" href="/send/LG_AKB72915207/KEY_3">
+            3
+          </a>
+        </div>
+
+
+
+
+        <div class="col-xs-4 control-button-container text-center">
+          <a class="btn btn-lg btn-default col-xs-12" href="/send/LG_AKB72915207/KEY_4">
+            4
+          </a>
+        </div>
+        <div class="col-xs-4 control-button-container text-center">
+          <a class="btn btn-lg btn-default col-xs-12" href="/send/LG_AKB72915207/KEY_5">
+            5
+          </a>
+        </div>
+        <div class="col-xs-4 control-button-container text-center">
+          <a class="btn btn-lg btn-default col-xs-12" href="/send/LG_AKB72915207/KEY_6">
+            6
+          </a>
+        </div>
+
+
+
+        <div class="col-xs-4 control-button-container text-center">
+          <a class="btn btn-lg btn-default col-xs-12" href="/send/LG_AKB72915207/KEY_7">
+            7
+          </a>
+        </div>
+        <div class="col-xs-4 control-button-container text-center">
+          <a class="btn btn-lg btn-default col-xs-12" href="/send/LG_AKB72915207/KEY_8">
+            8
+          </a>
+        </div>
+        <div class="col-xs-4 control-button-container text-center">
+          <a class="btn btn-lg btn-default col-xs-12" href="/send/LG_AKB72915207/KEY_9">
+            9
+          </a>
+        </div>
+
+        <div class="col-xs-4 control-button-container text-center">
+          <a class="btn btn-lg btn-default col-xs-12" href="/send/LG_AKB72915207/KEY_mode">
+            Input
+          </a>
+        </div>
+        <div class="col-xs-4 control-button-container text-center">
+          <a class="btn btn-lg btn-default col-xs-12" href="/send/LG_AKB72915207/KEY_0">
+            0
+          </a>
+        </div>
+        <div class="col-xs-4 control-button-container text-center">
+          <a class="btn btn-lg btn-default col-xs-12" href="/send/LG_AKB72915207/KEY_enter">
+            Enter
+          </a>
+        </div>
+      </div>
+
+      <div class="buttongroup col-xs-12 col-md-4">
+
+
+        <div class="col-xs-4 control-button-container text-center">
+          <a class="btn btn-lg btn-primary col-xs-12" href="/send/LG_AKB72915207/KEY_VOLUMEUP">
+            <i class="fa fa-plus-circle"></i>
+          </a>
+        </div>
+        <div class="col-xs-4 control-button-container text-center">
+          <a class="btn btn-lg btn-warning col-xs-12" href="/send/LG_AKB72915207/KEY_MUTE">
+      <span style="display:inline-block;height:24px;overflow:hidden">
+        <i class="fa fa-stack-1x fa-volume-up"></i>
+        <i class="fa fa-stack-2x fa-ban"></i>
+      </span>
+          </a>
+        </div>
+        <div class="col-xs-4 control-button-container text-center">
+          <a class="btn btn-lg btn-primary col-xs-12" href="/send/LG_AKB72915207/KEY_CHANNELUP">
+            <i class="fa fa-arrow-circle-up"></i>
+          </a>
+        </div>
+
+
+        <div class="col-xs-4 control-button-container text-center">
+          <a class="btn btn-lg btn-primary col-xs-12" href="/send/LG_AKB72915207/KEY_VOLUMEDOWN">
+            <i class="fa fa-minus-circle"></i>
+          </a>
+        </div>
+        <div class="col-xs-4 control-button-container text-center">
+          <a class="btn btn-lg btn-success col-xs-12" href="/send/LG_AKB72915207/KEY_FAVORITE">
+            <i class="fa fa-star"></i>
+          </a>
+        </div>
+        <div class="col-xs-4 control-button-container text-center">
+          <a class="btn btn-lg btn-primary col-xs-12" href="/send/LG_AKB72915207/KEY_CHANNELDOWN">
+            <i class="fa fa-arrow-circle-down"></i>
+          </a>
+        </div>
+        <div class="col-xs-12 control-button-container text-center">
+
+
+        </div>
+
+
+      </div>
+    </div>
+      <!---- END TELEVISION ---->
+  </body>
+</html>
+
+
+2016-01-15 01:17:12,723 - INFO - -- stop listenCommand
+2016-01-15 01:27:05,432 - INFO - -- START voiceIRControl.py.
+2016-01-15 01:27:05,433 - INFO - -- finished to read device configuration json file device_config.json
+2016-01-15 01:27:05,433 - INFO - -- finished to set CMU SPHINX library settings
+2016-01-15 01:27:05,539 - INFO - -- finished to set alsaaudio parameters
+2016-01-15 01:27:08,428 - INFO - -- detected keyphrase raspberry
+2016-01-15 01:27:08,428 - INFO - -- start listenCommand
+2016-01-15 01:27:08,429 - INFO - ---- start speech2Text
+2016-01-15 01:27:11,935 - INFO - ---- finished speech2Text
+2016-01-15 01:27:11,936 - INFO - ---- recognized text = включить 
+2016-01-15 01:27:12,157 - INFO - ---- request url = http://192.168.0.106:3000/send/LG_AKB72915207/KEY_POWER
+2016-01-15 01:27:12,157 - INFO - ---- device returned: status_code = 200
+2016-01-15 01:27:12,158 - INFO - -- stop listenCommand
+2016-01-15 01:27:16,529 - INFO - -- detected keyphrase raspberry
+2016-01-15 01:27:16,529 - INFO - -- start listenCommand
+2016-01-15 01:27:16,529 - INFO - ---- start speech2Text
+2016-01-15 01:27:19,992 - INFO - ---- finished speech2Text
+2016-01-15 01:27:19,992 - INFO - ---- recognized text = выключить 
+2016-01-15 01:27:20,143 - INFO - ---- request url = http://192.168.0.106:3000/send/LG_AKB72915207/KEY_POWER
+2016-01-15 01:27:20,144 - INFO - ---- device returned: status_code = 200
+2016-01-15 01:27:20,144 - INFO - -- stop listenCommand
+2016-01-15 01:27:21,808 - INFO - -- detected keyphrase raspberry
+2016-01-15 01:27:21,809 - INFO - -- start listenCommand
+2016-01-15 01:27:21,809 - INFO - ---- start speech2Text
+2016-01-15 01:27:25,139 - INFO - ---- finished speech2Text
+2016-01-15 01:27:25,140 - INFO - ---- recognized text = день 
+2016-01-15 01:27:25,174 - INFO - ---- request url = http://192.168.0.106:8083/ZWaveAPI/Run/devices[13].instances[0].Basic.Set(255)
+2016-01-15 01:27:25,175 - INFO - ---- device returned: status_code = 200
+2016-01-15 01:27:25,175 - INFO - -- stop listenCommand
+2016-01-15 01:27:27,077 - INFO - -- detected keyphrase raspberry
+2016-01-15 01:27:27,080 - INFO - -- start listenCommand
+2016-01-15 01:27:27,080 - INFO - ---- start speech2Text
+2016-01-15 01:27:30,452 - INFO - ---- finished speech2Text
+2016-01-15 01:27:30,453 - INFO - ---- recognized text = ночь 
+2016-01-15 01:27:30,490 - INFO - ---- request url = http://192.168.0.106:8083/ZWaveAPI/Run/devices[13].instances[0].Basic.Set(0)
+2016-01-15 01:27:30,491 - INFO - ---- device returned: status_code = 200
+2016-01-15 01:27:30,491 - INFO - -- stop listenCommand
+2016-01-15 01:27:32,948 - INFO - -- detected keyphrase raspberry
+2016-01-15 01:27:32,948 - INFO - -- start listenCommand
+2016-01-15 01:27:32,948 - INFO - ---- start speech2Text
+2016-01-15 01:27:36,530 - INFO - ---- finished speech2Text
+2016-01-15 01:27:36,531 - INFO - ---- recognized text = громкость + 
+2016-01-15 01:27:36,531 - INFO - ---- no command matches
+2016-01-15 01:27:36,531 - INFO - -- stop listenCommand
+2016-01-15 01:27:39,634 - INFO - -- detected keyphrase raspberry
+2016-01-15 01:27:39,639 - INFO - -- start listenCommand
+2016-01-15 01:27:39,639 - INFO - ---- start speech2Text
+2016-01-15 01:27:43,019 - INFO - ---- finished speech2Text
+2016-01-15 01:27:43,020 - INFO - ---- recognized text = громкость - 
+2016-01-15 01:27:43,020 - INFO - ---- no command matches
+2016-01-15 01:27:43,020 - INFO - -- stop listenCommand
+2016-01-15 01:27:44,630 - INFO - -- detected keyphrase raspberry
+2016-01-15 01:27:44,635 - INFO - -- start listenCommand
+2016-01-15 01:27:44,635 - INFO - ---- start speech2Text
+2016-01-15 01:27:47,988 - INFO - ---- finished speech2Text
+2016-01-15 01:27:47,988 - INFO - ---- recognized text = canal + 
+2016-01-15 01:27:47,989 - INFO - ---- no command matches
+2016-01-15 01:27:47,989 - INFO - -- stop listenCommand
+2016-01-15 01:27:49,544 - INFO - -- detected keyphrase raspberry
+2016-01-15 01:27:49,548 - INFO - -- start listenCommand
+2016-01-15 01:27:49,548 - INFO - ---- start speech2Text
+2016-01-15 01:27:52,858 - INFO - ---- finished speech2Text
+2016-01-15 01:27:52,858 - INFO - ---- recognized text = - 
+2016-01-15 01:27:52,858 - INFO - ---- no command matches
+2016-01-15 01:27:52,858 - INFO - -- stop listenCommand
+2016-01-15 01:27:56,503 - INFO - -- detected keyphrase raspberry
+2016-01-15 01:27:56,507 - INFO - -- start listenCommand
+2016-01-15 01:27:56,507 - INFO - ---- start speech2Text
+2016-01-15 01:28:00,066 - INFO - ---- finished speech2Text
+2016-01-15 01:28:00,067 - INFO - ---- recognized text = она у - 
+2016-01-15 01:28:00,067 - INFO - ---- no command matches
+2016-01-15 01:28:00,067 - INFO - -- stop listenCommand
+2016-01-15 01:28:13,050 - INFO - -- detected keyphrase raspberry
+2016-01-15 01:28:13,054 - INFO - -- start listenCommand
+2016-01-15 01:28:13,054 - INFO - ---- start speech2Text
+2016-01-15 01:28:16,513 - INFO - ---- finished speech2Text
+2016-01-15 01:28:16,513 - INFO - ---- recognized text = канал - 
+2016-01-15 01:28:16,514 - INFO - ---- no command matches
+2016-01-15 01:28:16,514 - INFO - -- stop listenCommand
+2016-01-15 01:28:20,510 - INFO - -- detected keyphrase raspberry
+2016-01-15 01:28:20,515 - INFO - -- start listenCommand
+2016-01-15 01:28:20,515 - INFO - ---- start speech2Text
+2016-01-15 01:28:23,952 - INFO - ---- finished speech2Text
+2016-01-15 01:28:23,953 - INFO - ---- recognized text = canal + 
+2016-01-15 01:28:23,953 - INFO - ---- no command matches
+2016-01-15 01:28:23,953 - INFO - -- stop listenCommand
+2016-01-15 01:29:46,967 - INFO - -- detected keyphrase raspberry
+2016-01-15 01:29:46,970 - INFO - -- start listenCommand
+2016-01-15 01:29:46,971 - INFO - ---- start speech2Text
+2016-01-15 01:29:50,484 - INFO - ---- finished speech2Text
+2016-01-15 01:29:50,485 - INFO - ---- recognized text = справа 
+2016-01-15 01:29:50,485 - INFO - ---- no command matches
+2016-01-15 01:29:50,485 - INFO - -- stop listenCommand
+2016-01-15 01:29:53,013 - INFO - -- detected keyphrase raspberry
+2016-01-15 01:29:53,020 - INFO - -- start listenCommand
+2016-01-15 01:29:53,021 - INFO - ---- start speech2Text
+2016-01-15 01:29:56,433 - INFO - ---- finished speech2Text
+2016-01-15 01:29:56,434 - INFO - ---- recognized text = вверх 
+2016-01-15 01:29:56,613 - INFO - ---- request url = http://192.168.0.106:3000/send/LG_AKB72915207/KEY_UP
+2016-01-15 01:29:56,614 - INFO - ---- device returned: status_code = 200
+2016-01-15 01:29:56,614 - INFO - -- stop listenCommand
+2016-01-15 01:29:58,237 - INFO - -- detected keyphrase raspberry
+2016-01-15 01:29:58,242 - INFO - -- start listenCommand
+2016-01-15 01:29:58,243 - INFO - ---- start speech2Text
+2016-01-15 01:30:01,577 - INFO - ---- finished speech2Text
+2016-01-15 01:30:01,578 - INFO - ---- recognized text = nice 
+2016-01-15 01:30:01,578 - INFO - ---- no command matches
+2016-01-15 01:30:01,579 - INFO - -- stop listenCommand
+2016-01-15 01:30:05,743 - INFO - -- detected keyphrase raspberry
+2016-01-15 01:30:05,747 - INFO - -- start listenCommand
+2016-01-15 01:30:05,747 - INFO - ---- start speech2Text
+2016-01-15 01:30:09,385 - INFO - ---- finished speech2Text
+2016-01-15 01:30:09,385 - INFO - ---- recognized text = + 
+2016-01-15 01:30:09,385 - INFO - ---- no command matches
+2016-01-15 01:30:09,385 - INFO - -- stop listenCommand
+2016-01-15 01:30:10,928 - INFO - -- detected keyphrase raspberry
+2016-01-15 01:30:10,934 - INFO - -- start listenCommand
+2016-01-15 01:30:10,934 - INFO - ---- start speech2Text
+2016-01-15 01:30:14,270 - INFO - ---- finished speech2Text
+2016-01-15 01:30:14,271 - INFO - ---- recognized text = - 
+2016-01-15 01:30:14,271 - INFO - ---- no command matches
+2016-01-15 01:30:14,271 - INFO - -- stop listenCommand
+2016-01-15 01:31:41,605 - INFO - -- detected keyphrase raspberry
+2016-01-15 01:31:41,610 - INFO - -- start listenCommand
+2016-01-15 01:31:41,610 - INFO - ---- start speech2Text
+2016-01-15 01:31:45,135 - INFO - ---- finished speech2Text
+2016-01-15 01:31:45,136 - INFO - ---- recognized text = разве назад канал 
+2016-01-15 01:31:45,136 - INFO - ---- no command matches
+2016-01-15 01:31:45,136 - INFO - -- stop listenCommand
+2016-01-15 01:32:51,619 - INFO - -- START voiceIRControl.py.
+2016-01-15 01:32:51,620 - INFO - -- finished to read device configuration json file device_config.json
+2016-01-15 01:32:51,620 - INFO - -- finished to set CMU SPHINX library settings
+2016-01-15 01:32:51,683 - INFO - -- finished to set alsaaudio parameters
+2016-01-15 01:32:54,202 - INFO - -- detected keyphrase raspberry
+2016-01-15 01:32:54,203 - INFO - -- start listenCommand
+2016-01-15 01:32:54,203 - INFO - ---- start speech2Text
+2016-01-15 01:32:56,713 - INFO - ---- finished speech2Text
+2016-01-15 01:32:56,713 - INFO - ---- recognized text = 
+2016-01-15 01:32:56,713 - INFO - ---- no command matches
+2016-01-15 01:32:56,713 - INFO - -- stop listenCommand
+2016-01-15 01:32:58,992 - INFO - -- detected keyphrase raspberry
+2016-01-15 01:32:58,995 - INFO - -- start listenCommand
+2016-01-15 01:32:58,996 - INFO - ---- start speech2Text
+2016-01-15 01:33:01,610 - INFO - ---- finished speech2Text
+2016-01-15 01:33:01,610 - INFO - ---- recognized text = скачать 
+2016-01-15 01:33:01,611 - INFO - ---- no command matches
+2016-01-15 01:33:01,611 - INFO - -- stop listenCommand
+2016-01-15 01:33:03,618 - INFO - -- detected keyphrase raspberry
+2016-01-15 01:33:03,621 - INFO - -- start listenCommand
+2016-01-15 01:33:03,622 - INFO - ---- start speech2Text
+2016-01-15 01:33:06,067 - INFO - ---- finished speech2Text
+2016-01-15 01:33:06,067 - INFO - ---- recognized text = включить 
+2016-01-15 01:33:06,274 - INFO - ---- request url = http://192.168.0.106:3000/send/LG_AKB72915207/KEY_POWER
+2016-01-15 01:33:06,274 - INFO - ---- device returned: status_code = 200
+2016-01-15 01:33:06,274 - INFO - -- stop listenCommand
+2016-01-15 01:33:08,165 - INFO - -- detected keyphrase raspberry
+2016-01-15 01:33:08,169 - INFO - -- start listenCommand
+2016-01-15 01:33:08,169 - INFO - ---- start speech2Text
+2016-01-15 01:33:10,595 - INFO - ---- finished speech2Text
+2016-01-15 01:33:10,595 - INFO - ---- recognized text = выключить 
+2016-01-15 01:33:10,771 - INFO - ---- request url = http://192.168.0.106:3000/send/LG_AKB72915207/KEY_POWER
+2016-01-15 01:33:10,772 - INFO - ---- device returned: status_code = 200
+2016-01-15 01:33:10,772 - INFO - -- stop listenCommand
+2016-01-15 01:33:12,761 - INFO - -- detected keyphrase raspberry
+2016-01-15 01:33:12,765 - INFO - -- start listenCommand
+2016-01-15 01:33:12,766 - INFO - ---- start speech2Text
+2016-01-15 01:33:15,340 - INFO - ---- finished speech2Text
+2016-01-15 01:33:15,340 - INFO - ---- recognized text = canal + 
+2016-01-15 01:33:15,340 - INFO - ---- no command matches
+2016-01-15 01:33:15,340 - INFO - -- stop listenCommand
+2016-01-15 01:33:17,493 - INFO - -- detected keyphrase raspberry
+2016-01-15 01:33:17,498 - INFO - -- start listenCommand
+2016-01-15 01:33:17,498 - INFO - ---- start speech2Text
+2016-01-15 01:33:19,971 - INFO - ---- finished speech2Text
+2016-01-15 01:33:19,972 - INFO - ---- recognized text = канал - 
+2016-01-15 01:33:19,972 - INFO - ---- no command matches
+2016-01-15 01:33:19,972 - INFO - -- stop listenCommand
+2016-01-15 01:33:27,318 - INFO - -- detected keyphrase raspberry
+2016-01-15 01:33:27,321 - INFO - -- start listenCommand
+2016-01-15 01:33:27,321 - INFO - ---- start speech2Text
+2016-01-15 01:33:30,034 - INFO - ---- finished speech2Text
+2016-01-15 01:33:30,034 - INFO - ---- recognized text = вперед 
+2016-01-15 01:33:30,035 - INFO - ---- no command matches
+2016-01-15 01:33:30,035 - INFO - -- stop listenCommand
+2016-01-15 01:33:34,784 - INFO - -- detected keyphrase raspberry
+2016-01-15 01:33:34,785 - INFO - -- start listenCommand
+2016-01-15 01:33:34,785 - INFO - ---- start speech2Text
+2016-01-15 01:33:37,459 - INFO - ---- finished speech2Text
+2016-01-15 01:33:37,459 - INFO - ---- recognized text = но вперед 
+2016-01-15 01:33:37,459 - INFO - ---- no command matches
+2016-01-15 01:33:37,460 - INFO - -- stop listenCommand
+2016-01-15 01:33:39,907 - INFO - -- detected keyphrase raspberry
+2016-01-15 01:33:39,911 - INFO - -- start listenCommand
+2016-01-15 01:33:39,911 - INFO - ---- start speech2Text
+2016-01-15 01:33:42,385 - INFO - ---- finished speech2Text
+2016-01-15 01:33:42,385 - INFO - ---- recognized text = канал вперед 
+2016-01-15 01:33:42,616 - INFO - ---- request url = http://192.168.0.106:3000/send/LG_AKB72915207/KEY_CHANNELUP
+2016-01-15 01:33:42,617 - INFO - ---- device returned: status_code = 200
+2016-01-15 01:33:42,617 - INFO - -- stop listenCommand
+2016-01-15 01:33:44,687 - INFO - -- detected keyphrase raspberry
+2016-01-15 01:33:44,693 - INFO - -- start listenCommand
+2016-01-15 01:33:44,694 - INFO - ---- start speech2Text
+2016-01-15 01:33:47,210 - INFO - ---- finished speech2Text
+2016-01-15 01:33:47,210 - INFO - ---- recognized text = канал назад 
+2016-01-15 01:33:47,333 - INFO - ---- request url = http://192.168.0.106:3000/send/LG_AKB72915207/KEY_CHANNELDOWN
+2016-01-15 01:33:47,334 - INFO - ---- device returned: status_code = 200
+2016-01-15 01:33:47,334 - INFO - -- stop listenCommand
+2016-01-15 01:34:05,887 - INFO - -- detected keyphrase raspberry
+2016-01-15 01:34:05,890 - INFO - -- start listenCommand
+2016-01-15 01:34:05,891 - INFO - ---- start speech2Text
+2016-01-15 01:34:08,269 - INFO - ---- finished speech2Text
+2016-01-15 01:34:08,269 - INFO - ---- recognized text = день 
+2016-01-15 01:34:08,417 - INFO - ---- request url = http://192.168.0.106:8083/ZWaveAPI/Run/devices[13].instances[0].Basic.Set(255)
+2016-01-15 01:34:08,417 - INFO - ---- device returned: status_code = 200
+2016-01-15 01:34:08,417 - INFO - -- stop listenCommand
+2016-01-15 01:34:10,337 - INFO - -- detected keyphrase raspberry
+2016-01-15 01:34:10,340 - INFO - -- start listenCommand
+2016-01-15 01:34:10,341 - INFO - ---- start speech2Text
+2016-01-15 01:34:12,947 - INFO - ---- finished speech2Text
+2016-01-15 01:34:12,948 - INFO - ---- recognized text = ночь 
+2016-01-15 01:34:12,980 - INFO - ---- request url = http://192.168.0.106:8083/ZWaveAPI/Run/devices[13].instances[0].Basic.Set(0)
+2016-01-15 01:34:12,980 - INFO - ---- device returned: status_code = 200
+2016-01-15 01:34:12,981 - INFO - -- stop listenCommand
+2016-01-15 01:35:06,765 - INFO - -- START voiceIRControl.py.
+2016-01-15 01:35:06,766 - INFO - -- finished to read device configuration json file device_config.json
+2016-01-15 01:35:06,766 - INFO - -- finished to set CMU SPHINX library settings
+2016-01-15 01:35:06,822 - INFO - -- finished to set alsaaudio parameters
+2016-01-15 01:35:09,265 - INFO - -- detected keyphrase raspberry
+2016-01-15 01:35:09,269 - INFO - -- start listenCommand
+2016-01-15 01:35:09,269 - INFO - ---- start speech2Text
+2016-01-15 01:35:11,681 - INFO - ---- finished speech2Text
+2016-01-15 01:35:11,681 - INFO - ---- recognized text = canal + 
+2016-01-15 01:35:11,895 - INFO - ---- request url = http://192.168.0.106:3000/send/LG_AKB72915207/KEY_CHANNELUP
+2016-01-15 01:35:11,896 - INFO - ---- device returned: status_code = 200
+2016-01-15 01:35:11,896 - INFO - -- stop listenCommand
+2016-01-15 01:35:14,998 - INFO - -- detected keyphrase raspberry
+2016-01-15 01:35:15,003 - INFO - -- start listenCommand
+2016-01-15 01:35:15,003 - INFO - ---- start speech2Text
+2016-01-15 01:35:17,454 - INFO - ---- finished speech2Text
+2016-01-15 01:35:17,454 - INFO - ---- recognized text = канал - 
+2016-01-15 01:35:17,584 - INFO - ---- request url = http://192.168.0.106:3000/send/LG_AKB72915207/KEY_CHANNELDOWN
+2016-01-15 01:35:17,584 - INFO - ---- device returned: status_code = 200
+2016-01-15 01:35:17,585 - INFO - -- stop listenCommand
+2016-01-15 01:35:19,408 - INFO - -- detected keyphrase raspberry
+2016-01-15 01:35:19,412 - INFO - -- start listenCommand
+2016-01-15 01:35:19,413 - INFO - ---- start speech2Text
+2016-01-15 01:35:21,988 - INFO - ---- finished speech2Text
+2016-01-15 01:35:21,988 - INFO - ---- recognized text = громкость + 
+2016-01-15 01:35:22,129 - INFO - ---- request url = http://192.168.0.106:3000/send/LG_AKB72915207/KEY_VOLUMEUP
+2016-01-15 01:35:22,129 - INFO - ---- device returned: status_code = 200
+2016-01-15 01:35:22,129 - INFO - -- stop listenCommand
+2016-01-15 01:35:23,677 - INFO - -- detected keyphrase raspberry
+2016-01-15 01:35:23,681 - INFO - -- start listenCommand
+2016-01-15 01:35:23,681 - INFO - ---- start speech2Text
+2016-01-15 01:35:26,268 - INFO - ---- finished speech2Text
+2016-01-15 01:35:26,269 - INFO - ---- recognized text = август - 
+2016-01-15 01:35:26,269 - INFO - ---- no command matches
+2016-01-15 01:35:26,269 - INFO - -- stop listenCommand
+2016-01-15 01:35:28,740 - INFO - -- detected keyphrase raspberry
+2016-01-15 01:35:28,740 - INFO - -- start listenCommand
+2016-01-15 01:35:28,741 - INFO - ---- start speech2Text
+2016-01-15 01:35:31,063 - INFO - ---- finished speech2Text
+2016-01-15 01:35:31,064 - INFO - ---- recognized text = громкость - 
+2016-01-15 01:35:31,195 - INFO - ---- request url = http://192.168.0.106:3000/send/LG_AKB72915207/KEY_VOLUMEDOWN
+2016-01-15 01:35:31,195 - INFO - ---- device returned: status_code = 200
+2016-01-15 01:35:31,195 - INFO - -- stop listenCommand
+2016-01-15 01:35:45,296 - INFO - -- detected keyphrase raspberry
+2016-01-15 01:35:45,300 - INFO - -- start listenCommand
+2016-01-15 01:35:45,300 - INFO - ---- start speech2Text
+2016-01-15 01:35:47,993 - INFO - ---- finished speech2Text
+2016-01-15 01:35:47,994 - INFO - ---- recognized text = zlo + 
+2016-01-15 01:35:47,994 - INFO - ---- no command matches
+2016-01-15 01:35:47,994 - INFO - -- stop listenCommand
+2016-01-15 01:35:50,419 - INFO - -- detected keyphrase raspberry
+2016-01-15 01:35:50,424 - INFO - -- start listenCommand
+2016-01-15 01:35:50,424 - INFO - ---- start speech2Text
+2016-01-15 01:35:52,993 - INFO - ---- finished speech2Text
+2016-01-15 01:35:52,994 - INFO - ---- recognized text = звук + 
+2016-01-15 01:35:52,994 - INFO - ---- no command matches
+2016-01-15 01:35:52,994 - INFO - -- stop listenCommand
+2016-01-15 01:35:55,060 - INFO - -- detected keyphrase raspberry
+2016-01-15 01:35:55,067 - INFO - -- start listenCommand
+2016-01-15 01:35:55,068 - INFO - ---- start speech2Text
+2016-01-15 01:35:57,594 - INFO - ---- finished speech2Text
+2016-01-15 01:35:57,595 - INFO - ---- recognized text = с бог - 
+2016-01-15 01:35:57,595 - INFO - ---- no command matches
+2016-01-15 01:35:57,596 - INFO - -- stop listenCommand
+2016-01-15 01:36:00,023 - INFO - -- detected keyphrase raspberry
+2016-01-15 01:36:00,027 - INFO - -- start listenCommand
+2016-01-15 01:36:00,027 - INFO - ---- start speech2Text
+2016-01-15 01:36:02,369 - INFO - ---- finished speech2Text
+2016-01-15 01:36:02,370 - INFO - ---- recognized text = звук - 
+2016-01-15 01:36:02,370 - INFO - ---- no command matches
+2016-01-15 01:36:02,370 - INFO - -- stop listenCommand
+2016-01-15 01:36:04,570 - INFO - -- detected keyphrase raspberry
+2016-01-15 01:36:04,574 - INFO - -- start listenCommand
+2016-01-15 01:36:04,575 - INFO - ---- start speech2Text
+2016-01-15 01:36:06,891 - INFO - ---- finished speech2Text
+2016-01-15 01:36:06,891 - INFO - ---- recognized text = громкость - 
+2016-01-15 01:36:07,085 - INFO - ---- request url = http://192.168.0.106:3000/send/LG_AKB72915207/KEY_VOLUMEDOWN
+2016-01-15 01:36:07,085 - INFO - ---- device returned: status_code = 200
+2016-01-15 01:36:07,086 - INFO - -- stop listenCommand
+2016-01-15 01:36:09,249 - INFO - -- detected keyphrase raspberry
+2016-01-15 01:36:09,255 - INFO - -- start listenCommand
+2016-01-15 01:36:09,255 - INFO - ---- start speech2Text
+2016-01-15 01:36:11,619 - INFO - ---- finished speech2Text
+2016-01-15 01:36:11,619 - INFO - ---- recognized text = громкость + 
+2016-01-15 01:36:11,741 - INFO - ---- request url = http://192.168.0.106:3000/send/LG_AKB72915207/KEY_VOLUMEUP
+2016-01-15 01:36:11,741 - INFO - ---- device returned: status_code = 200
+2016-01-15 01:36:11,742 - INFO - -- stop listenCommand
+2016-01-15 01:36:13,570 - INFO - -- detected keyphrase raspberry
+2016-01-15 01:36:13,570 - INFO - -- start listenCommand
+2016-01-15 01:36:13,570 - INFO - ---- start speech2Text
+2016-01-15 01:36:15,911 - INFO - ---- finished speech2Text
+2016-01-15 01:36:15,912 - INFO - ---- recognized text = canal + 
+2016-01-15 01:36:16,109 - INFO - ---- request url = http://192.168.0.106:3000/send/LG_AKB72915207/KEY_CHANNELUP
+2016-01-15 01:36:16,109 - INFO - ---- device returned: status_code = 200
+2016-01-15 01:36:16,109 - INFO - -- stop listenCommand
+2016-01-15 01:36:17,483 - INFO - -- detected keyphrase raspberry
+2016-01-15 01:36:17,487 - INFO - -- start listenCommand
+2016-01-15 01:36:17,487 - INFO - ---- start speech2Text
+2016-01-15 01:36:19,932 - INFO - ---- finished speech2Text
+2016-01-15 01:36:19,933 - INFO - ---- recognized text = канал - 
+2016-01-15 01:36:20,062 - INFO - ---- request url = http://192.168.0.106:3000/send/LG_AKB72915207/KEY_CHANNELDOWN
+2016-01-15 01:36:20,063 - INFO - ---- device returned: status_code = 200
+2016-01-15 01:36:20,063 - INFO - -- stop listenCommand
+2016-01-15 01:36:39,852 - INFO - -- detected keyphrase raspberry
+2016-01-15 01:36:39,858 - INFO - -- start listenCommand
+2016-01-15 01:36:39,858 - INFO - ---- start speech2Text
+2016-01-15 01:36:42,232 - INFO - ---- finished speech2Text
+2016-01-15 01:36:42,232 - INFO - ---- recognized text = ночь 
+2016-01-15 01:36:42,319 - INFO - ---- request url = http://192.168.0.106:8083/ZWaveAPI/Run/devices[13].instances[0].Basic.Set(0)
+2016-01-15 01:36:42,319 - INFO - ---- device returned: status_code = 200
+2016-01-15 01:36:42,319 - INFO - -- stop listenCommand
+2016-01-15 01:36:47,143 - INFO - -- detected keyphrase raspberry
+2016-01-15 01:36:47,144 - INFO - -- start listenCommand
+2016-01-15 01:36:47,144 - INFO - ---- start speech2Text
+2016-01-15 01:36:49,654 - INFO - ---- finished speech2Text
+2016-01-15 01:36:49,654 - INFO - ---- recognized text = день 
+2016-01-15 01:36:49,690 - INFO - ---- request url = http://192.168.0.106:8083/ZWaveAPI/Run/devices[13].instances[0].Basic.Set(255)
+2016-01-15 01:36:49,691 - INFO - ---- device returned: status_code = 200
+2016-01-15 01:36:49,691 - INFO - -- stop listenCommand
+2016-01-15 01:36:54,776 - INFO - -- detected keyphrase raspberry
+2016-01-15 01:36:54,779 - INFO - -- start listenCommand
+2016-01-15 01:36:54,780 - INFO - ---- start speech2Text
+2016-01-15 01:36:57,124 - INFO - ---- finished speech2Text
+2016-01-15 01:36:57,124 - INFO - ---- recognized text = ночь 
+2016-01-15 01:36:57,156 - INFO - ---- request url = http://192.168.0.106:8083/ZWaveAPI/Run/devices[13].instances[0].Basic.Set(0)
+2016-01-15 01:36:57,157 - INFO - ---- device returned: status_code = 200
+2016-01-15 01:36:57,158 - INFO - -- stop listenCommand
+2016-01-15 01:37:03,320 - INFO - -- detected keyphrase raspberry
+2016-01-15 01:37:03,321 - INFO - -- start listenCommand
+2016-01-15 01:37:03,321 - INFO - ---- start speech2Text
+2016-01-15 01:37:05,680 - INFO - ---- finished speech2Text
+2016-01-15 01:37:05,680 - INFO - ---- recognized text = день 
+2016-01-15 01:37:05,764 - INFO - ---- request url = http://192.168.0.106:8083/ZWaveAPI/Run/devices[13].instances[0].Basic.Set(255)
+2016-01-15 01:37:05,765 - INFO - ---- device returned: status_code = 200
+2016-01-15 01:37:05,765 - INFO - -- stop listenCommand
+2016-01-15 01:37:19,506 - INFO - -- detected keyphrase raspberry
+2016-01-15 01:37:19,506 - INFO - -- start listenCommand
+2016-01-15 01:37:19,507 - INFO - ---- start speech2Text
+2016-01-15 01:37:21,893 - INFO - ---- finished speech2Text
+2016-01-15 01:37:21,894 - INFO - ---- recognized text = ночь 
+2016-01-15 01:37:21,925 - INFO - ---- request url = http://192.168.0.106:8083/ZWaveAPI/Run/devices[13].instances[0].Basic.Set(0)
+2016-01-15 01:37:21,926 - INFO - ---- device returned: status_code = 200
+2016-01-15 01:37:21,926 - INFO - -- stop listenCommand
+2016-01-15 01:41:19,168 - INFO - -- START voiceIRControl.py.
+2016-01-15 01:41:19,169 - INFO - -- finished to read device configuration json file device_config.json
+2016-01-15 01:41:19,169 - INFO - -- finished to set CMU SPHINX library settings
+2016-01-15 01:41:19,228 - INFO - -- finished to set alsaaudio parameters
+2016-01-15 01:41:24,297 - INFO - -- detected keyphrase raspberry
+2016-01-15 01:41:24,297 - INFO - -- start listenCommand
+2016-01-15 01:41:24,297 - INFO - ---- start speech2Text
+2016-01-15 01:41:26,671 - INFO - ---- finished speech2Text
+2016-01-15 01:41:26,671 - INFO - ---- recognized text = включить 
+2016-01-15 01:41:26,884 - INFO - ---- request url = http://192.168.0.106:3000/send/LG_AKB72915207/KEY_POWER
+2016-01-15 01:41:26,885 - INFO - ---- device returned: status_code = 200
+2016-01-15 01:41:26,885 - INFO - -- stop listenCommand
+2016-01-15 01:41:28,710 - INFO - -- detected keyphrase raspberry
+2016-01-15 01:41:28,714 - INFO - -- start listenCommand
+2016-01-15 01:41:28,714 - INFO - ---- start speech2Text
+2016-01-15 01:41:31,127 - INFO - ---- finished speech2Text
+2016-01-15 01:41:31,127 - INFO - ---- recognized text = выключить 
+2016-01-15 01:41:31,267 - INFO - ---- request url = http://192.168.0.106:3000/send/LG_AKB72915207/KEY_POWER
+2016-01-15 01:41:31,268 - INFO - ---- device returned: status_code = 200
+2016-01-15 01:41:31,268 - INFO - -- stop listenCommand
+2016-01-15 01:41:33,348 - INFO - -- detected keyphrase raspberry
+2016-01-15 01:41:33,349 - INFO - -- start listenCommand
+2016-01-15 01:41:33,349 - INFO - ---- start speech2Text
+2016-01-15 01:41:35,819 - INFO - ---- finished speech2Text
+2016-01-15 01:41:35,819 - INFO - ---- recognized text = телевизор 
+2016-01-15 01:41:35,819 - INFO - ---- no command matches
+2016-01-15 01:41:35,820 - INFO - -- stop listenCommand

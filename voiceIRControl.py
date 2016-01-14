@@ -8,7 +8,7 @@ import requests
 import json
 
 # GPIO settings
-import RPi.GPIO as GPIO
+#import RPi.GPIO as GPIO
 
 # logging libs
 import logging
@@ -27,7 +27,9 @@ JSON_FILE_NAME = "device_config.json"
 AUDIO_FILE_NAME = 'output.wav'
 IR_IP_adress = '192.168.0.106:3000'
 ZWAY_IP_adress = '192.168.0.106:8083'
+
 KEYPHRASE = 'raspberry'
+REC_TIME = 2
 
 def readJsonFile(file_name):
 	f = open(file_name, "r")
@@ -50,17 +52,17 @@ def audio2Text(audioFileName):
 	text.encode('utf-8')
 	return text
 
-def speech2Text():
+def speech2Text(stream, rate, chunk_size, rec_sec):
 	text = []
-	text = asr.yandexAsrMic()
+	text = asr.yandexAsrMicStream(stream, rate, chunk_size, rec_sec)
 	# convert to unicode
 	text = text.decode('utf-8')
 	text = text.lower()
 	text.encode('utf-8')
 	return text  
 
-def recordAudio(audioFileName, recTime, stream):
-	#recordAudioToFile.recAlsaAudio(audioFileName, recTime)
+def recordAudio(audioFileName, rec_sec, stream):
+	#recordAudioToFile.recAlsaAudio(audioFileName, rec_sec)
 	#stream = alsaaudio.PCM(alsaaudio.PCM_CAPTURE,alsaaudio.PCM_NORMAL)
 	#stream.setchannels(CHANNELS)
 	#stream.setrate(RATE)
@@ -72,7 +74,7 @@ def recordAudio(audioFileName, recTime, stream):
 	CHANNELS = 1
 	frames = []
 
-	for i in range(0, int(RATE / CHUNK * recTime)):
+	for i in range(0, int(RATE / CHUNK * rec_sec)):
 		l,data = stream.read()
 		frames.append(data)
 
@@ -107,10 +109,11 @@ def commandToActionHttp(matchCommands, lib):
 
 		app_log.info('---- request url = ' + req_url)
 
-    	return_mes = "returned: status_code = " + str(r.status_code) + ", content = " + r.content
+    	return_mes = "returned: status_code = " + str(r.status_code)
     	return return_mes
 
-def listenCommand(com_act_lib, time, stream):
+# record audio *.wav file and send it to yandex 
+def listenCommand(com_act_lib, rec_time, stream):
 	#time.sleep(0.5)
 	#  record speech audio file
 	app_log.info('---- start to record audio')
@@ -120,6 +123,8 @@ def listenCommand(com_act_lib, time, stream):
 	#  yandex speech recognition
 	text = audio2Text(AUDIO_FILE_NAME)
 	app_log.info('---- finished audio2Text')
+	app_log.info('---- recognized text = ' + text)
+
 	
 	# find commands in text
 	match = []
@@ -128,19 +133,40 @@ def listenCommand(com_act_lib, time, stream):
 		
 	if (match):
 		mes = commandToActionHttp(match, com_act_lib)
-		app_log.info('---- device' +  mes)
+		app_log.info('---- device ' +  mes)
+	else:
+		app_log.info('---- no command matches')
+
+# listen command directly from mic and send it to yandex 
+def listenCommand2(com_act_lib, stream, rate, chunk_size, rec_sec):
+	#yandex speech recognition
+	app_log.info('---- start speech2Text')
+	text = speech2Text(stream, rate, chunk_size, rec_sec)
+	#app_log.info('---- text type ' + type(text))
+	app_log.info('---- finished speech2Text')
+	app_log.info('---- recognized text = ' + text)
+
+
+	# find commands in text
+	match = []
+	if(text):
+		match = findMatch(text, com_act_lib.keys())
+		
+	if (match):
+		mes = commandToActionHttp(match, com_act_lib)
+		app_log.info('---- device ' +  mes)
 	else:
 		app_log.info('---- no command matches')
 
 def main():
 	# setup GPIO. LED Indication
-	GPIO.setmode(GPIO.BCM)
+	#GPIO.setmode(GPIO.BCM)
 	green = 12
-	GPIO.setup(green, GPIO.OUT) # green
+	#GPIO.setup(green, GPIO.OUT) # green
 	red = 16
-	GPIO.setup(red, GPIO.OUT) # red
-	GPIO.output(green, GPIO.HIGH)
-	GPIO.output(red, GPIO.HIGH)
+	#GPIO.setup(red, GPIO.OUT) # red
+	#GPIO.output(green, GPIO.HIGH)
+	#GPIO.output(red, GPIO.HIGH)
 
 	#change directory
 	homedir = os.environ['HOME']
@@ -198,8 +224,8 @@ def main():
 	
 
 	while True:
-		GPIO.output(green, GPIO.HIGH)
-		GPIO.output(red, GPIO.LOW)
+		#GPIO.output(green, GPIO.HIGH)
+		#GPIO.output(red, GPIO.LOW)
 
 		l, buf = stream.read()
 		if buf:
@@ -209,18 +235,19 @@ def main():
 		    #break
 		if decoder.hyp() != None:
 			
-			GPIO.output(green, GPIO.LOW)
-			GPIO.output(red, GPIO.HIGH)
+			#GPIO.output(green, GPIO.LOW)
+			#GPIO.output(red, GPIO.HIGH)
 
 			app_log.info('-- detected keyphrase ' + KEYPHRASE)
 			decoder.end_utt()
 
 			try:
 				app_log.info('-- start listenCommand')
-				listenCommand(com_act_lib, 3, stream)
+				#listenCommand(com_act_lib, REC_TIME, stream)
+				listenCommand2(com_act_lib, stream, RATE, CHUNK, REC_TIME)
 				app_log.info('-- stop listenCommand')
 			except Exception:
-				app_log.info("Unexpected error:" + str(sys.exc_info()))
+				app_log.info("-- Unexpected error:" + str(sys.exc_info()))
 
 			decoder.start_utt()
 

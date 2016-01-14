@@ -75,25 +75,25 @@
         "action": "send/LG_AKB72915207/KEY_VOLUMEUP",
         "button": "KEY_VOLUMEUP",
         "device_name": "LG_AKB72915207",
-        "voice_command": "громкость плюс"
+        "voice_command": "громкость +"
     },
     {
         "action": "send/LG_AKB72915207/KEY_VOLUMEDOWN",
         "button": "KEY_VOLUMEDOWN",
         "device_name": "LG_AKB72915207",
-        "voice_command": "громкость минус"
+        "voice_command": "громкость -"
     },
     {
         "action": "send/LG_AKB72915207/KEY_CHANNELUP",
         "button": "KEY_CHANNELUP",
         "device_name": "LG_AKB72915207",
-        "voice_command": "канал плюс"
+        "voice_command": "canal +"
     },
     {
         "action": "send/LG_AKB72915207/KEY_CHANNELDOWN",
         "button": "KEY_CHANNELDOWN",
         "device_name": "LG_AKB72915207",
-        "voice_command": "канал минус"
+        "voice_command": "канал -"
     },
     {
         "action": "send/LG_AKB72915207/KEY_MENU",
