@@ -8,7 +8,7 @@ import requests
 import json
 
 # GPIO settings
-#import RPi.GPIO as GPIO
+import RPi.GPIO as GPIO
 
 # logging libs
 import logging
@@ -161,13 +161,13 @@ def listenCommand2(com_act_lib, stream, rate, chunk_size, rec_sec):
 
 def main():
 	# setup GPIO. LED Indication
-	#GPIO.setmode(GPIO.BCM)
+	GPIO.setmode(GPIO.BCM)
 	green = 12
-	#GPIO.setup(green, GPIO.OUT) # green
+	GPIO.setup(green, GPIO.OUT) # green
 	red = 16
-	#GPIO.setup(red, GPIO.OUT) # red
-	#GPIO.output(green, GPIO.HIGH)
-	#GPIO.output(red, GPIO.HIGH)
+	GPIO.setup(red, GPIO.OUT) # red
+	GPIO.output(green, GPIO.HIGH)
+	GPIO.output(red, GPIO.HIGH)
 
 	#change directory
 	homedir = os.environ['HOME']
@@ -225,8 +225,8 @@ def main():
 	
 
 	while True:
-		#GPIO.output(green, GPIO.HIGH)
-		#GPIO.output(red, GPIO.LOW)
+		GPIO.output(green, GPIO.HIGH)
+		GPIO.output(red, GPIO.LOW)
 
 		l, buf = stream.read()
 		if buf:
@@ -236,8 +236,8 @@ def main():
 		    #break
 		if decoder.hyp() != None:
 			
-			#GPIO.output(green, GPIO.LOW)
-			#GPIO.output(red, GPIO.HIGH)
+			GPIO.output(green, GPIO.LOW)
+			GPIO.output(red, GPIO.HIGH)
 
 			app_log.info('-- detected keyphrase ' + KEYPHRASE)
 			decoder.end_utt()
