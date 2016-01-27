@@ -2,6 +2,7 @@
 *.wav
 *.log
 *~
+
 MANIFEST
 dist/
 build/

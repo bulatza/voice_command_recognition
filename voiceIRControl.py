@@ -1,6 +1,7 @@
 #! /usr/bin/env python
 # -*- coding: utf-8 -*-
 
+# yandex SpeechKit
 import asr
 import time
 
@@ -14,23 +15,35 @@ import RPi.GPIO as GPIO
 import logging
 app_log = logging.getLogger('root')
 
-
 # imports for CMU Sphinx voice activation
 import sys, os
 from pocketsphinx.pocketsphinx import *
 from sphinxbase.sphinxbase import *
 
+# audio streaming
 import alsaaudio
 import wave
 
-JSON_FILE_NAME = "device_config.json"
-AUDIO_FILE_NAME = 'output.wav'
-IR_IP_adress = '192.168.0.106:3000'
-ZWAY_IP_adress = '192.168.0.106:8083'
+# get raspberry ip adress
+import pi_adress
 
+JSON_FILE_NAME = 'device_config.json'
+LOG_FILE = 'voiceIRControl.log'
+
+AUDIO_FILE_NAME = 'output.wav'
+IR_IP_adress = '0.0.0.0:3000'
+ZWAY_IP_adress = '0.0.0.0:8083'
+
+# settings for key phrase detecting
 KEYPHRASE = 'raspberry'
-KEYPHRASE_ERR = 1e-40
+KEYPHRASE_ERR = 1e-30
 REC_TIME = 2
+
+def set_ip_adress():
+	global IR_IP_adress
+	IR_IP_adress = pi_adress.primary_ip_adress() + ':3000'
+	global ZWAY_IP_adress
+	ZWAY_IP_adress = pi_adress.primary_ip_adress() + ':8083'
 
 def readJsonFile(file_name):
 	f = open(file_name, "r")
@@ -159,16 +172,7 @@ def listenCommand2(com_act_lib, stream, rate, chunk_size, rec_sec):
 	else:
 		app_log.info('---- no command matches')
 
-def main():
-	# setup GPIO. LED Indication
-	GPIO.setmode(GPIO.BCM)
-	green = 12
-	GPIO.setup(green, GPIO.OUT) # green
-	red = 16
-	GPIO.setup(red, GPIO.OUT) # red
-	GPIO.output(green, GPIO.HIGH)
-	GPIO.output(red, GPIO.HIGH)
-
+def main(): 		
 	#change directory
 	homedir = os.environ['HOME']
 	currdir = os.getcwd()
@@ -177,20 +181,32 @@ def main():
 
 	# set logging info
 	log_formatter = logging.Formatter('%(asctime)s - %(levelname)s - %(message)s')
-	log_file = 'voiceIRControl.log'
-
+	log_file = LOG_FILE
 	from logging.handlers import RotatingFileHandler
 	file_handler = RotatingFileHandler(log_file, mode='a', maxBytes=5*1024*1024, 
                                  backupCount=2, encoding=None, delay=0)
 	file_handler.setFormatter(log_formatter)
 	file_handler.setLevel(logging.INFO)
 
-
 	app_log.setLevel(logging.INFO)
 	app_log.addHandler(file_handler)
 
+        app_log.info('-- START voiceIRControl.py.')
 
-	app_log.info('-- START voiceIRControl.py.')
+        # setup GPIO. LED Indication
+        GPIO.setmode(GPIO.BCM)
+        green = 12
+        GPIO.setup(green, GPIO.OUT) # green
+        red = 16
+        GPIO.setup(red, GPIO.OUT) # red
+        GPIO.output(green, GPIO.HIGH)
+        GPIO.output(red, GPIO.HIGH)
+	app_log.info('-- GPIO LED indication has been set')
+	
+        # set IP adresses
+        set_ip_adress()
+        app_log.info('-- IR_IP_adress ' + IR_IP_adress)
+        app_log.info('-- ZWAY_IP_adress ' + ZWAY_IP_adress)
 
 	# read commands from json file
 	com_act_lib = readJsonFile(JSON_FILE_NAME)
