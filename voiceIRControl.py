@@ -45,7 +45,7 @@ def set_ip_adress():
 	global ZWAY_IP_adress
 	ZWAY_IP_adress = pi_adress.primary_ip_adress() + ':8083'
 
-def readJsonFile(file_name):
+def readJsonCommandFile(file_name):
 	f = open(file_name, "r")
 	jdata = json.load(f)
 	f.close()
@@ -55,8 +55,28 @@ def readJsonFile(file_name):
 	for button in jdata:
 		commands.append(button['voice_command'])
 		actions.append(button['action'])
-
+	#app_log.info('---- jdata =' + str())
 	return dict(zip(commands, actions)) 
+
+def readDeviceCommand(ip_adress):
+	req_url = 'http://' + ip_adress + '/commands/json'
+	r = requests.get(req_url)
+	app_log.info('---- request commands url = ' + req_url)
+	# get all json format data
+	jdata = r.json()
+	# parse data
+	commands = []
+	actions = []
+	i = 1
+	for button in jdata:
+		command = button['voice_command']
+		action = button['action']
+		commands.append(command)
+		actions.append(action)
+		app_log.info('---- command[' + str(i) + '] - ' + command + '  =>  action[' + str(i) + '] - ' + action)
+		i = i + 1
+
+	return dict(zip(commands, actions))
 
 def audio2Text(audioFileName):
 	text = asr.yandexAsrFile(audioFileName)
@@ -138,7 +158,6 @@ def listenCommand(com_act_lib, rec_time, stream):
 	text = audio2Text(AUDIO_FILE_NAME)
 	app_log.info('---- finished audio2Text')
 	app_log.info('---- recognized text = ' + text)
-
 	
 	# find commands in text
 	match = []
@@ -160,7 +179,6 @@ def listenCommand2(com_act_lib, stream, rate, chunk_size, rec_sec):
 	app_log.info('---- finished speech2Text')
 	app_log.info('---- recognized text = ' + text)
 
-
 	# find commands in text
 	match = []
 	if(text):
@@ -173,7 +191,7 @@ def listenCommand2(com_act_lib, stream, rate, chunk_size, rec_sec):
 		app_log.info('---- no command matches')
 
 def main(): 		
-	#change directory
+	# change directory
 	homedir = os.environ['HOME']
 	currdir = os.getcwd()
 	irdir = os.path.join(homedir, 'irControl/voice_command_recognition')
@@ -191,7 +209,7 @@ def main():
 	app_log.setLevel(logging.INFO)
 	app_log.addHandler(file_handler)
 
-        app_log.info('-- START voiceIRControl.py. from director ' + currdir)
+        app_log.info('-- START voiceIRControl.py. from directory ' + currdir)
 
         # setup GPIO. LED Indication
         GPIO.setmode(GPIO.BCM)
@@ -207,9 +225,10 @@ def main():
         set_ip_adress()
         app_log.info('-- IR_IP_adress ' + IR_IP_adress)
         app_log.info('-- ZWAY_IP_adress ' + ZWAY_IP_adress)
-
+	
 	# read commands from json file
-	com_act_lib = readJsonFile(JSON_FILE_NAME)
+	#com_act_lib = readJsonCommandFile(JSON_FILE_NAME)
+	com_act_lib = readDeviceCommand(IR_IP_adress)
 	app_log.info('-- finished to read device configuration json file ' + JSON_FILE_NAME)
 
 	modeldir = "../pocketsphinx-python/pocketsphinx/model"
@@ -222,9 +241,7 @@ def main():
 	config.set_float('-kws_threshold', KEYPHRASE_ERR)
 	app_log.info('-- finished to set CMU SPHINX library settings')
 
-
 	# alsaaudio settings
-
 	CHUNK = 1024
 	FORMAT = alsaaudio.PCM_FORMAT_S16_LE
 	CHANNELS = 1
@@ -241,22 +258,20 @@ def main():
 		app_log.info('-- exit from programm sys.exit(1)')
 		sys.exit(1)
 
-
 	# Process audio chunk by chunk. 
 	decoder = Decoder(config)
 	decoder.start_utt()
 	
-
 	while True:
 		GPIO.output(green, GPIO.HIGH)
 		GPIO.output(red, GPIO.LOW)
 
 		l, buf = stream.read()
 		if buf:
-		    decoder.process_raw(buf, False, False)
+		    	decoder.process_raw(buf, False, False)
 		else:
 			app_log.info('-- no data from stream')
-		    #break
+
 		if decoder.hyp() != None:
 			
 			GPIO.output(green, GPIO.LOW)
@@ -271,7 +286,7 @@ def main():
 				listenCommand2(com_act_lib, stream, RATE, CHUNK, REC_TIME)
 				app_log.info('-- stop listenCommand')
 			except Exception:
-				app_log.info("-- Unexpected error:" + str(sys.exc_info()))
+				app_log.info("-- unexpected error:" + str(sys.exc_info()))
 
 			decoder.start_utt()
 
