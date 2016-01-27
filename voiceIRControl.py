@@ -28,8 +28,8 @@ AUDIO_FILE_NAME = 'output.wav'
 IR_IP_adress = '192.168.0.106:3000'
 ZWAY_IP_adress = '192.168.0.106:8083'
 
-KEYPHRASE = 'computer'
-KEYPHRASE_ERR = 1e-10
+KEYPHRASE = 'raspberry'
+KEYPHRASE_ERR = 1e-40
 REC_TIME = 2
 
 def readJsonFile(file_name):
