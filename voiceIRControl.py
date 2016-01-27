@@ -191,7 +191,7 @@ def main():
 	app_log.setLevel(logging.INFO)
 	app_log.addHandler(file_handler)
 
-        app_log.info('-- START voiceIRControl.py.')
+        app_log.info('-- START voiceIRControl.py. from director ' + currdir)
 
         # setup GPIO. LED Indication
         GPIO.setmode(GPIO.BCM)
@@ -224,16 +224,23 @@ def main():
 
 
 	# alsaaudio settings
+
 	CHUNK = 1024
 	FORMAT = alsaaudio.PCM_FORMAT_S16_LE
 	CHANNELS = 1
 	RATE = 16000
-	stream = alsaaudio.PCM(alsaaudio.PCM_CAPTURE,alsaaudio.PCM_NORMAL)
-	stream.setchannels(CHANNELS)
-	stream.setrate(RATE)
-	stream.setformat(FORMAT)
-	stream.setperiodsize(CHUNK)
-	app_log.info('-- finished to set alsaaudio parameters')
+	try:	
+		stream = alsaaudio.PCM(alsaaudio.PCM_CAPTURE,alsaaudio.PCM_NORMAL)
+		stream.setchannels(CHANNELS)
+		stream.setrate(RATE)
+		stream.setformat(FORMAT)
+		stream.setperiodsize(CHUNK)
+		app_log.info('-- finished to set alsaaudio parameters')
+	except Exception:
+		app_log.info('-- alsaaudio unexpected error:' + str(sys.exc_info()))
+		app_log.info('-- exit from programm sys.exit(1)')
+		sys.exit(1)
+
 
 	# Process audio chunk by chunk. 
 	decoder = Decoder(config)
