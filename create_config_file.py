@@ -62,7 +62,7 @@ def write2Json(file_name, device, buttons, voice_commands):
 	f = open(file_name, "w")
 	dev_buttons = []
 	for i in range(0, len(buttons)):
-		action = 'send/' + device + '/' + buttons[i]
+		action = '/send/' + device + '/' + buttons[i]
 		dev_buttons.append({'device_name': device, 
 							'button' :buttons[i], 
 							'action': action, 

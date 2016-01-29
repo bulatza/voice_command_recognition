@@ -133,12 +133,12 @@ def commandToActionHttp(matchCommands, lib):
 		
 		if action[0] == 'Z':
 			ip_adress = ZWAY_IP_adress
-			req_url = 'http://' + ip_adress + '/'  + action
+			req_url = 'http://' + ip_adress + action
 			r = requests.get(req_url, auth=('admin', 'bzahome27')) # http request
 
 		else:
 			ip_adress = IR_IP_adress
-			req_url = 'http://' + ip_adress + '/'  + action
+			req_url = 'http://' + ip_adress + action
 			r = requests.get(req_url) # http request
 
 		app_log.info('---- request url = ' + req_url)
@@ -205,7 +205,6 @@ def main():
                                  backupCount=2, encoding=None, delay=0)
 	file_handler.setFormatter(log_formatter)
 	file_handler.setLevel(logging.INFO)
-
 	app_log.setLevel(logging.INFO)
 	app_log.addHandler(file_handler)
 
