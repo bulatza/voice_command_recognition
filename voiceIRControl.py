@@ -9,7 +9,10 @@ import requests
 import json
 
 # GPIO settings
-import RPi.GPIO as GPIO
+#import RPi.GPIO as GPIO
+from gpio_led import Gpioled
+gl = Gpioled(12, 16, 0.2) # green, red, dt
+
 
 # logging libs
 import logging
@@ -142,9 +145,8 @@ def commandToActionHttp(matchCommands, lib):
 			r = requests.get(req_url) # http request
 
 		app_log.info('---- request url = ' + req_url)
-
-    	return_mes = "returned: status_code = " + str(r.status_code)
-    	return return_mes
+    	
+	return r.status_code
 
 # record audio *.wav file and send it to yandex 
 def listenCommand(com_act_lib, rec_time, stream):
@@ -165,9 +167,15 @@ def listenCommand(com_act_lib, rec_time, stream):
 		match = findMatch(text, com_act_lib.keys())
 		
 	if (match):
-		mes = commandToActionHttp(match, com_act_lib)
-		app_log.info('---- device ' +  mes)
+		status_code = commandToActionHttp(match, com_act_lib)
+		if status_code == 200:
+			gl.goodStatus()
+		else:
+			gl.badStatus()
+
+		app_log.info('---- device returned status: ' +  str(status_code))
 	else:
+		gl.badStatus()
 		app_log.info('---- no command matches')
 
 # listen command directly from mic and send it to yandex 
@@ -185,12 +193,20 @@ def listenCommand2(com_act_lib, stream, rate, chunk_size, rec_sec):
 		match = findMatch(text, com_act_lib.keys())
 		
 	if (match):
-		mes = commandToActionHttp(match, com_act_lib)
-		app_log.info('---- device ' +  mes)
+		status_code = commandToActionHttp(match, com_act_lib)
+		if status_code == 200:
+			gl.goodStatus()
+		else:
+			gl.badStatus()
+		app_log.info('---- device returned status:' +  str(status_code))
 	else:
+		gl.badStatus()
 		app_log.info('---- no command matches')
 
 def main(): 		
+	
+	gl.high()
+
 	# change directory
 	homedir = os.environ['HOME']
 	currdir = os.getcwd()
@@ -209,16 +225,6 @@ def main():
 	app_log.addHandler(file_handler)
 
         app_log.info('-- START voiceIRControl.py. from directory ' + currdir)
-
-        # setup GPIO. LED Indication
-        GPIO.setmode(GPIO.BCM)
-        green = 12
-        GPIO.setup(green, GPIO.OUT) # green
-        red = 16
-        GPIO.setup(red, GPIO.OUT) # red
-        GPIO.output(green, GPIO.HIGH)
-        GPIO.output(red, GPIO.HIGH)
-	app_log.info('-- GPIO LED indication has been set')
 	
         # set IP adresses
         set_ip_adress()
@@ -254,6 +260,8 @@ def main():
 		app_log.info('-- finished to set alsaaudio parameters')
 	except Exception:
 		app_log.info('-- alsaaudio unexpected error:' + str(sys.exc_info()))
+		
+		gl.errorStatus()
 		app_log.info('-- exit from programm sys.exit(1)')
 		sys.exit(1)
 
@@ -262,8 +270,7 @@ def main():
 	decoder.start_utt()
 	
 	while True:
-		GPIO.output(green, GPIO.HIGH)
-		GPIO.output(red, GPIO.LOW)
+		gl.wait()
 
 		l, buf = stream.read()
 		if buf:
@@ -273,20 +280,18 @@ def main():
 
 		if decoder.hyp() != None:
 			
-			GPIO.output(green, GPIO.LOW)
-			GPIO.output(red, GPIO.HIGH)
-
+			gl.rec()
 			app_log.info('-- detected keyphrase ' + KEYPHRASE)
 			decoder.end_utt()
 
 			try:
 				app_log.info('-- start listenCommand')
-				#listenCommand(com_act_lib, REC_TIME, stream)
 				listenCommand2(com_act_lib, stream, RATE, CHUNK, REC_TIME)
 				app_log.info('-- stop listenCommand')
 			except Exception:
 				app_log.info("-- unexpected error:" + str(sys.exc_info()))
-
+				gl.errorStatus()
+			
 			decoder.start_utt()
 
 if __name__ == "__main__":
