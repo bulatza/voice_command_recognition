@@ -9,10 +9,8 @@ import requests
 import json
 
 # GPIO settings
-#import RPi.GPIO as GPIO
 from gpio_led import Gpioled
 gl = Gpioled(12, 16, 0.2) # green, red, dt
-
 
 # logging libs
 import logging
@@ -134,7 +132,7 @@ def commandToActionHttp(matchCommands, lib):
 		action = lib[command]
 		ip_adress = []
 		
-		if action[0] == 'Z':
+		if action[1] == 'Z':
 			ip_adress = ZWAY_IP_adress
 			req_url = 'http://' + ip_adress + action
 			r = requests.get(req_url, auth=('admin', 'bzahome27')) # http request
@@ -145,7 +143,10 @@ def commandToActionHttp(matchCommands, lib):
 			r = requests.get(req_url) # http request
 
 		app_log.info('---- request url = ' + req_url)
-    	
+		if r.status_code == 200:
+			gl.goodStatus()
+		else:
+			gl.badStatus()    	
 	return r.status_code
 
 # record audio *.wav file and send it to yandex 
@@ -166,17 +167,12 @@ def listenCommand(com_act_lib, rec_time, stream):
 	if(text):
 		match = findMatch(text, com_act_lib.keys())
 		
-	if (match):
-		status_code = commandToActionHttp(match, com_act_lib)
-		if status_code == 200:
-			gl.goodStatus()
+		if (match):
+			status_code = commandToActionHttp(match, com_act_lib)
+			app_log.info('---- device returned status: ' +  str(status_code))
 		else:
 			gl.badStatus()
-
-		app_log.info('---- device returned status: ' +  str(status_code))
-	else:
-		gl.badStatus()
-		app_log.info('---- no command matches')
+			app_log.info('---- no command matches')
 
 # listen command directly from mic and send it to yandex 
 def listenCommand2(com_act_lib, stream, rate, chunk_size, rec_sec):
@@ -192,16 +188,12 @@ def listenCommand2(com_act_lib, stream, rate, chunk_size, rec_sec):
 	if(text):
 		match = findMatch(text, com_act_lib.keys())
 		
-	if (match):
-		status_code = commandToActionHttp(match, com_act_lib)
-		if status_code == 200:
-			gl.goodStatus()
+		if (match):
+			status_code = commandToActionHttp(match, com_act_lib)
+			app_log.info('---- device returned status:' +  str(status_code))
 		else:
 			gl.badStatus()
-		app_log.info('---- device returned status:' +  str(status_code))
-	else:
-		gl.badStatus()
-		app_log.info('---- no command matches')
+			app_log.info('---- no command matches')
 
 def main(): 		
 	
@@ -232,8 +224,8 @@ def main():
         app_log.info('-- ZWAY_IP_adress ' + ZWAY_IP_adress)
 	
 	# read commands from json file
-	#com_act_lib = readJsonCommandFile(JSON_FILE_NAME)
-	com_act_lib = readDeviceCommand(IR_IP_adress)
+	com_act_lib = readJsonCommandFile(JSON_FILE_NAME)
+	#com_act_lib = readDeviceCommand(IR_IP_adress)
 	app_log.info('-- finished to read device configuration json file ' + JSON_FILE_NAME)
 
 	modeldir = "../pocketsphinx-python/pocketsphinx/model"
