@@ -207,9 +207,8 @@ def main():
 
 	# set logging info
 	log_formatter = logging.Formatter('%(asctime)s - %(levelname)s - %(message)s')
-	log_file = LOG_FILE
 	from logging.handlers import RotatingFileHandler
-	file_handler = RotatingFileHandler(log_file, mode='a', maxBytes=5*1024*1024, 
+	file_handler = RotatingFileHandler(LOG_FILE, mode='a', maxBytes=5*1024*1024, 
                                  backupCount=2, encoding=None, delay=0)
 	file_handler.setFormatter(log_formatter)
 	file_handler.setLevel(logging.INFO)
@@ -252,7 +251,6 @@ def main():
 		app_log.info('-- finished to set alsaaudio parameters')
 	except Exception:
 		app_log.info('-- alsaaudio unexpected error:' + str(sys.exc_info()))
-		
 		gl.errorStatus()
 		app_log.info('-- exit from programm sys.exit(1)')
 		sys.exit(1)
@@ -282,8 +280,8 @@ def main():
 				app_log.info('-- stop listenCommand')
 			except Exception:
 				app_log.info("-- unexpected error:" + str(sys.exc_info()))
-				gl.errorStatus()
-			
+				gl.errorStatusTime(5)
+				pass				
 			decoder.start_utt()
 
 if __name__ == "__main__":
