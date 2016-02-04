@@ -36,8 +36,8 @@ IR_IP_adress = '0.0.0.0:3000'
 ZWAY_IP_adress = '0.0.0.0:8083'
 
 # settings for key phrase detecting
-KEYPHRASE = 'raspberry'
-KEYPHRASE_ERR = 1e-30
+KEYPHRASE = 'logic' #'raspberry'
+KEYPHRASE_ERR = 1e-10
 REC_TIME = 2
 
 def set_ip_adress():
@@ -121,11 +121,31 @@ def recordAudio(audioFileName, rec_sec, stream):
 	wf.close() 
 
 def findMatch(text, commands):
-	match = []
-	for command in commands:
-		if text.find(command, 0) != -1:
-			match.append(command)
-	return match
+        match_commands = {}
+        for command in commands:
+                beg = 0
+                match_pos = text.find(command, beg)
+                while match_pos != -1:
+                        match_commands[str(match_pos)] = command
+                        app_log.info('------ command ' + command + ' matched in posotion ' + str(match_pos + 1))
+                        beg = match_pos + 1
+                        match_pos = text.find(command, beg)
+
+        # sort finded commands
+        print match_commands
+        import operator
+        match_sort = sorted(match_commands.items(), key = operator.itemgetter(0))
+        match = []
+        if match_sort:
+                app_log.info('---- sorted matched commands :' )
+                for command in match_sort:
+                        app_log.info('------ ' + command[1] )
+                        match.append(command[1])
+        else:
+                app_log.info('---- no command matches')
+
+        return match
+
 
 def commandToActionHttp(matchCommands, lib):
 	for command in matchCommands:
@@ -150,11 +170,10 @@ def commandToActionHttp(matchCommands, lib):
 	return r.status_code
 
 # record audio *.wav file and send it to yandex 
-def listenCommand(com_act_lib, rec_time, stream):
-	#time.sleep(0.5)
+def listenCommand(com_act_lib, stream, rec_sec):
 	#  record speech audio file
 	app_log.info('---- start to record audio')
-	recordAudio(AUDIO_FILE_NAME, time, stream)
+	recordAudio(AUDIO_FILE_NAME, rec_sec, stream)
 	app_log.info('---- stop to record audio')
 
 	#  yandex speech recognition
@@ -166,7 +185,7 @@ def listenCommand(com_act_lib, rec_time, stream):
 	match = []
 	if(text):
 		match = findMatch(text, com_act_lib.keys())
-		
+	
 		if (match):
 			status_code = commandToActionHttp(match, com_act_lib)
 			app_log.info('---- device returned status: ' +  str(status_code))
@@ -261,27 +280,26 @@ def main():
 	
 	while True:
 		gl.wait()
-
 		l, buf = stream.read()
 		if buf:
 		    	decoder.process_raw(buf, False, False)
 		else:
 			app_log.info('-- no data from stream')
 
-		if decoder.hyp() != None:
-			
+		if decoder.hyp() != None:			
 			gl.rec()
 			app_log.info('-- detected keyphrase ' + KEYPHRASE)
 			decoder.end_utt()
-
 			try:
 				app_log.info('-- start listenCommand')
 				listenCommand2(com_act_lib, stream, RATE, CHUNK, REC_TIME)
+				#listenCommand(com_act_lib, stream, REC_TIME)
 				app_log.info('-- stop listenCommand')
 			except Exception:
 				app_log.info("-- unexpected error:" + str(sys.exc_info()))
 				gl.errorStatusTime(5)
-				pass				
+				pass
+				
 			decoder.start_utt()
 
 if __name__ == "__main__":
