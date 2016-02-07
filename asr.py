@@ -38,6 +38,7 @@ recognized_text = ''
 
 def text_callback(yandex_text):
     global recognized_text
+    recognized_text = ''
     recognized_text = yandex_text
 
 def yandexASR(key, server, port, format, model, lang, chunk_size, start_with_chunk, max_chunks_count, silent, reconnect_delay, reconnect_retry_count, record, ipv4, nopunctuation, uuid, files):

@@ -4,7 +4,7 @@
 # JSON device configuration file encoder and decoder.
 import json 
 
-jsonFileName = "deviceConfig.json"
+jsonFileName = "new_deviceConfig.json"
 
 device = "LG_AKB72915207"
 
@@ -46,10 +46,10 @@ voice_command = [
 '8',
 '9',
 '0',
-'громкость плюс',
-'громкость минус',
-'канал плюс',
-'канал минус',
+'громкость +',
+'громкость -',
+'canal +',
+'канал -',
 'меню',
 'вверх',
 'вниз',
@@ -62,10 +62,10 @@ def write2Json(file_name, device, buttons, voice_commands):
 	f = open(file_name, "w")
 	dev_buttons = []
 	for i in range(0, len(buttons)):
-		action = '/send/' + device + '/' + buttons[i]
+		action1 = '/send/' + device + '/' + buttons[i]
 		dev_buttons.append({'device_name': device, 
 							'button' :buttons[i], 
-							'action': action, 
+							'actions': [action1], 
 							'voice_command': voice_commands[i]})
 
 	dict_device = dev_buttons 
@@ -81,7 +81,7 @@ def readJsonFile(file_name):
 	actions = []
 	for button in jdata:
 		commands.append(button['voice_command'])
-		actions.append(button['action'])
+		actions.append(button['actions'])
 	return dict(zip(commands, actions)) 
 
 def main():
@@ -91,8 +91,8 @@ def main():
 
 	# read data from json file
 	data = readJsonFile(jsonFileName)
-	#print 'data in file: '
-	#print data
+	print 'data in file: '
+	print data
 
 
 if __name__ == '__main__':

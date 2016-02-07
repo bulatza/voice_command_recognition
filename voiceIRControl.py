@@ -37,7 +37,7 @@ ZWAY_IP_adress = '0.0.0.0:8083'
 
 # settings for key phrase detecting
 KEYPHRASE = 'logic' #'raspberry'
-KEYPHRASE_ERR = 1e-10
+KEYPHRASE_ERR = 1e-15
 REC_TIME = 2
 
 def set_ip_adress():
@@ -53,10 +53,16 @@ def readJsonCommandFile(file_name):
 	# parse jdata
 	commands = []
 	actions = []
-	for button in jdata:
-		commands.append(button['voice_command'])
-		actions.append(button['action'])
-	#app_log.info('---- jdata =' + str())
+        i = 1
+        for button in jdata:
+                command = button['voice_command']
+                action = button['actions']
+                commands.append(command)
+                actions.append(action)
+                app_log.info('---- command[' + str(i) + '] - ' + command + '  =>  action[' + str(i) + '] - ' + str(action))
+                i = i + 1
+
+
 	return dict(zip(commands, actions)) 
 
 def readDeviceCommand(ip_adress):
@@ -127,7 +133,6 @@ def findMatch(text, commands):
                 match_pos = text.find(command, beg)
                 while match_pos != -1:
                         match_commands[str(match_pos)] = command
-                        app_log.info('------ command ' + command + ' matched in posotion ' + str(match_pos + 1))
                         beg = match_pos + 1
                         match_pos = text.find(command, beg)
 
@@ -149,25 +154,26 @@ def findMatch(text, commands):
 
 def commandToActionHttp(matchCommands, lib):
 	for command in matchCommands:
-		action = lib[command]
+		actions = lib[command]
 		ip_adress = []
 		
-		if action[1] == 'Z':
-			ip_adress = ZWAY_IP_adress
-			req_url = 'http://' + ip_adress + action
-			r = requests.get(req_url, auth=('admin', 'bzahome27')) # http request
+		for action in actions:
+			if action[1] == 'Z':
+				ip_adress = ZWAY_IP_adress
+				req_url = 'http://' + ip_adress + action
+				r = requests.get(req_url, auth=('admin', 'bzahome27')) # http request
+			else:
+				ip_adress = IR_IP_adress
+				req_url = 'http://' + ip_adress + action
+				r = requests.get(req_url) # http request
 
-		else:
-			ip_adress = IR_IP_adress
-			req_url = 'http://' + ip_adress + action
-			r = requests.get(req_url) # http request
+			app_log.info('---- request url = ' + req_url)
+			app_log.info('---- device returned status: ' +  str(r.status_code))
 
-		app_log.info('---- request url = ' + req_url)
-		if r.status_code == 200:
-			gl.goodStatus()
-		else:
-			gl.badStatus()    	
-	return r.status_code
+			if r.status_code == 200:
+				gl.goodStatus()
+			else:
+				gl.badStatus()    	
 
 # record audio *.wav file and send it to yandex 
 def listenCommand(com_act_lib, stream, rec_sec):
@@ -187,8 +193,7 @@ def listenCommand(com_act_lib, stream, rec_sec):
 		match = findMatch(text, com_act_lib.keys())
 	
 		if (match):
-			status_code = commandToActionHttp(match, com_act_lib)
-			app_log.info('---- device returned status: ' +  str(status_code))
+			commandToActionHttp(match, com_act_lib)
 		else:
 			gl.badStatus()
 			app_log.info('---- no command matches')
@@ -209,7 +214,6 @@ def listenCommand2(com_act_lib, stream, rate, chunk_size, rec_sec):
 		
 		if (match):
 			status_code = commandToActionHttp(match, com_act_lib)
-			app_log.info('---- device returned status:' +  str(status_code))
 		else:
 			gl.badStatus()
 			app_log.info('---- no command matches')
@@ -290,6 +294,7 @@ def main():
 			gl.rec()
 			app_log.info('-- detected keyphrase ' + KEYPHRASE)
 			decoder.end_utt()
+
 			try:
 				app_log.info('-- start listenCommand')
 				listenCommand2(com_act_lib, stream, RATE, CHUNK, REC_TIME)
