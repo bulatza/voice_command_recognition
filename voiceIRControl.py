@@ -28,7 +28,11 @@ import wave
 # get raspberry ip adress
 import pi_adress
 
+
+# flag for reading from file
+file_flag = False # False if read from device
 JSON_FILE_NAME = 'device_config.json'
+
 LOG_FILE = 'voiceIRControl.log'
 
 AUDIO_FILE_NAME = 'output.wav'
@@ -37,7 +41,7 @@ ZWAY_IP_adress = '0.0.0.0:8083'
 
 # settings for key phrase detecting
 KEYPHRASE = 'logic' #'raspberry'
-KEYPHRASE_ERR = 1e-15
+KEYPHRASE_ERR = 1e-20
 REC_TIME = 2
 
 def set_ip_adress():
@@ -61,7 +65,6 @@ def readJsonCommandFile(file_name):
                 actions.append(action)
                 app_log.info('---- command[' + str(i) + '] - ' + command + '  =>  action[' + str(i) + '] - ' + str(action))
                 i = i + 1
-
 
 	return dict(zip(commands, actions)) 
 
@@ -142,29 +145,33 @@ def findMatch(text, commands):
         match_sort = sorted(match_commands.items(), key = operator.itemgetter(0))
         match = []
         if match_sort:
-                app_log.info('---- sorted matched commands :' )
+                #app_log.info('---- sorted matched commands :' )
                 for command in match_sort:
-                        app_log.info('------ ' + command[1] )
+                        #app_log.info('------ ' + command[1] )
                         match.append(command[1])
         else:
                 app_log.info('---- no command matches')
 
         return match
 
-
 def commandToActionHttp(matchCommands, lib):
 	for command in matchCommands:
-		actions = lib[command]
+                actions = lib[command]
+		if (isinstance(actions, basestring)):
+			app_log.info('------ action only one command')
+			actions = actions.split()
+			
 		ip_adress = []
-		
+		req_url = []
 		for action in actions:
 			if action[1] == 'Z':
 				ip_adress = ZWAY_IP_adress
-				req_url = 'http://' + ip_adress + action
+				req_url = 'http://' + ip_adress + action				
 				r = requests.get(req_url, auth=('admin', 'bzahome27')) # http request
 			else:
+				app_log.info('---- command = ' + command + ' => action = ' + action)
 				ip_adress = IR_IP_adress
-				req_url = 'http://' + ip_adress + action
+				req_url = 'http://' + ip_adress + action	
 				r = requests.get(req_url) # http request
 
 			app_log.info('---- request url = ' + req_url)
@@ -245,10 +252,15 @@ def main():
         app_log.info('-- IR_IP_adress ' + IR_IP_adress)
         app_log.info('-- ZWAY_IP_adress ' + ZWAY_IP_adress)
 	
-	# read commands from json file
-	com_act_lib = readJsonCommandFile(JSON_FILE_NAME)
-	#com_act_lib = readDeviceCommand(IR_IP_adress)
-	app_log.info('-- finished to read device configuration json file ' + JSON_FILE_NAME)
+	# read commands from json
+	com_act_lib = []
+	if file_flag:
+		com_act_lib = readJsonCommandFile(JSON_FILE_NAME)
+		app_log.info('-- finished to read device configuration json file ' + JSON_FILE_NAME)
+	else:
+		com_act_lib = readDeviceCommand(IR_IP_adress)
+		app_log.info('-- finished to read configuration json file from device ')
+
 
 	modeldir = "../pocketsphinx-python/pocketsphinx/model"
 	datadir = "../pocketsphinx-python/pocketsphinx/test/data"
