@@ -145,17 +145,17 @@ def  yandexAsrMicStream(stream, rate, chunk_size, rec_sec):
     if not chunks:
         click.echo('Please, specify one or more input filename.')
     else:
-        client.recognize(chunks,
-                 callback= text_callback,
-                 host=server,
-                 port=port,
-                 key=key,
-                 format=format,
-                 topic=model,
-                 lang=lang,
-                 reconnect_delay=reconnect_delay,
-                 reconnect_retry_count=reconnect_retry_count,                         
-                 uuid=uuid,
-                 ipv4=ipv4,
-                 punctuation=not nopunctuation)
-    return recognized_text
+        res_text = client.recognize(chunks,
+                 	callback= text_callback,
+                 	host=server,
+                 	port=port,
+                 	key=key,
+                 	format=format,
+                 	topic=model,
+                 	lang=lang,
+                 	reconnect_delay=reconnect_delay,
+                 	reconnect_retry_count=reconnect_retry_count,                         
+                 	uuid=uuid,
+                 	ipv4=ipv4,
+                 	punctuation=not nopunctuation)
+    return res_text

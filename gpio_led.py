@@ -61,6 +61,16 @@ class Gpioled:
                 GPIO.output(self.pin1, GPIO.HIGH)
                 time.sleep(self.dt)
                 GPIO.output(self.pin1, GPIO.LOW)
+	
+	def iConErrStatus(self, t):
+		self.low()
+		count = t
+                while count > 0:
+                        GPIO.output(self.pin2, GPIO.HIGH)
+                        time.sleep(self.dt)
+                        GPIO.output(self.pin2, GPIO.LOW)
+                        time.sleep(self.dt)
+                        count = count - 1
 
 	def errorStatus(self):
 		self.low()

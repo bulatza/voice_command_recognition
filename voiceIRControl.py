@@ -1,12 +1,17 @@
 #! /usr/bin/env python
 # -*- coding: utf-8 -*-
 
-# yandex SpeechKit
-import asr
-import time
-
 import requests
 import json
+
+# flag for reading from file
+file_flag = True # False if read from device
+JSON_FILE_NAME = 'device_config.json'
+
+# settings for key phrase detecting
+KEYPHRASE = 'logic' #'raspberry'
+KEYPHRASE_ERR = 1e-20
+REC_TIME = 2
 
 # GPIO settings
 from gpio_led import Gpioled
@@ -15,40 +20,42 @@ gl = Gpioled(12, 16, 0.2) # green, red, dt
 # logging libs
 import logging
 app_log = logging.getLogger('root')
+LOG_FILE = 'voiceIRControl.log'
 
 # imports for CMU Sphinx voice activation
 import sys, os
 from pocketsphinx.pocketsphinx import *
 from sphinxbase.sphinxbase import *
 
+# yandex SpeechKit
+import asr
+import time
+
 # audio streaming
 import alsaaudio
 import wave
-
-# get raspberry ip adress
-import pi_adress
-
-
-# flag for reading from file
-file_flag = False # False if read from device
-JSON_FILE_NAME = 'device_config.json'
-
-LOG_FILE = 'voiceIRControl.log'
-
 AUDIO_FILE_NAME = 'output.wav'
-IR_IP_adress = '0.0.0.0:3000'
-ZWAY_IP_adress = '0.0.0.0:8083'
 
-# settings for key phrase detecting
-KEYPHRASE = 'logic' #'raspberry'
-KEYPHRASE_ERR = 1e-20
-REC_TIME = 2
+IR_IP_adress = '127.0.0.1:3000'
+ZWAY_IP_adress = '127.0.0.1:8083'
+IP_adress = '127.0.0.1'
 
 def set_ip_adress():
+	import pi_adress
+	global IP_adress
+	IP_adress = pi_adress.primary_ip_adress()
 	global IR_IP_adress
-	IR_IP_adress = pi_adress.primary_ip_adress() + ':3000'
+	IR_IP_adress = IP_adress + ':3000'
 	global ZWAY_IP_adress
-	ZWAY_IP_adress = pi_adress.primary_ip_adress() + ':8083'
+	ZWAY_IP_adress = IP_adress + ':8083'
+
+def check_ping(hostname):
+	#hostname = "google.com"
+	response = os.system("ping -c 1 " + hostname)
+	if response == 0:
+  		return True
+	else:
+  		return False
 
 def readJsonCommandFile(file_name):
 	f = open(file_name, "r")
@@ -158,13 +165,13 @@ def commandToActionHttp(matchCommands, lib):
 	for command in matchCommands:
                 actions = lib[command]
 		if (isinstance(actions, basestring)):
-			app_log.info('------ action only one command')
+			app_log.info('------ only one action')
 			actions = actions.split()
 			
 		ip_adress = []
 		req_url = []
 		for action in actions:
-			if action[1] == 'Z':
+			if action[1] == 'Z': # for z-wave devices
 				ip_adress = ZWAY_IP_adress
 				req_url = 'http://' + ip_adress + action				
 				r = requests.get(req_url, auth=('admin', 'bzahome27')) # http request
@@ -249,9 +256,24 @@ def main():
 	
         # set IP adresses
         set_ip_adress()
+	app_log.info('-- IP_adress' + IP_adress)
         app_log.info('-- IR_IP_adress ' + IR_IP_adress)
         app_log.info('-- ZWAY_IP_adress ' + ZWAY_IP_adress)
+	if IP_adress == '127.0.0.1':
+		gl.iConErrStatus(5)
+		app_log.info('-- STOP: localhost adress. sys.exit(1)')
+		sys.exit(1) 	
 	
+	# check internet connection by ping
+	ping_adress = 'ya.ru'
+	if (check_ping(ping_adress)):
+		app_log.info('-- ping to ' + ping_adress + ' is ok')
+	else:
+		gl.iConErrStatus(10)
+		app_log.info('-- STOP: no ping to ' + ping_adress + '. sys.exit()')
+		sys.exit(1)
+		
+
 	# read commands from json
 	com_act_lib = []
 	if file_flag:
@@ -286,38 +308,39 @@ def main():
 		app_log.info('-- finished to set alsaaudio parameters')
 	except Exception:
 		app_log.info('-- alsaaudio unexpected error:' + str(sys.exc_info()))
-		gl.errorStatus()
+		gl.errorStatusTime(10)
 		app_log.info('-- exit from programm sys.exit(1)')
 		sys.exit(1)
 
-	# Process audio chunk by chunk. 
-	decoder = Decoder(config)
-	decoder.start_utt()
+	# Process audio chunk by chunk.
+	try:
+		decoder = Decoder(config)
+		decoder.start_utt()
 	
-	while True:
-		gl.wait()
-		l, buf = stream.read()
-		if buf:
-		    	decoder.process_raw(buf, False, False)
-		else:
-			app_log.info('-- no data from stream')
+		while True:
+			gl.wait()
+			l, buf = stream.read()
+			if buf:
+		    		decoder.process_raw(buf, False, False)
+			else:
+				app_log.info('-- no data from stream')
 
-		if decoder.hyp() != None:			
-			gl.rec()
-			app_log.info('-- detected keyphrase ' + KEYPHRASE)
-			decoder.end_utt()
+			if decoder.hyp() != None:			
+				gl.rec()
+				app_log.info('-- detected keyphrase ' + KEYPHRASE)
+				decoder.end_utt()
 
-			try:
 				app_log.info('-- start listenCommand')
 				listenCommand2(com_act_lib, stream, RATE, CHUNK, REC_TIME)
 				#listenCommand(com_act_lib, stream, REC_TIME)
 				app_log.info('-- stop listenCommand')
-			except Exception:
-				app_log.info("-- unexpected error:" + str(sys.exc_info()))
-				gl.errorStatusTime(5)
-				pass
 				
-			decoder.start_utt()
+				decoder.start_utt()
+
+	except Exception:
+		app_log.info("-- unexpected error:" + str(sys.exc_info()))
+		gl.errorStatusTime(10)
+		pass
 
 if __name__ == "__main__":
         main()
