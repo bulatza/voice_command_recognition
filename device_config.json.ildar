@@ -180,6 +180,28 @@
     },
     {
         "actions": [
+            "/send/LG_AKB72915207/KEY_INPUT",
+            "/send/LG_AKB72915207/KEY_RIGHT",
+            "/send/LG_AKB72915207/KEY_OK"
+        ],
+        "button": "KEY_INPUT",
+        "device_name": "LG_AKB72915207",
+        "voice_command": "компьютер"
+    },
+    {
+        "actions": [
+            "/send/LG_AKB72915207/KEY_CHANNELUP",
+            "/send/LG_AKB72915207/KEY_CHANNELUP",
+            "/send/LG_AKB72915207/KEY_CHANNELUP",
+            "/send/LG_AKB72915207/KEY_CHANNELUP",
+            "/send/LG_AKB72915207/KEY_CHANNELUP"
+        ],
+        "button": "KEY_",
+        "device_name": "LG_AKB72915207",
+        "voice_command": "переключать"
+    },
+    {
+        "actions": [
             "/ZWaveAPI/Run/devices[13].instances[0].Basic.Set(255)"
         ],
         "button": "LIGHT_ON",
