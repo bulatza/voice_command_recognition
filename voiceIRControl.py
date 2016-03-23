@@ -10,8 +10,8 @@ JSON_FILE_NAME = 'device_config.json'
 
 # settings for key phrase detecting
 KEYPHRASE = 'logic' #'raspberry'
-KEYPHRASE_ERR = 1e-15
-REC_TIME = 2.5
+KEYPHRASE_ERR = 1e-20
+REC_TIME = 3
 
 # GPIO settings
 from gpio_led import Gpioled

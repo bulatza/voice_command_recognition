@@ -98,8 +98,7 @@
     {
         "actions": [
             "/send/LG_AKB72915207/KEY_VOLUMEUP",
-	    "/send/LG_AKB72915207/KEY_VOLUMEUP"
-
+	        "/send/LG_AKB72915207/KEY_VOLUMEUP"
         ],
         "button": "KEY_VOLUMEUP",
         "device_name": "LG_AKB72915207",
@@ -121,6 +120,14 @@
         "button": "KEY_CHANNELUP",
         "device_name": "LG_AKB72915207",
         "voice_command": "canal +"
+    },
+    {
+        "actions": [
+            "/send/LG_AKB72915207/KEY_CHANNELUP"
+        ],
+        "button": "KEY_CHANNELUP",
+        "device_name": "LG_AKB72915207",
+        "voice_command": "канал +"
     },
     {
         "actions": [
@@ -164,11 +171,43 @@
     },
     {
         "actions": [
+            "/send/LG_AKB72915207/KEY_RIGHT"
+        ],
+        "button": "KEY_RIGHT",
+        "device_name": "LG_AKB72915207",
+        "voice_command": "правый"
+    },
+    {
+        "actions": [
+            "/send/LG_AKB72915207/KEY_RIGHT"
+        ],
+        "button": "KEY_RIGHT",
+        "device_name": "LG_AKB72915207",
+        "voice_command": "право"
+    },
+    {
+        "actions": [
             "/send/LG_AKB72915207/KEY_LEFT"
         ],
         "button": "KEY_LEFT",
         "device_name": "LG_AKB72915207",
         "voice_command": "влево"
+    },
+    {
+        "actions": [
+            "/send/LG_AKB72915207/KEY_LEFT"
+        ],
+        "button": "KEY_LEFT",
+        "device_name": "LG_AKB72915207",
+        "voice_command": "левый"
+    },
+    {
+        "actions": [
+            "/send/LG_AKB72915207/KEY_LEFT"
+        ],
+        "button": "KEY_LEFT",
+        "device_name": "LG_AKB72915207",
+        "voice_command": "лево"
     },
     {
         "actions": [
@@ -182,11 +221,32 @@
         "actions": [
             "/send/LG_AKB72915207/KEY_INPUT",
             "/send/LG_AKB72915207/KEY_RIGHT",
+            "/send/LG_AKB72915207/KEY_RIGHT",
             "/send/LG_AKB72915207/KEY_OK"
         ],
-        "button": "KEY_INPUT",
+        "button": "KEY_",
         "device_name": "LG_AKB72915207",
         "voice_command": "компьютер"
+    },
+    {
+        "actions": [
+            "/send/LG_AKB72915207/KEY_INPUT",
+            "/send/LG_AKB72915207/KEY_RIGHT",
+            "/send/LG_AKB72915207/KEY_RIGHT",
+            "/send/LG_AKB72915207/KEY_OK"
+        ],
+        "button": "KEY_",
+        "device_name": "LG_AKB72915207",
+        "voice_command": "computer"
+    },
+    {
+        "actions": [
+            "/send/LG_AKB72915207/KEY_INPUT",
+            "/send/LG_AKB72915207/KEY_OK"
+        ],
+        "button": "KEY_",
+        "device_name": "LG_AKB72915207",
+        "voice_command": "телевизор"
     },
     {
         "actions": [
@@ -200,6 +260,7 @@
         "device_name": "LG_AKB72915207",
         "voice_command": "переключать"
     },
+
     {
         "actions": [
             "/ZWaveAPI/Run/devices[13].instances[0].Basic.Set(255)"
