@@ -242,6 +242,8 @@
     {
         "actions": [
             "/send/LG_AKB72915207/KEY_INPUT",
+            "/send/LG_AKB72915207/KEY_LEFT",
+            "/send/LG_AKB72915207/KEY_LEFT",
             "/send/LG_AKB72915207/KEY_OK"
         ],
         "button": "KEY_",
