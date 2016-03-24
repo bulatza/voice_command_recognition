@@ -149,11 +149,35 @@
     },
     {
         "actions": [
+            "/send/LG_AKB72915207/KEY_CHANNELUP"
+        ],
+        "button": "KEY_CHANNELUP",
+        "device_name": "LG_AKB72915207",
+        "voice_command": "вперед"
+    },
+    {
+        "actions": [
+            "/send/LG_AKB72915207/KEY_CHANNELUP"
+        ],
+        "button": "KEY_CHANNELUP",
+        "device_name": "LG_AKB72915207",
+        "voice_command": "переключить"
+    },
+    {
+        "actions": [
             "/send/LG_AKB72915207/KEY_CHANNELDOWN"
         ],
         "button": "KEY_CHANNELDOWN",
         "device_name": "LG_AKB72915207",
         "voice_command": "канал -"
+    },
+    {
+        "actions": [
+            "/send/LG_AKB72915207/KEY_CHANNELDOWN"
+        ],
+        "button": "KEY_CHANNELDOWN",
+        "device_name": "LG_AKB72915207",
+        "voice_command": "назад"
     },
     {
         "actions": [
@@ -302,19 +326,6 @@
     },
     {
         "actions": [
-            "/send/LG_AKB72915207/KEY_CHANNELUP",
-            "/send/LG_AKB72915207/KEY_CHANNELUP",
-            "/send/LG_AKB72915207/KEY_CHANNELUP",
-            "/send/LG_AKB72915207/KEY_CHANNELUP",
-            "/send/LG_AKB72915207/KEY_CHANNELUP"
-        ],
-        "button": "KEY_",
-        "device_name": "LG_AKB72915207",
-        "voice_command": "переключать"
-    },
-
-    {
-        "actions": [
             "/ZWaveAPI/Run/devices[13].instances[0].Basic.Set(255)"
         ],
         "button": "LIGHT_ON",
@@ -328,6 +339,14 @@
         "button": "LIGHT_ON",
         "device_name": "ZWAY",
         "voice_command": "свет"
+    },
+    {
+        "actions": [
+            "/ZWaveAPI/Run/devices[13].instances[0].Basic.Set(255)"
+        ],
+        "button": "LIGHT_ON",
+        "device_name": "ZWAY",
+        "voice_command": "светло"
     },
     {
         "actions": [
