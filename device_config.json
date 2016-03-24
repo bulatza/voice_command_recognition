@@ -106,12 +106,30 @@
     },
     {
         "actions": [
+            "/send/LG_AKB72915207/KEY_VOLUMEUP",
+            "/send/LG_AKB72915207/KEY_VOLUMEUP"
+        ],
+        "button": "KEY_VOLUMEUP",
+        "device_name": "LG_AKB72915207",
+        "voice_command": "звук +"
+    },
+    {
+        "actions": [
             "/send/LG_AKB72915207/KEY_VOLUMEDOWN",
             "/send/LG_AKB72915207/KEY_VOLUMEDOWN"
-	],
+	    ],
         "button": "KEY_VOLUMEDOWN",
         "device_name": "LG_AKB72915207",
         "voice_command": "громкость -"
+    },
+    {
+        "actions": [
+            "/send/LG_AKB72915207/KEY_VOLUMEDOWN",
+            "/send/LG_AKB72915207/KEY_VOLUMEDOWN"
+        ],
+        "button": "KEY_VOLUMEDOWN",
+        "device_name": "LG_AKB72915207",
+        "voice_command": "звук -"
     },
     {
         "actions": [
@@ -155,11 +173,27 @@
     },
     {
         "actions": [
+            "/send/LG_AKB72915207/KEY_UP"
+        ],
+        "button": "KEY_UP",
+        "device_name": "LG_AKB72915207",
+        "voice_command": "верх"
+    },
+    {
+        "actions": [
             "/send/LG_AKB72915207/KEY_DOWN"
         ],
         "button": "KEY_DOWN",
         "device_name": "LG_AKB72915207",
         "voice_command": "вниз"
+    },
+    {
+        "actions": [
+            "/send/LG_AKB72915207/KEY_DOWN"
+        ],
+        "button": "KEY_DOWN",
+        "device_name": "LG_AKB72915207",
+        "voice_command": "низ"
     },
     {
         "actions": [
@@ -219,6 +253,22 @@
     },
     {
         "actions": [
+            "/send/LG_AKB72915207/KEY_OK"
+        ],
+        "button": "KEY_OK",
+        "device_name": "LG_AKB72915207",
+        "voice_command": "окей"
+    },
+    {
+        "actions": [
+            "/send/LG_AKB72915207/KEY_OK"
+        ],
+        "button": "KEY_OK",
+        "device_name": "LG_AKB72915207",
+        "voice_command": "ok"
+    },
+    {
+        "actions": [
             "/send/LG_AKB72915207/KEY_INPUT",
             "/send/LG_AKB72915207/KEY_RIGHT",
             "/send/LG_AKB72915207/KEY_RIGHT",
@@ -242,6 +292,8 @@
     {
         "actions": [
             "/send/LG_AKB72915207/KEY_INPUT",
+            "/send/LG_AKB72915207/KEY_LEFT",
+            "/send/LG_AKB72915207/KEY_LEFT",
             "/send/LG_AKB72915207/KEY_OK"
         ],
         "button": "KEY_",
@@ -271,10 +323,34 @@
     },
     {
         "actions": [
+            "/ZWaveAPI/Run/devices[13].instances[0].Basic.Set(255)"
+        ],
+        "button": "LIGHT_ON",
+        "device_name": "ZWAY",
+        "voice_command": "свет"
+    },
+    {
+        "actions": [
             "/ZWaveAPI/Run/devices[13].instances[0].Basic.Set(0)"
         ],
         "button": "LIGHT_OFF",
         "device_name": "ZWAY",
         "voice_command": "ночь"
+    }
+    {
+        "actions": [
+            "/ZWaveAPI/Run/devices[13].instances[0].Basic.Set(0)"
+        ],
+        "button": "LIGHT_OFF",
+        "device_name": "ZWAY",
+        "voice_command": "тьма"
+    }
+    {
+        "actions": [
+            "/ZWaveAPI/Run/devices[13].instances[0].Basic.Set(0)"
+        ],
+        "button": "LIGHT_OFF",
+        "device_name": "ZWAY",
+        "voice_command": "темно"
     }
 ]
