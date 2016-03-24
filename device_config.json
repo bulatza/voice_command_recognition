@@ -129,7 +129,25 @@
         ],
         "button": "KEY_VOLUMEDOWN",
         "device_name": "LG_AKB72915207",
+        "voice_command": "громкость минут"
+    },
+    {
+        "actions": [
+            "/send/LG_AKB72915207/KEY_VOLUMEDOWN",
+            "/send/LG_AKB72915207/KEY_VOLUMEDOWN"
+        ],
+        "button": "KEY_VOLUMEDOWN",
+        "device_name": "LG_AKB72915207",
         "voice_command": "звук -"
+    },
+    {
+        "actions": [
+            "/send/LG_AKB72915207/KEY_VOLUMEDOWN",
+            "/send/LG_AKB72915207/KEY_VOLUMEDOWN"
+        ],
+        "button": "KEY_VOLUMEDOWN",
+        "device_name": "LG_AKB72915207",
+        "voice_command": "звук минут"
     },
     {
         "actions": [
@@ -170,6 +188,14 @@
         "button": "KEY_CHANNELDOWN",
         "device_name": "LG_AKB72915207",
         "voice_command": "канал -"
+    },
+    {
+        "actions": [
+            "/send/LG_AKB72915207/KEY_CHANNELDOWN"
+        ],
+        "button": "KEY_CHANNELDOWN",
+        "device_name": "LG_AKB72915207",
+        "voice_command": "канал минут"
     },
     {
         "actions": [
@@ -371,5 +397,13 @@
         "button": "LIGHT_OFF",
         "device_name": "ZWAY",
         "voice_command": "темно"
-    }
+    },
+    {
+        "actions": [
+            "/ZWaveAPI/Run/devices[13].instances[0].Basic.Set(100)"
+        ],
+        "button": "LIGHT_HALF",
+        "device_name": "ZWAY",
+        "voice_command": "сумерки"
+    },
 ]
