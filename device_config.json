@@ -355,7 +355,7 @@
         "button": "LIGHT_OFF",
         "device_name": "ZWAY",
         "voice_command": "ночь"
-    }
+    },
     {
         "actions": [
             "/ZWaveAPI/Run/devices[13].instances[0].Basic.Set(0)"
@@ -363,7 +363,7 @@
         "button": "LIGHT_OFF",
         "device_name": "ZWAY",
         "voice_command": "тьма"
-    }
+    },
     {
         "actions": [
             "/ZWaveAPI/Run/devices[13].instances[0].Basic.Set(0)"
